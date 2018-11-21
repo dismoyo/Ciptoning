@@ -1,0 +1,4 @@
+[2016-12-20 14:33:29] 'Application Start' event has ocurred.
+[2016-12-20 16:38:41] 'Application Start' event has ocurred.
+[2016-12-20 17:35:47] 'Application Start' event has ocurred.
+[2016-12-20 17:41:30] ERROR: [6edc3525-15df-4512-a32d-3860cfc772e0] Object reference not set to an instance of an object.

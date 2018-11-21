@@ -1,0 +1,63 @@
+﻿<%@ Template Language="C#" Src="..\BaseTemplate.cst.cs" Inherits="Generator.BaseTemplate" TargetLanguage="Java" Description="Create a class from database view." %>
+<%@ Assembly Name="SchemaExplorer" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+
+<%@ Property Name="SourceView" Type="SchemaExplorer.ViewSchema" Category="Context" Description="View that the object is based on." %>
+
+<% %>
+package id.co.aio.sfa.dao;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import id.co.aio.sfa.utils.DatabaseHelper;
+import id.co.aio.sfa.bo;
+
+public class <%= SourceView.Name %>DAO extends DatabaseHelper {                
+
+    //--------------------------------------------------------------------------------------------------
+    // Constructors
+    //--------------------------------------------------------------------------------------------------
+    
+    public <%= SourceView.Name %>DAO(Context context){
+        super(context);
+    }
+
+    //--------------------------------------------------------------------------------------------------
+    // Read
+    //--------------------------------------------------------------------------------------------------
+    
+    public ArrayList< <%= SourceView.Name %>BO> getData(String[] filter) {
+        this.openWriteDataBase();
+        
+        ArrayList< <%= SourceView.Name %>BO> list = new ArrayList< <%= SourceView.Name %>BO>();
+        String sql = "SELECT * FROM <%= SourceView.Name %>";
+        Cursor res = getDB().rawQuery(sql, filter);
+
+        if (res.getCount() != 0) {
+            while (res.moveToNext()) {
+                <%= SourceView.Name %>BO obj = new <%= SourceView.Name %>BO();
+
+<%
+foreach(ViewColumnSchema c in SourceView.Columns)
+{
+    string systemTypeString = GetSystemTypeString(Map.Load(GetMapFileFullName("System-JavaAlias.csmap")),
+        Map.Load(GetMapFileFullName("System-JavaNullable.csmap")), c.SystemType.FullName, c.AllowDBNull);
+%>
+                obj.set<%= c.Name %>(res.get<%= systemTypeString %>(res.getColumnIndex("<%= c.Name %>")));
+<%
+}
+%>
+
+                list.add(obj);
+            }
+        }
+        
+        this.close();
+        return list;
+    }
+
+}

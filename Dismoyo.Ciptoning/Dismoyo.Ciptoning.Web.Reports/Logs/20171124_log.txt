@@ -1,0 +1,2 @@
+[2017-11-24 03:08:45] 'Application Start' event has ocurred.
+[2017-11-24 03:08:45] ERROR: [e491deb8-529d-4d42-890c-444284f1bf5a] Could not load type 'AIO.IDOS2.Web.Reports.SiteMaster'.

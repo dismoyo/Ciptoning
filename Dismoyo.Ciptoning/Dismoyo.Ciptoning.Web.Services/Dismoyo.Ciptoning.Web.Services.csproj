@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFB84BB6-8E92-4625-8091-A3CFAACD30DE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dismoyo.Ciptoning.Web.Services</RootNamespace>
+    <AssemblyName>Dismoyo.Ciptoning.Web.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.5.8.4\lib\net40\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.EntityFrameworkProvider, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.EntityFrameworkProvider.1.0.0-beta2\lib\net40\Microsoft.OData.EntityFrameworkProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.6\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AuthService.svc" />
+    <Content Include="DataService.svc">
+      <BrowseToURL>~/DataService.svc</BrowseToURL>
+    </Content>
+    <Content Include="CommonService.svc" />
+    <Content Include="FileService.svc" />
+    <Content Include="Files\Temp\177288dc-edb5-a69a-d5f8-d93c55b8a0f8.jpg" />
+    <Content Include="Files\Temp\573900b4-e48e-754b-4794-9891357730ab.png" />
+    <Content Include="Files\Temp\697310da-e80d-1e67-a7a5-7f689492c3bd.png" />
+    <Content Include="Files\Temp\80c364b5-45fb-bd1f-655d-6d6b5d66093f.png" />
+    <Content Include="Files\Temp\8f5cab62-abb0-500d-18bf-cbbc65fc45dd.png" />
+    <Content Include="Files\Temp\c7509c7c-31b3-6fd9-4525-19a3e3c2826b.png" />
+    <Content Include="Files\Temp\e17b435f-3d75-93bc-8dc9-6a894dbf9132.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\StartOfDayController.cs" />
+    <Compile Include="AuthService.svc.cs">
+      <DependentUpon>AuthService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DataService.svc.cs">
+      <DependentUpon>DataService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DataService\DataService.svc.vCommon.cs" />
+    <Compile Include="DataService\DataService.svc.vCustomerStockOnHandPeriodics.cs" />
+    <Compile Include="DataService\DataService.svc.vMerchandiseDisplayActivities.cs" />
+    <Compile Include="DataService\DataService.svc.vPermissionObjects.cs" />
+    <Compile Include="DataService\DataService.svc.vPromoMaterialActivities.cs" />
+    <Compile Include="DataService\DataService.svc.vPromoProducts.cs" />
+    <Compile Include="DataService\DataService.svc.vAuthorizationAccessToken.cs" />
+    <Compile Include="DataService\DataService.svc.vRoles.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmanActivityReports.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmanCallLogs.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmanCalls.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmanInitialCalls.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmanTargets.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmanProductTargets.cs" />
+    <Compile Include="DataService\DataService.svc.vSFADashboardDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vSFADashboards.cs" />
+    <Compile Include="DataService\DataService.svc.vSyncHistories.cs" />
+    <Compile Include="DataService\DataService.svc.vClosingPeriods.cs" />
+    <Compile Include="DataService\DataService.svc.vCustomerCategories.cs" />
+    <Compile Include="DataService\DataService.svc.vDiscountGroupProducts.cs" />
+    <Compile Include="DataService\DataService.svc.vProductPrices.cs" />
+    <Compile Include="DataService\DataService.svc.vRoutePlanCustomers.cs" />
+    <Compile Include="DataService\DataService.svc.vRoutePlans.cs" />
+    <Compile Include="DataService\DataService.svc.vRoutePlanSalesmen.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmanProducts.cs" />
+    <Compile Include="DataService\DataService.svc.vDiscountStrataDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vDiscountStratas.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderReturnDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderFOCDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderReturns.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderFOCs.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderReturnSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderFOCSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderSwapDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderSampleDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderSwaps.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderSamples.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderSwapSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderSampleSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vSiteProducts.cs" />
+    <Compile Include="DataService\DataService.svc.vStockDisposals.cs" />
+    <Compile Include="DataService\DataService.svc.vStockDisposalDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vStockDisposalSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vStockOnHandAlls.cs" />
+    <Compile Include="DataService\DataService.svc.vStockOnHandAvailables.cs" />
+    <Compile Include="DataService\DataService.svc.vProductBrands.cs" />
+    <Compile Include="DataService\DataService.svc.vProductLots.cs" />
+    <Compile Include="DataService\DataService.svc.vStockChanges.cs" />
+    <Compile Include="DataService\DataService.svc.vSites.cs" />
+    <Compile Include="DataService\DataService.svc.vCompanies.cs" />
+    <Compile Include="DataService\DataService.svc.vAreas.cs" />
+    <Compile Include="DataService\DataService.svc.vProducts.cs" />
+    <Compile Include="DataService\DataService.svc.vRegions.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesmen.cs" />
+    <Compile Include="DataService\DataService.svc.vCustomers.cs" />
+    <Compile Include="DataService\DataService.svc.vStockChangesDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vStockChangesSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrders.cs" />
+    <Compile Include="DataService\DataService.svc.vSalesOrderSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vStockReceiveDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vStockReceives.cs" />
+    <Compile Include="DataService\DataService.svc.vStockReceiveSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vStockViews.cs" />
+    <Compile Include="DataService\DataService.svc.vStockTransferDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vStockOpnameDetails.cs" />
+    <Compile Include="DataService\DataService.svc.vStockTransferSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vStockOpnameSummaries.cs" />
+    <Compile Include="DataService\DataService.svc.vStockOpnames.cs" />
+    <Compile Include="DataService\DataService.svc.vStockTransfers.cs" />
+    <Compile Include="DataService\DataService.svc.vCountries.cs" />
+    <Compile Include="DataService\DataService.svc.vSystemLookups.cs" />
+    <Compile Include="DataService\DataService.svc.vDiscountGroups.cs" />
+    <Compile Include="DataService\DataService.svc.vSystemParameters.cs" />
+    <Compile Include="DataService\DataService.svc.ChangePasswords.cs" />
+    <Compile Include="DataService\DataService.svc.vUserNotifications.cs" />
+    <Compile Include="DataService\DataService.svc.vUserPermissionAlls.cs" />
+    <Compile Include="DataService\DataService.svc.vUserRolePermissions.cs" />
+    <Compile Include="DataService\DataService.svc.vUserRoleAlls.cs" />
+    <Compile Include="DataService\DataService.svc.vUserRoles.cs" />
+    <Compile Include="DataService\DataService.svc.vUsers.cs" />
+    <Compile Include="DataService\DataService.svc.vTerritories.cs" />
+    <Compile Include="DataService\DataService.svc.vWarehouses.cs" />
+    <Compile Include="CommonService.svc.cs">
+      <DependentUpon>CommonService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="FileService.svc.cs">
+      <DependentUpon>FileService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IAuthService.cs" />
+    <Compile Include="ICommonService.cs" />
+    <Compile Include="IFileService.cs" />
+    <Compile Include="IImageSource.cs" />
+    <Compile Include="ImageStreamProvider.cs" />
+    <Compile Include="JSONPSupportBehavior.cs" />
+    <Compile Include="DataModelExtensions.cs" />
+    <Compile Include="JSONPSupportInspector.cs" />
+    <Compile Include="MultipartParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LastSyncResult.cs" />
+    <Compile Include="UploadController.cs" />
+    <Content Include="Global.asax" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="CorsSupport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\iDOS2.pubxml" />
+    <None Include="Properties\PublishProfiles\Server.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\StockChanges\" />
+    <Folder Include="Files\StockDisposals\" />
+    <Folder Include="Files\StockOpnames\" />
+    <Folder Include="Files\StockReceivals\" />
+    <Folder Include="Files\StockTransfers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Data.LinqToEntity\Dismoyo.Ciptoning.Data.LinqToEntity.csproj">
+      <Project>{12b3a6e3-8a05-424c-b0ab-c56d82961220}</Project>
+      <Name>Dismoyo.Ciptoning.Data.LinqToEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Data\Dismoyo.Ciptoning.Data.csproj">
+      <Project>{4f0d8033-8deb-424b-94a4-31651423a695}</Project>
+      <Name>Dismoyo.Ciptoning.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Web\Dismoyo.Ciptoning.Web.csproj">
+      <Project>{712995f0-eb17-4234-88a7-bc0a126f56fc}</Project>
+      <Name>Dismoyo.Ciptoning.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Data.LinqToEntity\Dismoyo.Data.LinqToEntity.csproj">
+      <Project>{8d465f75-cd28-47e7-bd2f-73e6b8d1b7bb}</Project>
+      <Name>Dismoyo.Data.LinqToEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Data\Dismoyo.Data.csproj">
+      <Project>{fdc5213a-3b33-47a5-858c-f46de29df569}</Project>
+      <Name>Dismoyo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Utilities\Dismoyo.Utilities.csproj">
+      <Project>{8bd5cead-a880-4a18-a560-502da4c4ad09}</Project>
+      <Name>Dismoyo.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Web\Dismoyo.Web.csproj">
+      <Project>{850677ff-5f70-46c2-b1be-c28a90b79d69}</Project>
+      <Name>Dismoyo.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

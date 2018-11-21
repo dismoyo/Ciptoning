@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>IDOS 2.0</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <link rel="stylesheet" type="text/css" href="css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="css/dx.common.css" />
+    <!--<link rel="dx-theme" data-theme="generic.light" href="css/dx.light.css" data-active="true" />-->
+    <!--<link rel="dx-theme" data-theme="light.compact" href="css/dx.light.compact.css" data-active="true" />-->
+    <link rel="stylesheet" href="css/generic.light-compact.custom.css" />
+    <!-- Other available themes:DX
+        <link rel="dx-theme" data-theme="contrast" href="css/dx.contrast.css" data-active="true" />
+        <link rel="dx-theme" data-theme="contrast.compact" href="css/dx.contrast.compact.css" data-active="true" />
+        <link rel="stylesheet" href="css/dx.dark.css" />
+        <link rel="dx-theme" data-theme="dark.compact" href="css/dx.dark.compact.css" data-active="true" />
+    -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
+    <!-- Read the Localization section of the migration guide for more details http://dxpr.es/1TXqrVS -->
+    <script type="text/javascript" src="js/cldr.min.js"></script>
+    <script type="text/javascript" src="js/cldr/event.min.js"></script>
+    <script type="text/javascript" src="js/cldr/supplemental.min.js"></script>
+    <script type="text/javascript" src="js/globalize.min.js"></script>
+    <script type="text/javascript" src="js/globalize/number.min.js"></script>
+    <script type="text/javascript" src="js/globalize/date.min.js"></script>
+    <script type="text/javascript" src="js/globalize/message.min.js"></script>
+    <script type="text/javascript" src="js/globalize/currency.min.js"></script>
+    <script type="text/javascript" src="js/numeral.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+
+    <script type="text/javascript" src="js/dx.all.js"></script>
+    <!--
+    <script type="text/javascript" src="js/dx.all.debug.js"></script>
+    -->
+
+    <script type="text/javascript" src="js/jquery-ui-1.11.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.layout-1.4.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.layout-1.4.3.css" />
+
+    <script type="text/javascript" src="js/jquery.layout.resizeTabLayout-1.3.js"></script>
+
+    <script type="text/javascript" src="js/jquery.resize.js"></script>
+    <script type="text/javascript" src="js/detect-element-resize.js"></script>
+
+
+
+    <script type="text/javascript" src="Dismoyo_Ciptoning_Client.shared.config.js"></script>
+    <script type="text/javascript" src="Dismoyo_Ciptoning_Client.config.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="index.js"></script>
+
+
+    <!-- [BEGIN] REL MODE: This statements should be used when in release mode to improve performance.
+        <link rel="stylesheet" type="text/css" href="minify/Dismoyo_Ciptoning_Client.Desktop.min.css" />
+        <script type="text/javascript" src="minify/Dismoyo_Ciptoning_Client.Desktop.min.js"></script>
+    <!-- [END] REL MODE -->
+    <!-- [BEGIN] DEV MODE: This statements should be used when in development mode only. -->
+
+    <link rel="stylesheet" href="css/icons8.css" />
+
+    <script type="text/javascript" src="Data/DB.js"></script>
+    <script type="text/javascript" src="Data/LocalStore.js"></script>
+
+
+    <script type="text/javascript" src="Utilities/CommonUtility.js"></script>
+    <script type="text/javascript" src="Utilities/DXUtility.js"></script>
+    <script type="text/javascript" src="Utilities/DataUtility.js"></script>
+    <script type="text/javascript" src="Utilities/DateTimeUtility.js"></script>
+    <script type="text/javascript" src="Utilities/HtmlUtility.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="Layouts/Desktop/DesktopLayout.css" />
+
+    <script type="text/javascript" src="Views/ChangePassword/ChangePassword.js"></script>
+    <script type="text/javascript" src="Layouts/Desktop/DesktopLayout.js"></script>
+
+    <script type="text/javascript" src="Data/vSystemParameter/Generated/vSystemParameterViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vUser/Generated/vUserViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vRole/Generated/vRoleViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vUserRole/Generated/vUserRoleViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vUserRoleAll/Generated/vUserRoleAllViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vPermissionObject/Generated/vPermissionObjectViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vUserRolePermission/Generated/vUserRolePermissionViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vUserPermissionAll/Generated/vUserPermissionAllViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vUserNotification/Generated/vUserNotificationViewModel.generated.js"></script>
+    <script type="text/javascript" src="Views/Login/Login.js"></script>
+    
+    <script type="text/javascript" src="Views/Shared/collapsibleFilter.js"></script>
+    <script type="text/javascript" src="Views/Shared/commonGridView.js"></script>
+    <script type="text/javascript" src="Views/Shared/commonIFrame.js"></script>
+    <script type="text/javascript" src="Views/Shared/commonTreeView.js"></script>
+    <script type="text/javascript" src="Views/Shared/commonPopupEdit.js"></script>
+    <script type="text/javascript" src="Views/Shared/commonPopupIFrame.js"></script>
+    <script type="text/javascript" src="Views/Shared/productLotPopupEdit.js"></script>
+    
+    <script type="text/javascript" src="Data/vCountry/Generated/vCountryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSystemLookup/Generated/vSystemLookupViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vClosingPeriod/Generated/vClosingPeriodViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vTerritory/Generated/vTerritoryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vRegion/Generated/vRegionViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vArea/Generated/vAreaViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vCustomerCategory/Generated/vCustomerCategoryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSite/Generated/vSiteViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSiteProduct/Generated/vSiteProductViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vWarehouse/Generated/vWarehouseViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesman/Generated/vSalesmanViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesmanProduct/Generated/vSalesmanProductViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesmanTarget/Generated/vSalesmanTargetViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesmanProductTarget/Generated/vSalesmanProductTargetViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vCustomer/Generated/vCustomerViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vCompany/Generated/vCompanyViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vProductBrand/Generated/vProductBrandViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vProduct/Generated/vProductViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vProductPrice/Generated/vProductPriceViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vProductLot/Generated/vProductLotViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vDiscountGroupProduct/Generated/vDiscountGroupProductViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vDiscountGroup/Generated/vDiscountGroupViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vDiscountStrataDetails/Generated/vDiscountStrataDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vDiscountStrata/Generated/vDiscountStrataViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockOnHandAvailable/Generated/vStockOnHandAvailableViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockOnHandAll/Generated/vStockOnHandAllViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockView/Generated/vStockViewViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockReceiveDetails/Generated/vStockReceiveDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockReceiveSummary/Generated/vStockReceiveSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockReceive/Generated/vStockReceiveViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockOpnameDetails/Generated/vStockOpnameDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockOpnameSummary/Generated/vStockOpnameSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockOpname/Generated/vStockOpnameViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockChangesDetails/Generated/vStockChangesDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockChangesSummary/Generated/vStockChangesSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockChanges/Generated/vStockChangesViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockDisposalDetails/Generated/vStockDisposalDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockDisposalSummary/Generated/vStockDisposalSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockDisposal/Generated/vStockDisposalViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockTransferDetails/Generated/vStockTransferDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockTransferSummary/Generated/vStockTransferSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vStockTransfer/Generated/vStockTransferViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderDetails/Generated/vSalesOrderDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderSummary/Generated/vSalesOrderSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrder/Generated/vSalesOrderViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderReturnDetails/Generated/vSalesOrderReturnDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderReturnSummary/Generated/vSalesOrderReturnSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderReturn/Generated/vSalesOrderReturnViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderFOCDetails/Generated/vSalesOrderFOCDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderFOCSummary/Generated/vSalesOrderFOCSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderFOC/Generated/vSalesOrderFOCViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderSampleDetails/Generated/vSalesOrderSampleDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderSampleSummary/Generated/vSalesOrderSampleSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderSample/Generated/vSalesOrderSampleViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderSwapDetails/Generated/vSalesOrderSwapDetailsViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderSwapSummary/Generated/vSalesOrderSwapSummaryViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesOrderSwap/Generated/vSalesOrderSwapViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vRoutePlan/Generated/vRoutePlanViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vRoutePlanSalesman/Generated/vRoutePlanSalesmanViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vRoutePlanCustomer/Generated/vRoutePlanCustomerViewModel.generated.js"></script>
+    <script type="text/javascript" src="Data/vSalesmanActivityReport/Generated/vSalesmanActivityReportViewModel.generated.js"></script>
+
+    <script type="text/javascript" src="Views/Home/Home.js"></script>
+    <!---->
+
+    <script type="text/javascript" src="Views/vSystemParameter/vSystemParameters.js"></script>
+    <script type="text/javascript" src="Views/vUser/vUsers.js"></script>
+    <script type="text/javascript" src="Views/vRole/vRoles.js"></script>
+    <script type="text/javascript" src="Views/vPermissionObject/vPermissionObjects.js"></script>
+    <script type="text/javascript" src="Views/vClosingPeriod/vClosingPeriods.js"></script>
+    <script type="text/javascript" src="Views/vTerritory/vTerritories.js"></script>
+    <script type="text/javascript" src="Views/vRegion/vRegions.js"></script>
+    <script type="text/javascript" src="Views/vArea/vAreas.js"></script>
+    <script type="text/javascript" src="Views/vCustomerCategory/vCustomerCategories.js"></script>
+    <script type="text/javascript" src="Views/vSite/vSites.js"></script>
+    <script type="text/javascript" src="Views/vWarehouse/vWarehouses.js"></script>
+    <script type="text/javascript" src="Views/vSalesman/vSalesmen.js"></script>
+    <script type="text/javascript" src="Views/vSalesmanTarget/vSalesmanTargets.js"></script>
+    <script type="text/javascript" src="Views/vCustomer/vCustomers.js"></script>
+    <script type="text/javascript" src="Views/vCompany/vCompanies.js"></script>
+    <script type="text/javascript" src="Views/vProductBrand/vProductBrands.js"></script>
+    <script type="text/javascript" src="Views/vProduct/vProducts.js"></script>
+    <script type="text/javascript" src="Views/vProductPrice/vProductPrices.js"></script>
+    <script type="text/javascript" src="Views/vDiscountGroup/vDiscountGroups.js"></script>
+    <script type="text/javascript" src="Views/vDiscountStrata/vDiscountStratas.js"></script>
+    <script type="text/javascript" src="Views/vStockView/vStockViews.js"></script>
+    <script type="text/javascript" src="Views/vStockReceive/vStockReceives.js"></script>
+    <script type="text/javascript" src="Views/vStockOpname/vStockOpnames.js"></script>
+    <script type="text/javascript" src="Views/vStockChanges/vStockChanges.js"></script>
+    <script type="text/javascript" src="Views/vStockDisposal/vStockDisposals.js"></script>
+    <script type="text/javascript" src="Views/vStockTransfer/vStockTransfers.js"></script>
+    <script type="text/javascript" src="Views/vSalesOrder/vSalesOrders.js"></script>
+    <script type="text/javascript" src="Views/vSalesOrderReturn/vSalesOrderReturns.js"></script>
+    <script type="text/javascript" src="Views/vSalesOrderFOC/vSalesOrderFOCs.js"></script>
+    <script type="text/javascript" src="Views/vSalesOrderSample/vSalesOrderSamples.js"></script>
+    <script type="text/javascript" src="Views/vSalesOrderSwap/vSalesOrderSwaps.js"></script>
+    <script type="text/javascript" src="Views/vRoutePlan/vRoutePlans.js"></script>
+    <script type="text/javascript" src="Views/vDailySalesReport/vDailySalesReports.js"></script>
+    <script type="text/javascript" src="Views/vDailySalesmanReport/vDailySalesmanReports.js"></script>
+    <script type="text/javascript" src="Views/vSalesByChannelReport/vSalesByChannelReports.js"></script>    
+    <script type="text/javascript" src="Views/vSalesBySiteReport/vSalesBySiteReports.js"></script>
+    <script type="text/javascript" src="Views/vSalesByOrderReport/vSalesByOrderReports.js"></script>
+    <script type="text/javascript" src="Views/vCustomerMasterReport/vCustomerMasterReports.js"></script>
+    <script type="text/javascript" src="Views/vSalesmanActivityReport/vSalesmanActivityReports.js"></script>
+    <!-- [END] DEV MODE -->
+
+    <link rel="dx-template" type="text/html" href="Views/ChangePassword/ChangePassword.dxview" />
+    <link rel="dx-template" type="text/html" href="Layouts/Desktop/DesktopLayout.html" />
+    <link rel="dx-template" type="text/html" href="Views/Login/Login.dxview" />    
+    <link rel="dx-template" type="text/html" href="Views/Shared/contentHeader.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/Shared/collapsibleFilter.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/Shared/commonGridView.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/Shared/commonIFrame.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/Shared/commonTreeView.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/Shared/commonPopupEdit.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/Shared/commonPopupIFrame.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/Shared/productLotPopupEdit.dxview" />    
+    <link rel="dx-template" type="text/html" href="Views/Home/Home.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSystemParameter/vSystemParameters.dxview" />
+    <!--<link rel="dx-template" type="text/html" href="Views/vUser/vUsers.dxview" />
+    <!--<link rel="dx-template" type="text/html" href="Views/vRole/vRoles.dxview" />
+    <!--<link rel="dx-template" type="text/html" href="Views/vPermissionObject/vPermissionObjects.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vClosingPeriod/vClosingPeriods.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vTerritory/vTerritories.dxview" />    
+    <link rel="dx-template" type="text/html" href="Views/vRegion/vRegions.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vArea/vAreas.dxview" />-->
+    <!--<link rel="dx-template" type="text/html" href="Views/vCustomerCategory/vCustomerCategories.dxview" />-->
+    <!--<link rel="dx-template" type="text/html" href="Views/vSite/vSites.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vWarehouse/vWarehouses.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesman/vSalesmen.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesmanTarget/vSalesmanTargets.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vCustomer/vCustomers.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vCompany/vCompanies.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vProductBrand/vProductBrands.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vProduct/vProducts.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vProductPrice/vProductPrices.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vDiscountGroup/vDiscountGroups.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vDiscountStrata/vDiscountStratas.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vStockView/vStockViews.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vStockReceive/vStockReceives.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vStockOpname/vStockOpnames.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vStockChanges/vStockChanges.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vStockDisposal/vStockDisposals.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vStockTransfer/vStockTransfers.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesOrder/vSalesOrders.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesOrderReturn/vSalesOrderReturns.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesOrderFOC/vSalesOrderFOCs.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesOrderSample/vSalesOrderSamples.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesOrderSwap/vSalesOrderSwaps.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vRoutePlan/vRoutePlans.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vDailySalesReport/vDailySalesReports.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vDailySalesmanReport/vDailySalesmanReports.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesByChannelReport/vSalesByChannelReports.dxview" />    
+    <link rel="dx-template" type="text/html" href="Views/vSalesBySiteReport/vSalesBySiteReports.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesByOrderReport/vSalesByOrderReports.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vCustomerMasterReport/vCustomerMasterReports.dxview" />
+    <link rel="dx-template" type="text/html" href="Views/vSalesmanActivityReport/vSalesmanActivityReports.dxview" />-->
+    <!--<link rel="dx-template" type="text/html" href="Views/about.html" />
+    <link rel="dx-template" type="text/html" href="Views/blank.html" />-->
+</head>
+
+<body>
+
+    <div class="dx-viewport ui-layout-center full-space"></div>
+
+</body>
+</html>

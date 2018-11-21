@@ -1,0 +1,17 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vDailySalesmanReports', title: 'Daily Salesman Reports', pane: 'master' }">
+    <div id="vDailySalesmanReports_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vDailySalesmanReports_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vDailySalesmanReports_viewSubContent" class="ui-layout-center full-space">
+            <div id="vDailySalesmanReports_collapsibleFilter" class="desktop-collapsibleFilter"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vDailySalesmanReports_commonIFrame" class="desktop-commonIFrame ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonIFrame' }"></div>
+        </div>
+    </div>
+</div>

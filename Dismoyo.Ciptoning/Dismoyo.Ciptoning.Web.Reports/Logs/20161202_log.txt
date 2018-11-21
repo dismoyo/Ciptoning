@@ -1,0 +1,186 @@
+[2016-12-02 05:32:16] 'Application Start' event has ocurred.
+[2016-12-02 05:35:18] ERROR: [83d998e7-1e94-4e93-9d4a-290267dc4ea1] No such host is known
+[2016-12-02 05:37:34] ERROR: [4525e4bc-4f05-4189-a30f-27c2c07a5244] No such host is known
+[2016-12-02 06:41:23] 'Application Start' event has ocurred.
+[2016-12-02 06:56:07] 'Application Start' event has ocurred.
+[2016-12-02 06:58:54] 'Application Start' event has ocurred.
+[2016-12-02 07:02:09] 'Application Start' event has ocurred.
+[2016-12-02 07:02:10] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '3d052629cab84ce98f7ae2bc59dc79e9' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:10:46] 'Application Start' event has ocurred.
+[2016-12-02 07:11:29] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '9a73fabb76144e779aea70d3a500907e' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:17:58] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.StartBuild (startBuild): System.ArgumentException: Report '617f77db643847e88c9650fe54da6110' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.ReportManagementService.DoWithReportById[T](String id, Func`2 func)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:19:50] 'Application Start' event has ocurred.
+[2016-12-02 07:20:05] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '5cab3cb204fa4a97ba0c77a2d47108e4' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:20:36] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document 'f0bc7526a9b642938285e8d426f4b6b4' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:20:57] 'Application Start' event has ocurred.
+[2016-12-02 07:23:14] 'Application Start' event has ocurred.
+[2016-12-02 07:24:16] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '963297ed6af247f5a37b8166ccd97fa8' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:24:43] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '3608cc97f3de486b8c5d63c9631862f5' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:27:37] 'Application Start' event has ocurred.
+[2016-12-02 07:27:54] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '27ca9d30160a4455aa213e91e5067ec9' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:29:45] 'Application Start' event has ocurred.
+[2016-12-02 07:31:19] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document 'b26bf153e5ef4ecb9dbee804a50b7851' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:37:21] 'Application Start' event has ocurred.
+[2016-12-02 07:37:22] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '329de1c611324f6ea8e9ec53c3661406' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:44:25] 'Application Start' event has ocurred.
+[2016-12-02 07:44:28] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document 'e553b8e4e777434eae2c16a25ed2eb25 not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.GetDocumentDirectoryPath(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:44:36] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '73bb01e4e9fd4a20b464381ac5db1b42 not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.GetDocumentDirectoryPath(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 07:51:40] 'Application Start' event has ocurred.
+[2016-12-02 07:52:43] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '9140cbeb3c6f46d09c3bde59a4780876' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 08:18:41] 'Application Start' event has ocurred.
+[2016-12-02 08:19:44] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document 'ef5ce99cefca4410baf37d51d9df9dca' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 08:31:39] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.StartBuild (startBuild): System.ArgumentException: Report 'ca5ede54f47f4a6d8c79ff876ae7fc3d' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.ReportManagementService.DoWithReportById[T](String id, Func`2 func)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 08:34:40] 'Application Start' event has ocurred.
+[2016-12-02 08:41:34] 'Application Start' event has ocurred.
+[2016-12-02 08:41:53] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '10bbc6553cd74492bf1d0e02c7c9e1c8' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 08:43:37] 'Application Start' event has ocurred.
+[2016-12-02 08:45:29] 'Application Start' event has ocurred.
+[2016-12-02 08:46:40] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.GetBuildStatus (getBuildStatus): System.ArgumentException: Document '5764af4fb2f44c1eb96a4ffa8837016c' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.DocumentStorageExtensions.DoWithBuildResult[T](IDocumentStorage documentStorage, String id, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetBuildStatus(BuildStatusRequest buildStatusRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-02 08:47:36] 'Application Start' event has ocurred.
+[2016-12-02 08:50:26] 'Application Start' event has ocurred.
+[2016-12-02 09:50:33] 'Application Start' event has ocurred.
+[2016-12-02 09:56:01] ERROR: [e4e8733b-fb51-4647-a03a-098bfa17bd2d] The wait operation timed out
+[2016-12-02 09:56:46] 'Application Start' event has ocurred.
+[2016-12-02 10:02:36] 'Application Start' event has ocurred.
+[2016-12-02 10:29:43] 'Application Start' event has ocurred.
+[2016-12-02 11:18:40] 'Application Start' event has ocurred.
+[2016-12-02 01:25:21] 'Application Start' event has ocurred.
+[2016-12-02 01:41:41] 'Application Start' event has ocurred.
+[2016-12-02 01:49:42] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentException: Document '8abcf45fb5424eb1a712dddf9ae4e98f' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-02 01:59:56] 'Application Start' event has ocurred.
+[2016-12-02 02:02:01] 'Application Start' event has ocurred.

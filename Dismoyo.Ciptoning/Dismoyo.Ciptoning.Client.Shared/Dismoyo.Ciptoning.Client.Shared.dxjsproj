@@ -1,0 +1,1014 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35a65fac-be50-47da-881e-4a6b1b24b316}</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <UploadPluginsToTheCourier>True</UploadPluginsToTheCourier>
+    <Name>Shared</Name>
+    <RootNamespace>Dismoyo_Ciptoning_Client</RootNamespace>
+    <ApkDexFilePackageName>com.devextreme.AIO.IDOS2.Client.Shared</ApkDexFilePackageName>
+    <XapPackagePublisherID>{c50830eb-7a93-46f3-a65d-cfbd31423f3b}</XapPackagePublisherID>
+    <XapPackageProductID>{355ebe08-72dd-4ab4-8915-bc822894f314}</XapPackageProductID>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <UpgradeNotifyShown>17.2.3</UpgradeNotifyShown>
+    <ApplicationPage />
+    <ScreenOrientation>Default</ScreenOrientation>
+    <ApplicationTitle>Dismoyo.Ciptoning.Client.Shared</ApplicationTitle>
+    <VersionPackage>1.0.0.0</VersionPackage>
+    <ShowSplashScreen>True</ShowSplashScreen>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery-ui.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery-ui.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dismoyo_Ciptoning_Client.shared.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bundleconfig.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\jquery.layout-1.4.3.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.accordion.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.all.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.base.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.button.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.core.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.dialog.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.resizable.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.selectable.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.slider.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.tabs.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\themes\base\jquery.ui.theme.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\generic.light-compact.custom.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\jquery.layout-1.4.3.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\LocalStore.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\DB.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vArea\Generated\vAreaViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vClosingPeriod\Generated\vClosingPeriodViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vCompany\Generated\vCompanyViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vCountry\Generated\vCountryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vCustomerCategory\Generated\vCustomerCategoryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vCustomer\Generated\vCustomerViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vDiscountGroup\Generated\vDiscountGroupViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vDiscountStrataDetails\Generated\vDiscountStrataDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vDiscountStrata\Generated\vDiscountStrataViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vPermissionObject\Generated\vPermissionObjectViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vProductBrand\Generated\vProductBrandViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vDiscountGroupProduct\Generated\vDiscountGroupProductViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vProductLot\Generated\vProductLotViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vProductPrice\Generated\vProductPriceViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vProduct\Generated\vProductViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vRegion\Generated\vRegionViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vRole\Generated\vRoleViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vRoutePlanCustomer\Generated\vRoutePlanCustomerViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vRoutePlanSalesman\Generated\vRoutePlanSalesmanViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vRoutePlan\Generated\vRoutePlanViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesmanActivityReport\Generated\vSalesmanActivityReportViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesmanProductTarget\Generated\vSalesmanProductTargetViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesmanProduct\Generated\vSalesmanProductViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesmanTarget\Generated\vSalesmanTargetViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesman\Generated\vSalesmanViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderDetails\Generated\vSalesOrderDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderFOCDetails\Generated\vSalesOrderFOCDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderFOCSummary\Generated\vSalesOrderFOCSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderFOC\Generated\vSalesOrderFOCViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderReturnDetails\Generated\vSalesOrderReturnDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderReturnSummary\Generated\vSalesOrderReturnSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderReturn\Generated\vSalesOrderReturnViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderSampleDetails\Generated\vSalesOrderSampleDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderSampleSummary\Generated\vSalesOrderSampleSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderSample\Generated\vSalesOrderSampleViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderSummary\Generated\vSalesOrderSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderSwapDetails\Generated\vSalesOrderSwapDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderSwapSummary\Generated\vSalesOrderSwapSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrderSwap\Generated\vSalesOrderSwapViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSalesOrder\Generated\vSalesOrderViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSiteAdditionalInfo\Generated\vSiteAdditionalInfoViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSiteProduct\Generated\vSiteProductViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSite\Generated\vSiteViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockChangesDetails\Generated\vStockChangesDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockChangesSummary\Generated\vStockChangesSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockChanges\Generated\vStockChangesViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockDisposalDetails\Generated\vStockDisposalDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockDisposalSummary\Generated\vStockDisposalSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockDisposal\Generated\vStockDisposalViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockOnHandAll\Generated\vStockOnHandAllViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockOnHandAvailable\Generated\vStockOnHandAvailableViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockOpnameDetails\Generated\vStockOpnameDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockOpnameSummary\Generated\vStockOpnameSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockOpname\Generated\vStockOpnameViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockReceiveDetails\Generated\vStockReceiveDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockReceiveSummary\Generated\vStockReceiveSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockReceive\Generated\vStockReceiveViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockTransferDetails\Generated\vStockTransferDetailsViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockTransferSummary\Generated\vStockTransferSummaryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockTransfer\Generated\vStockTransferViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vStockView\Generated\vStockViewViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSystemLookup\Generated\vSystemLookupViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vSystemParameter\generated\vSystemParameterViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vTerritory\Generated\vTerritoryViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vUserNotification\Generated\vUserNotificationViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vUserPermissionAll\Generated\vUserPermissionAllViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vUserRoleAll\Generated\vUserRoleAllViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vUserRolePermission\Generated\vUserRolePermissionViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vUserRole\Generated\vUserRoleViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vUser\Generated\vUserViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\vWarehouse\Generated\vWarehouseViewModel.generated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\area_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\close_period_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\company_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\company_logo_small.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\customer_master_report_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\daily_salesman_report_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\daily_sales_report_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\home_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\reports_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\route_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\route_plan_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\logout_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\master_data_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\salesman_target_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_by_channel_report_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_by_order_report_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_by_site_report_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\settings_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\stock_receive_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_order_swap_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_order_return_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_order_sample_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_order_foc_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\customer_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\discount_group_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\discount_promo_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\discount_strata_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\file_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\filter_24px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\folder_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\inventory_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\product_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\product_brand_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\product_price_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\region_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\salesman_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_order_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\sales_organization_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\site_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\stock_changes_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\stock_disposal_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\stock_opname_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\stock_transfer_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\stock_view_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\system_parameter_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\territory_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\user_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\role_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\user_menu_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\user_notification_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\user_notification_empty_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\permission_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\warehouse_32px.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\detect-element-resize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\draggable-0.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\cldr.min.js" />
+    <Content Include="js\cldr\event.min.js" />
+    <Content Include="js\cldr\supplemental.min.js" />
+    <Content Include="js\globalize\number.min.js" />
+    <Content Include="js\globalize\date.min.js" />
+    <Content Include="js\globalize\message.min.js" />
+    <Content Include="js\globalize\currency.min.js" />
+    <Content Include="js\globalize.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery-2.2.3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery-2.2.3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery-2.2.0.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery-ui-1.11.4.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery.layout-1.4.3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery.layout.resizeTabLayout-1.3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery.resize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\moment.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\numeral.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="minify\AIO_IDOS2_Client.Shared.min.js">
+      <SubType>Content</SubType>
+      <DependentUpon>minify\AIO_IDOS2_Client.Shared.js</DependentUpon>
+    </Content>
+    <Content Include="minify\Dismoyo_Ciptoning_Client.Shared.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="minify\Dismoyo_Ciptoning_Client.Shared.min.js">
+      <SubType>Content</SubType>
+      <DependentUpon>minify\Dismoyo_Ciptoning_Client.Shared.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\detect-element-resize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\draggable-0.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize\unit.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.2.3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1-vsdoc.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1.slim.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.11.4.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.12.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.8.11.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery.layout-1.4.3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery.resize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\json2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\json2.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\knockout-3.4.2.debug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\knockout-3.4.2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone-utils.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone-with-data-2010-2020.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone-with-data-2010-2020.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone-with-data-2012-2022.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone-with-data-2012-2022.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone-with-data.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone-with-data.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-timezone.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-with-locales.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment-with-locales.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\moment.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\numeral\numeral.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\numeral\numeral.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Utilities\CommonUtility.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Utilities\DataUtility.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Utilities\DateTimeUtility.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Utilities\DXUtility.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\company_logo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dx.all.js" />
+    <Content Include="js\dx.all.debug.js" />
+    <Content Include="js\localization\dx.messages.ru.js" />
+    <Content Include="js\localization\dx.messages.ja.js" />
+    <Content Include="js\localization\dx.messages.en.js" />
+    <Content Include="js\localization\dx.messages.de.js" />
+    <Content Include="js\localization\dx.all.de.js" />
+    <Content Include="js\localization\dx.all.ja.js" />
+    <Content Include="js\localization\dx.all.ru.js" />
+    <Content Include="js\jquery-1.12.3.min.js" />
+    <Content Include="js\knockout-3.4.0.js" />
+    <Content Include="css\dx.spa.css" />
+    <Content Include="css\dx.common.css" />
+    <Content Include="css\dx.contrast.compact.css" />
+    <Content Include="css\dx.contrast.css" />
+    <Content Include="css\dx.dark.compact.css" />
+    <Content Include="css\dx.light.compact.css" />
+    <Content Include="css\dx.dark.css" />
+    <Content Include="css\dx.light.css" />
+    <Content Include="css\dx.android5.light.css" />
+    <Content Include="css\dx.ios7.default.css" />
+    <Content Include="css\dx.win8.black.css" />
+    <Content Include="css\dx.win8.white.css" />
+    <Content Include="css\dx.win10.black.css" />
+    <Content Include="css\dx.win10.white.css" />
+    <Content Include="css\icons\dxicons.eot" />
+    <Content Include="css\icons\dxicons.ttf" />
+    <Content Include="css\icons\dxicons.woff" />
+    <Content Include="css\icons\dxiconsios.eot" />
+    <Content Include="css\icons\dxiconsios.ttf" />
+    <Content Include="css\icons\dxiconsios.woff" />
+    <Content Include="packages.config">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\cldr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\cldr\event.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\cldr\supplemental.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\cldr\unresolved.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize\currency.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize\date.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize\message.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize\number.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize\plural.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\globalize\relative-time.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.11.3-vsdoc.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.2.0-vsdoc.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.2.0.intellisense.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.2.3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.2.3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.2.0.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\knockout-3.4.0.debug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\knockout-3.4.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Utilities\HtmlUtility.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\about.html" />
+    <Content Include="Views\blank.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\themes\" />
+    <Folder Include="Content\themes\base\" />
+    <Folder Include="Content\themes\base\images\" />
+    <Folder Include="css" />
+    <Folder Include="css\icons" />
+    <Folder Include="Data" />
+    <Folder Include="Data\vSalesmanActivityReport" />
+    <Folder Include="Data\vSalesmanActivityReport\Generated\" />
+    <Folder Include="Data\vUserPermissionAll" />
+    <Folder Include="Data\vSalesmanProductTarget" />
+    <Folder Include="Data\vSalesmanProductTarget\Generated" />
+    <Folder Include="Data\vUserNotification" />
+    <Folder Include="Data\vUserNotification\Generated" />
+    <Folder Include="Data\vUserPermissionAll\Generated\" />
+    <Folder Include="Data\vUserRoleAll" />
+    <Folder Include="Data\vUserRoleAll\Generated\" />
+    <Folder Include="Data\vUserRolePermission" />
+    <Folder Include="Data\vPermissionObject" />
+    <Folder Include="Data\vPermissionObject\Generated\" />
+    <Folder Include="Data\vUserRole" />
+    <Folder Include="Data\vRole" />
+    <Folder Include="Data\vRole\Generated" />
+    <Folder Include="Data\vRoutePlanCustomer\" />
+    <Folder Include="Data\vRoutePlanCustomer\Generated\" />
+    <Folder Include="Data\vRoutePlanSalesman\" />
+    <Folder Include="Data\vRoutePlanSalesman\Generated\" />
+    <Folder Include="Data\vStockReceiveDetails\Generated\" />
+    <Folder Include="Data\vStockReceiveSummary" />
+    <Folder Include="Data\vStockReceiveDetails" />
+    <Folder Include="Data\vStockReceive" />
+    <Folder Include="Data\vSalesOrderSwapDetails" />
+    <Folder Include="Data\vSalesOrderSwapDetails\Generated\" />
+    <Folder Include="Data\vSalesOrderSwapSummary" />
+    <Folder Include="Data\vSalesOrderSwap" />
+    <Folder Include="Data\vSalesOrderFOCDetails\" />
+    <Folder Include="Data\vSalesOrderFOCDetails\Generated\" />
+    <Folder Include="Data\vSalesOrderReturnDetails" />
+    <Folder Include="Data\vSalesOrderReturnDetails\Generated\" />
+    <Folder Include="Data\vSalesOrderReturnSummary" />
+    <Folder Include="Data\vSalesOrderReturn" />
+    <Folder Include="Data\vSalesOrderFOCSummary" />
+    <Folder Include="Data\vSalesOrderFOC" />
+    <Folder Include="Data\vSalesOrderFOCSummary\Generated" />
+    <Folder Include="Data\vSalesOrderFOC\Generated" />
+    <Folder Include="Data\vSalesOrderReturnSummary\Generated\" />
+    <Folder Include="Data\vSalesOrderReturn\Generated\" />
+    <Folder Include="Data\vSalesOrderSampleDetails\" />
+    <Folder Include="Data\vSalesOrderSampleDetails\Generated\" />
+    <Folder Include="Data\vSalesOrderSampleSummary\" />
+    <Folder Include="Data\vSalesOrderSampleSummary\Generated\" />
+    <Folder Include="Data\vSalesOrderSample\" />
+    <Folder Include="Data\vSalesOrderSample\Generated\" />
+    <Folder Include="Data\vSalesOrderSwapSummary\Generated\" />
+    <Folder Include="Data\vSalesOrderSwap\Generated\" />
+    <Folder Include="Data\vStockReceiveSummary\Generated\" />
+    <Folder Include="Data\vStockReceive\Generated\" />
+    <Folder Include="Data\vSystemParameter" />
+    <Folder Include="Data\vSiteAdditionalInfo" />
+    <Folder Include="Data\vRoutePlan\" />
+    <Folder Include="Data\vRoutePlan\Generated\" />
+    <Folder Include="Data\vSalesOrderSummary" />
+    <Folder Include="Data\vSalesOrderDetails" />
+    <Folder Include="Data\vSalesOrder" />
+    <Folder Include="Data\vDiscountStrataDetails" />
+    <Folder Include="Data\vDiscountStrata" />
+    <Folder Include="Data\vDiscountGroup" />
+    <Folder Include="Data\vDiscountGroup\Generated" />
+    <Folder Include="Data\vDiscountStrataDetails\Generated" />
+    <Folder Include="Data\vDiscountStrata\Generated" />
+    <Folder Include="Data\vDiscountGroupProduct" />
+    <Folder Include="Data\vDiscountGroupProduct\Generated" />
+    <Folder Include="Data\vSalesmanProduct" />
+    <Folder Include="Data\vSalesmanProduct\Generated\" />
+    <Folder Include="Data\vSalesOrderDetails\Generated\" />
+    <Folder Include="Data\vSalesOrderSummary\Generated\" />
+    <Folder Include="Data\vSalesOrder\Generated" />
+    <Folder Include="Data\vSiteAdditionalInfo\Generated\" />
+    <Folder Include="Data\vStockView" />
+    <Folder Include="Data\vStockDisposalDetails" />
+    <Folder Include="Data\vStockDisposalDetails\Generated" />
+    <Folder Include="Data\vStockDisposalSummary" />
+    <Folder Include="Data\vSiteProduct" />
+    <Folder Include="Data\vSiteProduct\Generated" />
+    <Folder Include="Data\vStockDisposalSummary\Generated" />
+    <Folder Include="Data\vStockOnHandAll" />
+    <Folder Include="Data\vStockOnHandAll\Generated" />
+    <Folder Include="Data\vStockOnHandAvailable" />
+    <Folder Include="Data\vProductLot" />
+    <Folder Include="Data\vProductLot\Generated\" />
+    <Folder Include="Data\vStockChangesDetails\Generated\" />
+    <Folder Include="Data\vStockChangesSummary" />
+    <Folder Include="Data\vStockChangesDetails" />
+    <Folder Include="Data\vStockChanges" />
+    <Folder Include="Data\vStockChangesSummary\Generated\" />
+    <Folder Include="Data\vStockChanges\Generated\" />
+    <Folder Include="Data\vStockOnHandAvailable\Generated\" />
+    <Folder Include="Data\vStockTransferDetails\Generated\" />
+    <Folder Include="Data\vStockTransferSummary" />
+    <Folder Include="Data\vStockTransferDetails" />
+    <Folder Include="Data\vStockOpnameDetails" />
+    <Folder Include="Data\vStockOpnameDetails\Generated" />
+    <Folder Include="Data\vStockOpnameSummary" />
+    <Folder Include="Data\vStockOpnameSummary\Generated" />
+    <Folder Include="Data\vStockTransferSummary\Generated" />
+    <Folder Include="Data\vProductBrand" />
+    <Folder Include="Data\vCountry" />
+    <Folder Include="Data\vCountry\Generated" />
+    <Folder Include="Data\vCustomerCategory\" />
+    <Folder Include="Data\vCustomerCategory\Generated\" />
+    <Folder Include="Data\vCustomer\Generated\" />
+    <Folder Include="Data\vCustomer" />
+    <Folder Include="Data\vProductBrand\Generated" />
+    <Folder Include="Data\vSalesmanTarget" />
+    <Folder Include="Data\vSalesmanTarget\Generated" />
+    <Folder Include="Data\vSalesman\" />
+    <Folder Include="Data\vSalesman\Generated\" />
+    <Folder Include="Data\vStockOpname" />
+    <Folder Include="Data\vProduct" />
+    <Folder Include="Data\vProduct\Generated\" />
+    <Folder Include="Data\vStockDisposal" />
+    <Folder Include="Data\vClosingPeriod\" />
+    <Folder Include="Data\vClosingPeriod\Generated\" />
+    <Folder Include="Data\vStockOpname\Generated" />
+    <Folder Include="Data\vStockTransfer\" />
+    <Folder Include="Data\vStockTransfer\Generated\" />
+    <Folder Include="Data\vStockView\Generated" />
+    <Folder Include="Data\vSystemLookup\" />
+    <Folder Include="Data\vSystemLookup\Generated\" />
+    <Folder Include="Data\vSystemParameter\generated" />
+    <Folder Include="Data\vUserRolePermission\Generated\" />
+    <Folder Include="Data\vUserRole\Generated\" />
+    <Folder Include="Data\vWarehouse" />
+    <Folder Include="Data\vProductPrice\" />
+    <Folder Include="Data\vProductPrice\Generated\" />
+    <Folder Include="Data\vSite\" />
+    <Folder Include="Data\vSite\Generated\" />
+    <Folder Include="Data\vStockDisposal\Generated\" />
+    <Folder Include="Data\vUser" />
+    <Folder Include="Data\vCompany" />
+    <Folder Include="Data\vArea" />
+    <Folder Include="Data\vArea\Generated\" />
+    <Folder Include="Data\vCompany\Generated" />
+    <Folder Include="Data\vRegion" />
+    <Folder Include="Data\vRegion\Generated" />
+    <Folder Include="Data\vTerritory" />
+    <Folder Include="Data\vTerritory\Generated" />
+    <Folder Include="Data\vUser\Generated" />
+    <Folder Include="Data\vWarehouse\Generated\" />
+    <Folder Include="Images" />
+    <Folder Include="js\" />
+    <Folder Include="js\cldr\" />
+    <Folder Include="js\globalize\" />
+    <Folder Include="js\localization\" />
+    <Folder Include="minify\" />
+    <Folder Include="Scripts\numeral\" />
+    <Folder Include="Utilities" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\cldr\" />
+    <Folder Include="Scripts\globalize\" />
+    <Folder Include="Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+  <Import Project="..\packages\BuildBundlerMinifier.2.8.391\build\BuildBundlerMinifier.targets" Condition="Exists('..\packages\BuildBundlerMinifier.2.8.391\build\BuildBundlerMinifier.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\BuildBundlerMinifier.2.8.391\build\BuildBundlerMinifier.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildBundlerMinifier.2.8.391\build\BuildBundlerMinifier.targets'))" />
+  </Target>
+</Project>

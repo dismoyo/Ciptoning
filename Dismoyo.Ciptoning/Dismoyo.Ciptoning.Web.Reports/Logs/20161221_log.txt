@@ -1,0 +1,44 @@
+[2016-12-21 16:08:55] 'Application Start' event has ocurred.
+[2016-12-21 16:10:33] ERROR: [7811147d-c552-43b2-9351-28865791c20d] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:13:11] ERROR: [a7e11523-73a7-4e3a-8bec-3d271ccb8304] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:14:00] ERROR: [63c81a58-2895-45c6-af9d-c0eee3030588] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:14:30] ERROR: [1df606a1-4360-495a-8051-27cff8ca2497] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:17:00] ERROR: [a62ca9d9-ae59-4f52-8881-287edb1c7ef3] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:19:16] ERROR: [7c355b6d-732f-4250-ac74-8c94d783a4cc] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:19:40] ERROR: [2c72b468-3f40-46ee-9cc3-ed2999c7e70f] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:20:00] ERROR: [f330c4e3-b751-4d18-b0f7-285d6bf38798] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:20:16] ERROR: [66e00991-2ee1-4e49-af75-1d3750b786e8] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:23:07] ERROR: [510ca552-db7b-47ff-85d8-94a11fec339c] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:24:59] ERROR: [549469b4-5bc1-4bcb-bba1-b0025b5449f1] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:26:02] ERROR: [c02f397b-9313-4c92-9230-511483f6af58] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:30:12] 'Application Start' event has ocurred.
+[2016-12-21 16:31:25] ERROR: [0b546faf-4705-4ca1-acf5-b72c5a90ac82] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:35:58] ERROR: [e05a61ef-fea3-4531-b4d2-4494f7dc7f5d] Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+[2016-12-21 16:36:27] 'Application Start' event has ocurred.
+[2016-12-21 16:37:56] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.FileWebPreviewWritableDocument.DoWithBuildResult[T](Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-21 16:39:27] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.FileWebPreviewWritableDocument.DoWithBuildResult[T](Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-21 16:39:27] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.FileWebPreviewWritableDocument.DoWithBuildResult[T](Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)

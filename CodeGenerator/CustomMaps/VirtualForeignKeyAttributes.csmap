@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csmap.xsd">
+  <map caseSensitive="true" returnKeyWhenNotFound="false">
+    <item>
+      <key>CreatedByUserID</key>
+      <value>[dbo].[User]:[CU]:LEFT OUTER JOIN=[ID]:[CreatedByUserID],[Name]:[CreatedByUserName]</value>
+    </item>
+    <item>
+      <key>ModifiedByUserID</key>
+      <value>[dbo].[User]:[MU]:LEFT OUTER JOIN=[ID]:[ModifiedByUserID],[Name]:[ModifiedByUserName]</value>
+    </item>
+  </map>
+</codeSmith>

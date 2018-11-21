@@ -1,0 +1,210 @@
+﻿<%@ Template Language="C#" Src="..\BaseTemplate.cst.cs" Inherits="Generator.BaseTemplate" TargetLanguage="Java" Description="Create a class from database Table." %>
+<%@ Assembly Name="SchemaExplorer" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+
+<% %>
+package id.co.aio.sfa.dao;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import id.co.aio.sfa.utils.DatabaseHelper;
+import id.co.aio.sfa.bo;
+
+public class <%= SourceTable.Name %>DAO extends DatabaseHelper {                
+
+    //--------------------------------------------------------------------------------------------------
+    // Constructors
+    //--------------------------------------------------------------------------------------------------
+    
+    public <%= SourceTable.Name %>DAO(Context context){
+        super(context);
+    }
+
+    //--------------------------------------------------------------------------------------------------
+    // CRUD
+    //--------------------------------------------------------------------------------------------------
+    
+    public ArrayList< <%= SourceTable.Name %>BO> getData(String[] filter) {
+        this.openWriteDataBase();
+        
+        ArrayList< <%= SourceTable.Name %>BO> list = new ArrayList< <%= SourceTable.Name %>BO>();
+        String sql = "SELECT * FROM <%= SourceTable.Name %>";
+        Cursor res = getDB().rawQuery(sql, filter);
+
+        if (res.getCount() != 0) {
+            while (res.moveToNext()) {
+                <%= SourceTable.Name %>BO obj = new <%= SourceTable.Name %>BO();
+
+<%
+foreach(ColumnSchema c in SourceTable.Columns)
+{
+    string systemTypeString = GetSystemTypeString(Map.Load(GetMapFileFullName("System-JavaAlias.csmap")),
+        Map.Load(GetMapFileFullName("System-JavaNullable.csmap")), c.SystemType.FullName, c.AllowDBNull);
+%>
+                obj.set<%= c.Name %>(res.get<%= systemTypeString %>(res.getColumnIndex("<%= c.Name %>")));
+<%
+}
+%>
+
+                list.add(obj);
+            }
+        }
+        
+        this.close();
+        return list;
+    }
+    
+    public <%= SourceTable.Name %>BO getDataByKey(Object... keys) {
+        this.openWriteDataBase();
+        
+        String sql = "SELECT * FROM <%= SourceTable.Name %>";
+        
+        String filter = "";
+        for (int i = 0; i < keys.length) {
+            Object key = keys[i];
+            
+            if (i > 0)
+                filter += " AND ";
+            
+            switch (i) {
+<%
+    int i = 0;
+    foreach(ColumnSchema c in SourceTable.Columns)   
+    {
+        if(c.IsPrimaryKeyMember)
+        {
+%>
+                case <%= i.ToString() %>: filter += "<%= c.Name %> = " + key.toString(); break; // Please modified this code if it's not correct filter.
+<%
+            i++;
+        }
+    }
+%>
+        }
+        
+        Cursor res = getDb().rawQuery(sql, filter);
+        <%= SourceTable.Name %>BO obj = new <%= SourceTable.Name %>BO();
+        
+        if (res.getCount() != 0) {
+            while (res.moveToNext()) {
+<%
+foreach(ColumnSchema c in SourceTable.Columns)
+{
+    string systemTypeString = GetSystemTypeString(Map.Load(GetMapFileFullName("System-JavaAlias.csmap")),
+        Map.Load(GetMapFileFullName("System-JavaNullable.csmap")), c.SystemType.FullName, c.AllowDBNull);
+%>
+                obj.set<%= c.Name %>(res.get<%= systemTypeString %>(res.getColumnIndex("<%= c.Name %>")));
+<%
+}
+%>
+                break;
+            }
+        }
+        
+        this.close();
+        return obj;
+    }
+    
+    public boolean insert(<%= SourceTable.Name %>BO obj) {
+        this.openWriteDataBase();
+
+        ContentValues contentValues = new ContentValues();
+
+<%
+foreach(ColumnSchema c in SourceTable.Columns)
+{
+    string systemTypeString = GetSystemTypeString(Map.Load(GetMapFileFullName("System-JavaAlias.csmap")),
+        Map.Load(GetMapFileFullName("System-JavaNullable.csmap")), c.SystemType.FullName, c.AllowDBNull);
+%>
+        contentValues.put("<%= c.Name %>", obj.get<%= c.Name %>());
+<%
+}
+%>
+
+        long result = getDb().replace("<%= SourceTable.Name %>", null, contentValues);
+
+        this.close();
+        if (result == -1)
+            return false;
+        
+        return true;
+    }
+    
+    public boolean update(Object... keys){
+        this.openWriteDataBase();
+        
+        ContentValues contentValues = new ContentValues();
+        
+        String filter = "";
+        for (int i = 0; i < keys.length) {
+            Object key = keys[i];
+            
+            if (i > 0)
+                filter += " AND ";
+            
+            switch (i) {
+<%
+    i = 0;
+    foreach(ColumnSchema c in SourceTable.Columns)   
+    {
+        if(c.IsPrimaryKeyMember)
+        {
+%>
+                case <%= i.ToString() %>: filter += "<%= c.Name %> = " + key.toString(); break; // Please modified this code if it's not correct filter.
+<%
+            i++;
+        }
+    }
+%>
+        }
+                
+        long result = getDb().update("<%= SourceTable.Name %>", contentValues, filter, null);
+
+        this.close();
+        if (result == -1)
+            return false;
+        
+        return true;
+    }
+    
+    public boolean deleteRequestedStock(Object... keys) {
+        this.openWriteDataBase();
+        
+        String filter = "";
+        for (int i = 0; i < keys.length) {
+            Object key = keys[i];
+            
+            if (i > 0)
+                filter += " AND ";
+            
+            switch (i) {
+<%
+    i = 0;
+    foreach(ColumnSchema c in SourceTable.Columns)   
+    {
+        if(c.IsPrimaryKeyMember)
+        {
+%>
+                case <%= i.ToString() %>: filter += "<%= c.Name %> = " + key.toString(); break; // Please modified this code if it's not correct filter.
+<%
+            i++;
+        }
+    }
+%>
+
+        long result = getDb().delete("<%= SourceTable.Name %>", filter, null);
+        
+        this.close();
+        if (result == -1)
+            return false;
+        
+        return true;
+    }
+
+}

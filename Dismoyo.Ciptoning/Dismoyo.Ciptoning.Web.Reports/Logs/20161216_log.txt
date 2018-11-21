@@ -1,0 +1,21 @@
+[2016-12-16 10:03:32] 'Application Start' event has ocurred.
+[2016-12-16 10:13:06] 'Application Start' event has ocurred.
+[2016-12-16 10:14:42] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-16 10:15:21] 'Application Start' event has ocurred.
+[2016-12-16 10:19:33] 'Application Start' event has ocurred.
+[2016-12-16 10:27:31] 'Application Start' event has ocurred.
+[2016-12-16 10:27:55] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.StartBuild (startBuild): System.ArgumentException: Report '486e898ab93840c8bcbd7520c27a7722' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.ReportManagementService.DoWithReportById[T](String id, Func`2 func)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-16 05:53:35] 'Application Start' event has ocurred.
+[2016-12-16 06:31:59] 'Application Start' event has ocurred.

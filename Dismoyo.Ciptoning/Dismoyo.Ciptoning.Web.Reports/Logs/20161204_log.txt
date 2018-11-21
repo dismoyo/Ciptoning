@@ -1,0 +1,10 @@
+[2016-12-04 05:10:31] 'Application Start' event has ocurred.
+[2016-12-04 05:14:35] ERROR: [2a30a107-42d4-4239-91ee-fc6303fd70ed] The configured column orders for the table 'vDailySalesmanReport' contains duplicates. Ensure the specified column order values are distinct.
+[2016-12-04 05:14:42] ERROR: [21c8b8f2-8445-4546-83ec-4aedfeacf08c] The configured column orders for the table 'vDailySalesmanReport' contains duplicates. Ensure the specified column order values are distinct.
+[2016-12-04 05:14:45] ERROR: [4d3f029e-3fd6-46de-9396-f858fe12bd9a] The configured column orders for the table 'vDailySalesmanReport' contains duplicates. Ensure the specified column order values are distinct.
+[2016-12-04 05:15:29] ERROR: [098b38d2-ad54-4b5c-82e6-ac2663c07de4] The configured column orders for the table 'vDailySalesmanReport' contains duplicates. Ensure the specified column order values are distinct.
+[2016-12-04 05:18:25] 'Application Start' event has ocurred.
+[2016-12-04 05:19:08] ERROR: [cfc9feeb-5012-4cd8-8738-fe36ce2d236b] The specified cast from a materialized 'System.Int64' type to the 'System.Int32' type is not valid.
+[2016-12-04 05:19:10] ERROR: [c81035ab-4d94-4b8e-9168-c9da17954037] The specified cast from a materialized 'System.Int64' type to the 'System.Int32' type is not valid.
+[2016-12-04 05:19:18] ERROR: [3e381572-f33e-48ab-81ea-167291f9424b] The specified cast from a materialized 'System.Int64' type to the 'System.Int32' type is not valid.
+[2016-12-04 05:20:08] ERROR: [4b5a7f67-6958-4ac5-98e5-9c8a2500bf14] The specified cast from a materialized 'System.Int64' type to the 'System.Int32' type is not valid.

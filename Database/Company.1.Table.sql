@@ -1,0 +1,46 @@
+USE [IDOS];
+GO
+
+SET ANSI_NULLS ON;
+GO
+
+SET QUOTED_IDENTIFIER ON;
+GO
+
+CREATE TABLE [dbo].[Company]
+(
+    [ID] [int] IDENTITY(1,1) NOT NULL,
+    [Code] [nvarchar](10) NOT NULL,
+    [Name] [nvarchar](50) NOT NULL,
+    [TaxNumber] [nvarchar](20) NULL,
+	[StatusID] [int] NOT NULL CONSTRAINT [DF_Company_StatusID] DEFAULT (1),
+    [CreatedDate] [datetime] NOT NULL CONSTRAINT [DF_Company_CreatedDate] DEFAULT (GETUTCDATE()),
+    [CreatedByUserID] [int] NULL,
+    [ModifiedDate] [datetime] NULL,
+    [ModifiedByUserID] [int] NULL,
+    [IsDeleted] [bit] NOT NULL CONSTRAINT [DF_Company_IsDeleted] DEFAULT (0),
+    CONSTRAINT [PK_Company] PRIMARY KEY CLUSTERED 
+    (
+        [ID] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY];
+GO
+
+CREATE NONCLUSTERED INDEX [IX_Company] ON [dbo].[Company]
+(
+    [Code] ASC,
+    [Name] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY];
+GO
+
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Company_Unique] ON [dbo].[Company]
+(
+    [Code] ASC,
+    [IsDeleted] ASC
+)
+WHERE ([IsDeleted] = 0)
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY];
+GO
+
+ALTER TABLE [dbo].[Company] 
+ENABLE CHANGE_TRACKING 

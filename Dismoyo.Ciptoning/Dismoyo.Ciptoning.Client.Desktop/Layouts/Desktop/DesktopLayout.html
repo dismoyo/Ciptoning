@@ -1,0 +1,134 @@
+<div class="desktop-layout ui-layout-center full-space" data-options="dxLayout : { name: 'desktop', platform: 'generic' }">
+    <div id="loadingPanel" data-bind="dxLoadPanel: {
+            showIndicator: true,
+            showPane: true,
+            shading: true,
+            closeOnOutsideClick: false,
+            shadingColor: 'rgba(0,0,0,0.4)'
+        }">
+    </div>
+
+    <div id="notificationPopover" data-bind="dxPopover: {
+            deferRendering: false,          
+            target: '#headerMenu',
+            position: 'bottom',
+            width: 500,
+            height: 'auto',
+            
+            showTitle: true,
+            title: 'Notifications',
+            visible: false
+        }">
+        <div id="notificationList" data-bind="dxList: {
+                deferRendering: false                
+            }">
+            <div style="border-top: #d3d3d3 solid 1px" data-options="dxTemplate: { name: 'item' }">
+                <span style="white-space: normal" data-bind="html: $data.HtmlMessage()"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="topPane" class="ui-layout-north full-space">
+        <header>
+            <div class="company-logo" />
+            <div class="commands">
+                <table>
+                    <tr>
+                        <td>
+                            <span id="headerWelcome"></span>
+                        </td>
+                        <td>
+                            <div id="headerMenu" data-bind="dxMenu: {
+                               dataSource: [{
+                                    id: 'userNotification',
+                                    caption: '',
+                                    iconSrc: 'Images/user_notification_empty_32px.png'
+                                },{
+                                    id: 'userMenu',
+                                    caption: '',
+                                    iconSrc: 'Images/user_menu_32px.png',
+                                    items: [{
+                                        id: 'changePassword',
+                                        caption: 'Change Password'
+                                    }, {
+                                        id: 'logout',
+                                        caption: 'Sign Out',
+                                        iconSrc: 'Images/logout_32px.png'
+                                    }]
+                                }],
+                                displayExpr: 'caption',
+                                onItemClick: function (data) {
+                                    var item = data.itemData;
+                                    switch (item.id) {
+                                        case 'userNotification':
+                                            showNotification();
+                                            break;
+                                        case 'changePassword':
+                                            changePassword.popupOptions.visible(true);
+                                            var editForm = changePassword.form();
+
+                                            DXUtility.resetFormValidation(editForm);
+                                            editForm.getEditor('OldPassword').option('value', '');
+                                            editForm.getEditor('NewPassword').option('value', '');
+                                            editForm.getEditor('ConfirmNewPassword').option('value', '');
+                                            DXUtility.resetFormValidation(editForm);
+                                            break;
+                                        case 'logout':
+                                            CommonUtility.clearCookie('CurrentUser');
+                                            
+                                            CommonUtility.clearCookie('CurrentUserPermissionsLength');
+                                            for (var i = 0; i < 100; i++)
+                                                CommonUtility.clearCookie('CurrentUserPermissions' + (i + 1).toString());
+                                            
+                                            Dismoyo_Ciptoning_Client.app.navigate(Dismoyo_Ciptoning_Client.app.router.format({ view: 'Login' }));
+                                            break;
+                                    }
+                                }
+                            }"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </header>
+    </div>
+
+    <div id="leftPane" class="ui-layout-west">
+        <div id="leftMenu" data-bind="dxTreeView: {
+            items: mainMenuItems,
+            dataStructure: 'plain',
+            parentIdExpr: 'categoryId',
+            keyExpr: 'ID',
+            displayExpr: 'name',
+            onItemClick: function (data) {
+                var item = data.itemData;
+                if (item.uri && item.viewScript && item.view) {
+                    HtmlUtility.loadScriptFile(item.viewScript, 'js');
+
+                    if (!Dismoyo_Ciptoning_Client.app.getViewTemplateInfo(item.uri)) {
+                        Dismoyo_Ciptoning_Client.app.loadTemplates(item.view)
+                            .done(function () {
+                                Dismoyo_Ciptoning_Client.app.navigate(Dismoyo_Ciptoning_Client.app.router.format({ view: item.uri }));
+                            });
+                    } else
+                        Dismoyo_Ciptoning_Client.app.navigate(Dismoyo_Ciptoning_Client.app.router.format({ view: item.uri }));
+                }
+            }              
+        }"></div>
+    </div>
+
+    <div id="mainContent" class="resizable-article ui-widget-content ui-layout-center full-space" data-options="dxContentPlaceholder : { name: 'content', contentCssPosition: 'static' } "></div>
+
+    <div id="bottomPane" class="ui-layout-south full-space">
+        <footer>
+            <div class="footer-bottom">
+                <a class="footer-logo" href="http://devexpress.com" target="_blank"></a>
+                <div class="copyright">
+                    <p>Copyright © 2016 PT. Amerta Indah Otsuka. All rights reserved.</p>                    
+                </div>
+            </div>            
+        </footer>
+    </div>
+
+    <div id="changePassword" class="desktop-commonPopupEdit"
+         data-options="dxViewPlaceholder: { viewName: 'ChangePassword' }"></div>
+</div>

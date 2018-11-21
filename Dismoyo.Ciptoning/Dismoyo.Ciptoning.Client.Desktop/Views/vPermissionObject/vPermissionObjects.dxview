@@ -1,0 +1,42 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vPermissionObjects', title: 'Permissions', pane: 'master' }">
+    <div data-bind="dxCommand: { onExecute: refreshList, id: 'refresh', title: 'Refresh', icon: 'refresh' }"></div>
+    <div id="vPermissionObjects_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vPermissionObjects_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vPermissionObjects_viewSubContent" class="ui-layout-center full-space">
+            <div id="vPermissionObjects_collapsibleFilter" class="desktop-collapsibleFilter ui-layout-north full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vPermissionObjects_commonGridView" class="desktop-commonGridView ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonGridView' }"></div>
+
+            <div id="vPermissionObjects_commonPopupEdit" class="desktop-commonPopupEdit ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupEdit' }"></div>
+
+            <div id="vPermissionObjects_newUserRolePopupEdit" class="desktop-commonPopupEdit ui-layout-center full-space"
+                 data-bind="dxPopup: $root.newUserRolePopupEdit.popupEditOptions">
+                <div data-options="dxTemplate: {name: 'content'}">
+                    <div id="vPermissionObjects_newUserRolePopupEdit_popupContent" class="desktop-commonPopupEdit-popupContent"
+                         data-bind="dxScrollView: $root.newUserRolePopupEdit.popupContentOptions">
+                        <div id="vPermissionObjects_newUserRolePopupEdit_form" class="desktop-commonPopupEdit-form"
+                             data-bind="dxForm: $root.newUserRolePopupEdit.formOptions"></div>
+                        <div id="vPermissionObjects_newUserRolePopupEdit_extContent" class="desktop-commonPopupEdit-extContent"></div>
+                    </div>
+
+                    <div class="desktop-commonPopupEdit-commands">
+                        <div class="desktop-commonPopupEdit-commands-item">
+                            <div id="vPermissionObjects_newUserRolePopupEdit_cancel" data-bind="dxButton: $root.newUserRolePopupEdit.cancelOptions" />
+                        </div>
+                        <div class="desktop-commonPopupEdit-commands-item">
+                            <div id="vPermissionObjects_newUserRolePopupEdit_ok" data-bind="dxButton: $root.newUserRolePopupEdit.okOptions" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

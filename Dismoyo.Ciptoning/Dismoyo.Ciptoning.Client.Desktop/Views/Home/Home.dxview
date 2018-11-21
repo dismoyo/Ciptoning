@@ -1,0 +1,20 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'Home', title: 'Home', pane: 'master' }">
+    <div id="Home_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }">
+
+        <div id="Home_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="Home_viewSubContent" class="ui-layout-center full-space">
+            <div id="Home_leftChartContent" class="ui-layout-west full-space">
+                <!--<div id="Home_leftChart" data-bind="dxChart: $root.leftChartOptions"></div>-->
+            </div>
+            <div id="Home_centerChartContent" class="ui-layout-center full-space">
+                <!--<div id="Home_centerChart" data-bind="dxChart: $root.centerChartOptions"></div>-->
+            </div>
+            <div id="Home_rightChartContent" class="ui-layout-east full-space">
+                <!--<div id="Home_rightChart" data-bind="dxChart: $root.rightChartOptions"></div>-->
+            </div>            
+        </div>
+    </div>
+</div>

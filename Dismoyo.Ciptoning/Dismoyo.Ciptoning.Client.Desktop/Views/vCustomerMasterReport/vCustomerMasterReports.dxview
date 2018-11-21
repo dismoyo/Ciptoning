@@ -1,0 +1,17 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vCustomerMasterReports', title: 'Customer Master Reports', pane: 'master' }">
+    <div id="vCustomerMasterReports_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vCustomerMasterReports_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vCustomerMasterReports_viewSubContent" class="ui-layout-center full-space">
+            <div id="vCustomerMasterReports_collapsibleFilter" class="desktop-collapsibleFilter"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vCustomerMasterReports_commonIFrame" class="desktop-commonIFrame ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonIFrame' }"></div>
+        </div>
+    </div>
+</div>

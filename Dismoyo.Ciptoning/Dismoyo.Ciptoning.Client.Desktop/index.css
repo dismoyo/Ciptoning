@@ -1,0 +1,22 @@
+﻿html, 
+body, 
+.dx-viewport {
+    height: 100%;
+    display: block;
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.full-space {
+    padding: 0px !important;
+    border-style: none !important;
+}
+
+
+.ui-layout-pane {
+	border:	none;
+}

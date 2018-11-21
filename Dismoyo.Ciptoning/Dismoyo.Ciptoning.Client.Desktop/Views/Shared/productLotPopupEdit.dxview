@@ -1,0 +1,35 @@
+<div data-options="dxView: { name: 'productLotPopupEdit' }">
+    <div id="productLotPopupEdit_popupEdit" data-bind="dxPopup: $root.productLotPopupEdit.popupEditOptions">
+        <div data-options="dxTemplate: {name: 'content'}">
+            <div id="productLotPopupEdit_popupContent" class="desktop-commonPopupEdit-popupContent"
+                data-bind="dxScrollView: $root.productLotPopupEdit.popupContentOptions">
+                <div id="productLotPopupEdit_form" class="desktop-commonPopupEdit-form"
+                     data-bind="dxForm: $root.productLotPopupEdit.formOptions"></div>
+
+                <div id="productLotPopupEdit_extContent" class="desktop-commonPopupEdit-extContent">
+                    <div class="desktop-commonGridView-commands">
+                        <div class="desktop-commonGridView-commands-item">
+                            <div id="productLotPopupEdit_newRow" data-bind="dxButton: $root.productLotPopupEdit.newRowOptions" />
+                        </div>
+                        <div class="desktop-commonGridView-commands-item">
+                            <div id="productLotPopupEdit_deleteRows" data-bind="dxButton: $root.productLotPopupEdit.deleteRowsOptions" />
+                        </div>
+                    </div>
+
+                    <div class="desktop-commonGridView-container">
+                        <div id="productLotPopupEdit_dataGrid" data-bind="dxDataGrid: $root.productLotPopupEdit.dataGridOptions"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="desktop-commonPopupEdit-commands">
+                <div class="desktop-commonPopupEdit-commands-item">
+                    <div id="productLotPopupEdit_cancel" data-bind="dxButton: $root.productLotPopupEdit.cancelOptions" />
+                </div>
+                <div class="desktop-commonPopupEdit-commands-item">
+                    <div id="productLotPopupEdit_save" data-bind="dxButton: $root.productLotPopupEdit.saveOptions" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

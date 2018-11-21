@@ -1,0 +1,24 @@
+[
+  {
+    "outputFileName": "minify/Dismoyo_Ciptoning_Client.Desktop.css",
+    "inputFiles": [
+      "Layouts/*/*.css",
+      "css/*/*.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all"
+    }
+  },
+  {
+    "outputFileName": "minify/Dismoyo_Ciptoning_Client.Desktop.js",
+    "inputFiles": [
+      "Layouts/*/*.js",
+      "Views/*/*.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all"
+    }
+  }
+]

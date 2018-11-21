@@ -1,0 +1,54 @@
+USE [IDOS];
+GO
+
+SET ANSI_NULLS ON;
+GO
+
+SET QUOTED_IDENTIFIER ON;
+GO
+
+CREATE TABLE [dbo].[Region]
+(
+    [ID] [int] IDENTITY(1,1) NOT NULL,
+    [Code] [nvarchar](10) NOT NULL,
+    [Name] [nvarchar](50) NOT NULL,
+    [TerritoryID] [int] NULL,
+    [CreatedDate] [datetime] NOT NULL CONSTRAINT [DF_Region_CreatedDate] DEFAULT (GETUTCDATE()),
+    [CreatedByUserID] [int] NULL,
+    [ModifiedDate] [datetime] NULL,
+    [ModifiedByUserID] [int] NULL,
+    [IsDeleted] [bit] NOT NULL CONSTRAINT [DF_Region_IsDeleted] DEFAULT (0),
+    CONSTRAINT [PK_Region] PRIMARY KEY CLUSTERED
+    (
+	    [ID] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY];
+GO
+
+CREATE NONCLUSTERED INDEX [IX_Region] ON [dbo].[Region]
+(
+    [Code] ASC,
+    [Name] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY];
+GO
+
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Region_Unique] ON [dbo].[Region]
+(
+    [Code] ASC,
+    [IsDeleted] ASC
+)
+WHERE ([IsDeleted] = 0)
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY];
+GO
+
+ALTER TABLE [dbo].[Region] WITH CHECK ADD CONSTRAINT [FK_Region_Territory] FOREIGN KEY
+(
+    [TerritoryID]
+) REFERENCES [dbo].[Territory] ([ID]) ON UPDATE CASCADE;
+GO
+
+ALTER TABLE [dbo].[Region] CHECK CONSTRAINT [FK_Region_Territory];
+GO
+
+ALTER TABLE [dbo].[Region] 
+ENABLE CHANGE_TRACKING 

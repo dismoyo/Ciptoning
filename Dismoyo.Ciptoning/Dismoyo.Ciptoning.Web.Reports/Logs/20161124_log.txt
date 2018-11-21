@@ -1,0 +1,6 @@
+[2016-11-24 11:27:52] 'Application Start' event has ocurred.
+[2016-11-24 11:28:40] ERROR: [8ab2490a-ec00-47cc-bddd-1fd04522215d] The 'DataArea5' property on 'vDailySalesReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-24 11:33:26] ERROR: [6b46ae1e-78d3-48b6-8903-c5e6edd98bf3] The 'DataArea5' property on 'vDailySalesReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-24 01:54:26] ERROR: [ecf8a186-65d4-43ed-960e-d76885b3b713] The network path was not found
+[2016-11-24 01:55:24] ERROR: [a2b0a18f-43dc-4c13-8887-21d5d39ab21e] The network path was not found
+[2016-11-24 02:00:32] ERROR: [a0dad860-2ac8-4de5-88fc-dc0777cfc634] The network path was not found

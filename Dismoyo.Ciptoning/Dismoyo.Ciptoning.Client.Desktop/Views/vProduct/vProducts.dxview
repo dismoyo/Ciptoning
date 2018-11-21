@@ -1,0 +1,18 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vProducts', title: 'Products', pane: 'master' }">
+    <div data-bind="dxCommand: { onExecute: refreshList, id: 'refresh', title: 'Refresh', icon: 'refresh' }"></div>
+    <div id="vProducts_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vProducts_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vProducts_viewSubContent" class="ui-layout-center full-space">
+            <div id="vProducts_collapsibleFilter" class="desktop-collapsibleFilter ui-layout-north full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vProducts_commonGridView" class="desktop-commonGridView ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonGridView' }"></div>
+        </div>
+    </div>
+</div>

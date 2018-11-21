@@ -1,0 +1,31 @@
+<div data-options="dxView: { name: 'commonPopupIFrame' }">
+    <div id="commonPopupIFrame_popupEdit" data-bind="dxPopup: $root.commonPopupIFrame.popupEditOptions">
+        <div data-options="dxTemplate: {name: 'content'}">
+            <div id="commonPopupIFrame_loadingPanel" data-bind="dxLoadPanel: {
+                    showIndicator: true,
+                    showPane: true,
+                    shading: true,
+                    closeOnOutsideClick: false,
+                    shadingColor: 'rgba(0,0,0,0.4)',
+                    position: { of: '#commonPopupIFrame_iframe' }
+                }">
+            </div>
+
+            <div class="desktop-commonPopupIFrame-container">
+                <iframe id="commonPopupIFrame_iframe" onload="setLoadingPanelByVisibility('#commonPopupIFrame_loadingPanel', false);">
+                </iframe>
+            </div>
+            
+            <div class="desktop-commonPopupIFrame-commands">
+                <div class="desktop-commonPopupIFrame-commands-item">
+                    <div id="commonPopupIFrame_cancel" data-bind="dxButton: $root.commonPopupIFrame.cancelOptions" />
+                </div>
+                <div class="desktop-commonPopupIFrame-commands-item">
+                    <div id="commonPopupIFrame_ok" data-bind="dxButton: $root.commonPopupIFrame.okOptions" />
+                </div>
+
+                <div id="commonPopupIFrame_extCommands" class="desktop-commonPopupIFrame-commands-item"></div>
+            </div>
+        </div>
+    </div>
+</div>

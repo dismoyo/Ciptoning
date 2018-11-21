@@ -1,0 +1,18 @@
+[2016-11-13 10:47:36] 'Application Start' event has ocurred.
+[2016-11-13 10:48:49] ERROR: [6d432188-c158-4c3d-8c98-100fdb262a87] The 'TargetSalesOrderQty' property on 'vSalesByChannelReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-13 10:53:29] ERROR: [aba6715d-392e-4157-a8d3-7fd2ea3bdbfb] The 'TargetSalesOrderQty' property on 'vSalesByChannelReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-13 10:53:52] ERROR: [2e419f10-53ab-47bd-a1a5-05dd8bee0a97] The 'TargetSalesOrderQty' property on 'vSalesByChannelReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-13 11:11:35] 'Application Start' event has ocurred.
+[2016-11-13 11:19:39] ERROR: [65e2ca92-a482-44c9-b8ac-49bd0c3d2d7d] The 'TargetSalesOrderQty' property on 'vSalesByChannelByBrandReport' could not be set to a 'System.Double' value. You must set this property to a non-null value of type 'System.Int32'. 
+[2016-11-13 11:20:43] ERROR: [68d5ed9a-b199-4705-be8d-a436a73186df] The 'TargetSalesOrderQty' property on 'vSalesByChannelByBrandReport' could not be set to a 'System.Double' value. You must set this property to a non-null value of type 'System.Int32'. 
+[2016-11-13 11:22:30] ERROR: [560cc647-da35-45e4-9a3d-952ce63e4e02] The 'TargetSalesOrderQty' property on 'vSalesByChannelByBrandReport' could not be set to a 'System.Double' value. You must set this property to a non-null value of type 'System.Int32'. 
+[2016-11-13 11:23:06] ERROR: [afd2d12e-b766-4e13-9ac6-783610935948] The 'TargetSalesOrderQty' property on 'vSalesByChannelByBrandReport' could not be set to a 'System.Double' value. You must set this property to a non-null value of type 'System.Int32'. 
+[2016-11-13 11:40:38] ERROR: [48ae809d-6756-4a70-9c03-d80ded058680] The 'TargetSalesOrderQty' property on 'vSalesBySiteReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-13 11:43:51] 'Application Start' event has ocurred.
+[2016-11-13 11:44:28] ERROR: [d056428c-073d-4a04-b155-02725a853ce9] The 'TargetSalesOrderQty' property on 'vSalesBySiteReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-13 11:45:17] ERROR: [44847e47-a00e-40d4-b336-c57cc1e84698] The 'TargetSalesOrderQty' property on 'vSalesBySiteReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-13 11:47:45] ERROR: [41f31426-1007-4668-bd46-c6a50914b35c] The 'TargetSalesOrderQty' property on 'vSalesBySiteReport' could not be set to a 'System.Int32' value. You must set this property to a non-null value of type 'System.Double'. 
+[2016-11-13 11:48:31] ERROR: [a74f33ee-ddfc-49be-a032-0d35187fcec7] Invalid column name 'GapTargetVsActualSalesOrder'.
+[2016-11-13 11:53:10] 'Application Start' event has ocurred.
+[2016-11-13 11:53:49] ERROR: [c588229e-d343-4f6e-aee8-65605aa900eb] Invalid column name 'GapTargetVsActualSalesOrder'.
+[2016-11-13 11:55:28] 'Application Start' event has ocurred.

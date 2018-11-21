@@ -1,0 +1,97 @@
+[2016-12-13 06:54:08] 'Application Start' event has ocurred.
+[2016-12-13 06:57:50] ERROR: [65d20726-a81c-4a71-a966-052883bd25f9] The network path was not found
+[2016-12-13 06:58:13] 'Application Start' event has ocurred.
+[2016-12-13 07:05:04] 'Application Start' event has ocurred.
+[2016-12-13 07:09:55] 'Application Start' event has ocurred.
+[2016-12-13 07:14:12] 'Application Start' event has ocurred.
+[2016-12-13 10:39:08] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 10:39:34] 'Application Start' event has ocurred.
+[2016-12-13 10:39:44] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.StartBuild (startBuild): System.ArgumentException: Report '69bdc509be0e4b87b53e110c62547c74' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.ReportManagementService.DoWithReportById[T](String id, Func`2 func)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)
+[2016-12-13 10:50:46] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentException: Document '4ba431907d1d4d998e9855d82b273901' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 10:50:49] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentException: Document '4ba431907d1d4d998e9855d82b273901' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 10:54:17] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 11:26:41] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 11:27:06] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 11:27:53] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 11:28:54] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 11:30:13] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-13 03:24:35] 'Application Start' event has ocurred.
+[2016-12-13 06:36:53] 'Application Start' event has ocurred.

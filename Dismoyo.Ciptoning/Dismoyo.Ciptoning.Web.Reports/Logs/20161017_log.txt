@@ -1,0 +1,7 @@
+[2016-10-17 01:56:13] 'Application Start' event has ocurred.
+[2016-10-17 01:56:28] ERROR: [2d49bf36-01d9-4772-9dc0-e7a398182f84] Nullable object must have a value.
+[2016-10-17 01:57:10] ERROR: [c8246880-597f-4343-89cb-16eb8637f83c] Nullable object must have a value.
+[2016-10-17 01:57:16] ERROR: [88c96935-6d67-4bd1-b067-a97261091c87] Nullable object must have a value.
+[2016-10-17 02:45:06] ERROR: [90e750d3-ff73-481d-bbb4-ff4a12db88d8] Nullable object must have a value.
+[2016-10-17 10:01:35] 'Application Start' event has ocurred.
+[2016-10-17 10:09:16] ERROR: [f1f14236-ae7d-4d27-988c-1cd04e0c1a79] The file '/DailySalesByReport.aspx' does not exist.

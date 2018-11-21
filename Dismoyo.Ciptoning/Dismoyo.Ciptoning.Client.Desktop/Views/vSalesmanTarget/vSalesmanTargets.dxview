@@ -1,0 +1,21 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vSalesmanTargets', title: 'Salesman Target', pane: 'master' }">
+    <div data-bind="dxCommand: { onExecute: refreshList, id: 'refresh', title: 'Refresh', icon: 'refresh' }"></div>
+    <div id="vSalesmanTargets_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vSalesmanTargets_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vSalesmanTargets_viewSubContent" class="ui-layout-center full-space">
+            <div id="vSalesmanTargets_collapsibleFilter" class="desktop-collapsibleFilter ui-layout-north full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vSalesmanTargets_commonGridView" class="desktop-commonGridView ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonGridView' }"></div>
+
+            <div id="vSalesmanTargets_commonPopupEdit" class="desktop-commonPopupEdit"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupEdit' }"></div>
+        </div>
+    </div>
+</div>

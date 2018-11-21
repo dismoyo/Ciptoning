@@ -1,0 +1,24 @@
+<div data-options="dxView: { name: 'commonPopupEdit' }">
+    <div id="commonPopupEdit_popupEdit" data-bind="dxPopup: $root.commonPopupEdit.popupEditOptions">
+        <div data-options="dxTemplate: {name: 'content'}">
+            <div id="commonPopupEdit_popupContent" class="desktop-commonPopupEdit-popupContent"
+                 data-bind="dxScrollView: $root.commonPopupEdit.popupContentOptions">
+                <div id="commonPopupEdit_form" class="desktop-commonPopupEdit-form"
+                     data-bind="dxForm: $root.commonPopupEdit.formOptions"></div>
+
+                <div id="commonPopupEdit_extContent" class="desktop-commonPopupEdit-extContent"></div>
+            </div>
+
+            <div class="desktop-commonPopupEdit-commands">
+                <div class="desktop-commonPopupEdit-commands-item">
+                    <div id="commonPopupEdit_cancel" data-bind="dxButton: $root.commonPopupEdit.cancelOptions" />
+                </div>
+                <div class="desktop-commonPopupEdit-commands-item">
+                    <div id="commonPopupEdit_ok" data-bind="dxButton: $root.commonPopupEdit.okOptions" />
+                </div>
+
+                <div id="commonPopupEdit_extCommands" class="desktop-commonPopupEdit-commands-item"></div>
+            </div>
+        </div>
+    </div>
+</div>

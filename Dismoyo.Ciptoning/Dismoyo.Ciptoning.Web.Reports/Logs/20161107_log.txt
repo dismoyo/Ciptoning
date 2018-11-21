@@ -1,0 +1,9 @@
+[2016-11-07 01:53:05] 'Application Start' event has ocurred.
+[2016-11-07 01:53:06] ERROR: [5366039f-957a-4a46-a4b5-af91558f332b] The file '/SalesOrdersByOrder.aspx' does not exist.
+[2016-11-07 01:53:28] ERROR: [9000d3e7-d6b1-451a-a51c-f01ae5cf4c64] The file '/SalesByOrder.aspx' does not exist.
+[2016-11-07 02:13:49] 'Application Start' event has ocurred.
+[2016-11-07 02:13:49] ERROR: DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.WebDocumentViewerRequestController.StartBuild (startBuild): System.ArgumentException: Report 'a1fa0057c22141238703481ccd3ef5b3' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.ReportManagementService.DoWithReportById[T](String id, Func`2 func)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.WrapWithTryCatchAction(String controllerTypeName, String methodName, String webActionName, ControllerFunc invoker, TController controller, String json)

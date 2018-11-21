@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>3692264a-e633-46fa-a587-30475c40d799</ProjectGuid>
+    <AutoAssignPort>False</AutoAssignPort>
+    <RunInSimulator>False</RunInSimulator>
+    <ApplicationPage>index.html</ApplicationPage>
+    <RootNamespace>Dismoyo_Ciptoning_Client</RootNamespace>
+    <Name>AIO.IDOS2.Client.Desktop</Name>
+    <ApkDexFilePackageName>com.devextreme.Dismoyo.Ciptoning.Client.Desktop</ApkDexFilePackageName>
+    <XapPackagePublisherID>{0933c57a-71b6-42a8-89c4-a763116895a2}</XapPackagePublisherID>
+    <XapPackageProductID>{fe5326db-3f63-47d3-a41a-61a740630510}</XapPackageProductID>
+    <DebugSitePortNumber>6301</DebugSitePortNumber>
+    <UseWebDev>False</UseWebDev>
+    <DefaultDevice>iPhone6</DefaultDevice>
+    <DeviceOrientation>Portrait</DeviceOrientation>
+    <DisplayUnhandledExceptions>True</DisplayUnhandledExceptions>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <UpgradeNotifyShown>17.2.3</UpgradeNotifyShown>
+    <ScreenOrientation>Default</ScreenOrientation>
+    <ApplicationTitle>Dismoyo.Ciptoning.Client.Desktop</ApplicationTitle>
+    <VersionPackage>1.0.0.0</VersionPackage>
+    <ShowSplashScreen>True</ShowSplashScreen>
+    <KeyApkPath />
+    <VersionCode>1</VersionCode>
+    <TemplateFileApk />
+    <UseCustomTemplateNameApk>False</UseCustomTemplateNameApk>
+    <KeyDebuggable>False</KeyDebuggable>
+    <PackagePublisherID>60fa49cc-aa26-4ec2-b0ed-7a75bf411337</PackagePublisherID>
+    <AppxPackageProductID>27e1881b-87c7-4142-8773-8598be81962c</AppxPackageProductID>
+    <KeyPackageIdentityPublisher>CN=60fa49cc-aa26-4ec2-b0ed-7a75bf411337</KeyPackageIdentityPublisher>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bundleconfig.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\icons8.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dismoyo_Ciptoning_Client.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Galleries\1.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Galleries\3.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Galleries\2.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="index.css" />
+    <Content Include="index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Desktop\DesktopLayout.css" />
+    <Content Include="Layouts\Desktop\DesktopLayout.js" />
+    <Content Include="Layouts\Desktop\DesktopLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="minify\Dismoyo_Ciptoning_Client.Desktop.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="minify\Dismoyo_Ciptoning_Client.Desktop.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="minify\Dismoyo_Ciptoning_Client.Desktop.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>minify\Dismoyo_Ciptoning_Client.Desktop.css</DependentUpon>
+    </Content>
+    <Content Include="minify\Dismoyo_Ciptoning_Client.Desktop.min.js">
+      <SubType>Content</SubType>
+      <DependentUpon>minify\Dismoyo_Ciptoning_Client.Desktop.js</DependentUpon>
+    </Content>
+    <Content Include="packages.config">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\ChangePassword\ChangePassword.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\ChangePassword\ChangePassword.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Home\Home.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Home\Home.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Login\Login.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Login\Login.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonPopupIFrame.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonPopupIFrame.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCustomerMasterReport\vCustomerMasterReports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCustomerMasterReport\vCustomerMasterReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesByOrderReport\vSalesByOrderReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\collapsibleFilter.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\collapsibleFilter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonGridView.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonGridView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonIFrame.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonIFrame.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonMasterGridView.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonPopupEdit.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonPopupEdit.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonTreeView.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\commonTreeView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\contentHeader.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\productLotPopupEdit.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\Shared\productLotPopupEdit.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vArea\vAreas.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vArea\vAreas.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vClosingPeriod\vClosingPeriods.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vClosingPeriod\vClosingPeriods.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCompany\vCompanies.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCompany\vCompanies.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCustomerCategory\vCustomerCategories.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCustomerCategory\vCustomerCategories.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCustomer\vCustomers.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vCustomer\vCustomers.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDailySalesmanReport\vDailySalesmanReports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDailySalesmanReport\vDailySalesmanReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDailySalesReport\vDailySalesReports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDailySalesReport\vDailySalesReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDiscountGroup\vDiscountGroups.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDiscountGroup\vDiscountGroups.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDiscountStrata\vDiscountStratas.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vDiscountStrata\vDiscountStratas.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vPermissionObject\vPermissionObjects.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vPermissionObject\vPermissionObjects.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vProductBrand\vProductBrands.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vProductBrand\vProductBrands.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vProductPrice\vProductPrices.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vProductPrice\vProductPrices.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vProduct\vProducts.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vProduct\vProducts.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vRegion\vRegions.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vRegion\vRegions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vRole\vRoles.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vRole\vRoles.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vRoutePlan\vRoutePlans.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vRoutePlan\vRoutePlans.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesByOrderReport\vSalesByOrderReports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesByOrderReport\vSalesByOrderReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesBySiteReport\vSalesBySiteReports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesBySiteReport\vSalesBySiteReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesByChannelReport\vSalesByChannelReports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesByChannelReport\vSalesByChannelReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesmanActivityReport\vSalesmanActivityReports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesmanActivityReport\vSalesmanActivityReports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesmanTarget\vSalesmanTargets.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesmanTarget\vSalesmanTargets.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesman\vSalesmen.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesman\vSalesmen.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderFOC\vSalesOrderFOCs.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderFOC\vSalesOrderFOCs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderReturn\vSalesOrderReturns.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderReturn\vSalesOrderReturns.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderSample\vSalesOrderSamples.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderSample\vSalesOrderSamples.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderSwap\vSalesOrderSwaps.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrderSwap\vSalesOrderSwaps.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrder\vSalesOrders.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSalesOrder\vSalesOrders.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSite\vSites.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSite\vSites.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockChanges\vStockChanges.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockChanges\vStockChanges.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockOpname\vStockOpnames.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockOpname\vStockOpnames.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockDisposal\vStockDisposals.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockDisposal\vStockDisposals.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockReceive\vStockReceives.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockReceive\vStockReceives.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockTransfer\vStockTransfers.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockTransfer\vStockTransfers.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockView\vStockViews.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vStockView\vStockViews.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSystemParameter\vSystemParameters.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vSystemParameter\vSystemParameters.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vTerritory\vTerritories.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vTerritory\vTerritories.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vUser\vUsers.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vUser\vUsers.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vWarehouse\vWarehouses.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\vWarehouse\vWarehouses.js">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images" />
+    <Folder Include="css" />
+    <Folder Include="js\" />
+    <Folder Include="Layouts" />
+    <Folder Include="Layouts\Desktop" />
+    <Folder Include="Galleries" />
+    <Folder Include="minify" />
+    <Folder Include="Views" />
+    <Folder Include="Views\Home" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\ChangePassword" />
+    <Folder Include="Views\vSalesmanActivityReport" />
+    <Folder Include="Views\vCustomerMasterReport" />
+    <Folder Include="Views\vSalesByOrderReport\" />
+    <Folder Include="Views\vSalesByOrderReport" />
+    <Folder Include="Views\vSalesBySiteReport" />
+    <Folder Include="Views\vDailySalesmanReport" />
+    <Folder Include="Views\vSalesByChannelReport" />
+    <Folder Include="Views\vDailySalesReport" />
+    <Folder Include="Views\vPermissionObject" />
+    <Folder Include="Views\vRole\" />
+    <Folder Include="Views\vStockReceive" />
+    <Folder Include="Views\vSalesOrderSwap" />
+    <Folder Include="Views\vSalesOrderReturn" />
+    <Folder Include="Views\vSalesOrderFOC" />
+    <Folder Include="Views\vSalesOrderSample\" />
+    <Folder Include="Views\vSystemParameter" />
+    <Folder Include="Views\vRoutePlan\" />
+    <Folder Include="Views\vSalesOrder" />
+    <Folder Include="Views\vDiscountStrata" />
+    <Folder Include="Views\vDiscountGroup" />
+    <Folder Include="Views\vStockView" />
+    <Folder Include="Views\vStockChanges" />
+    <Folder Include="Views\vStockTransfer" />
+    <Folder Include="Views\vProductBrand" />
+    <Folder Include="Views\vCustomerCategory\" />
+    <Folder Include="Views\vStockOpname" />
+    <Folder Include="Views\vCustomer" />
+    <Folder Include="Views\vStockDisposal" />
+    <Folder Include="Views\vClosingPeriod\" />
+    <Folder Include="Views\vProductPrice\" />
+    <Folder Include="Views\vProduct\" />
+    <Folder Include="Views\vSalesmanTarget\" />
+    <Folder Include="Views\vSite\" />
+    <Folder Include="Views\vUser" />
+    <Folder Include="Views\vCompany" />
+    <Folder Include="Views\Shared" />
+    <Folder Include="Views\vArea" />
+    <Folder Include="Views\vRegion" />
+    <Folder Include="Views\vSalesman" />
+    <Folder Include="Views\vTerritory" />
+    <Folder Include="Views\vWarehouse\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Client.Shared\Dismoyo.Ciptoning.Client.Shared.dxjsproj">
+      <Name>Dismoyo.Ciptoning.Client.Shared</Name>
+      <Project>{35a65fac-be50-47da-881e-4a6b1b24b316}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Client.Shared\Dismoyo.Ciptoning.Client.Shared.dxjsproj" />
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Client.Shared\Dismoyo.Ciptoning.Client.Shared.dxjsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+  <Import Project="..\packages\BuildBundlerMinifier.1.9.155\build\BuildBundlerMinifier.targets" Condition="Exists('..\packages\BuildBundlerMinifier.1.9.155\build\BuildBundlerMinifier.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\BuildBundlerMinifier.1.9.155\build\BuildBundlerMinifier.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildBundlerMinifier.1.9.155\build\BuildBundlerMinifier.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,27 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vStockTransfers', title: 'Stock Transfers', pane: 'master' }">
+    <div data-bind="dxCommand: { onExecute: refreshList, id: 'refresh', title: 'Refresh', icon: 'refresh' }"></div>
+    <div id="vStockTransfers_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vStockTransfers_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vStockTransfers_viewSubContent" class="ui-layout-center full-space">
+            <div id="vStockTransfers_collapsibleFilter" class="desktop-collapsibleFilter ui-layout-north full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vStockTransfers_commonGridView" class="desktop-commonGridView ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonGridView' }"></div>
+
+            <div id="vStockTransfers_commonPopupEdit" class="desktop-commonPopupEdit"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupEdit' }"></div>
+
+            <div id="vStockTransfers_commonPopupIFrame" class="desktop-commonPopupIFrame"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupIFrame' }"></div>
+
+            <div id="vStockTransfers_productLotPopupEdit" class="desktop-commonPopupEdit"
+                 data-options="dxViewPlaceholder: { viewName: 'productLotPopupEdit' }"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,2 @@
+[2016-11-14 12:02:42] 'Application Start' event has ocurred.
+[2016-11-14 12:13:16] ERROR: [0c9e9330-d594-4591-b75f-3ff9ec0da9ba] The wait operation timed out

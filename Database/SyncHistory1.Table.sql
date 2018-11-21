@@ -1,0 +1,28 @@
+USE [IDOS]
+GO
+
+/****** Object:  Table [dbo].[SyncHistory]    Script Date: 06/28/2016 11:16:08 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SyncHistory](
+	[TableName] [varchar](30) NOT NULL,
+	[LatestVersion] [bigint] NOT NULL,
+ CONSTRAINT [PK_SyncHistory_1] PRIMARY KEY CLUSTERED 
+(
+	[TableName] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

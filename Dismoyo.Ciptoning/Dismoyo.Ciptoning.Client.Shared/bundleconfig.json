@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "minify/Dismoyo_Ciptoning_Client.Shared.js",
+    "inputFiles": [
+      "Data/*/*.js",
+      "Data/*/*/*.js",
+      "Utilities/*.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all"
+    }
+  }
+]

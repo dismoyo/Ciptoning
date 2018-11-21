@@ -1,0 +1,14 @@
+<div data-options="dxView : { name: 'commonTreeView' }">
+    <div id="commonTreeView_loadingPanel" data-bind="dxLoadPanel: $root.commonTreeView.loadingPanelOptions">
+    </div>
+    
+    <div class="desktop-commonTreeView-commands">
+        <div class="desktop-commonTreeView-commands-item">
+            <div id="commonTreeView_search" data-bind="dxTextBox: $root.commonTreeView.searchOptions"></div>
+        </div>
+    </div>
+
+    <div class="desktop-commonTreeView-container">
+        <div id="commonTreeView_treeView" data-bind="dxTreeView: $root.commonTreeView.treeViewOptions"></div>
+    </div>
+</div>

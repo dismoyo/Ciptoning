@@ -1,0 +1,326 @@
+USE IDOS_LIVE;
+GO
+
+--INSERT INTO [dbo].[FIX_SALES_ORDER]
+--    (
+--        [DocumentID],
+--        [DocumentCode],
+--        [NewDocumentCode],
+--        [TransactionDate],
+--        [SalesmanID],
+--        [Salesman],
+--        [CustomerID],
+--        [Customer],
+--        [DocumentStatusID],
+--        [DocumentStatusName],
+--        [PostedDate],
+--        [CreatedDate]
+--    )
+--SELECT
+--        [Q].[DocumentID],
+--        [Q].[DocumentCode],
+--        SUBSTRING([Q].[DocumentCode], 1, 12) + RIGHT('0000000' + CAST((SELECT [SalesOrder] FROM [dbo].[AutoNumberCounter] WHERE [SiteID] = [S].[ID]) + (ROW_NUMBER() OVER (PARTITION BY [S].[ID] ORDER BY [Q].[DocumentCode], [Q].[RowNumber]) - 1) AS nvarchar(7)), 7) [NewDocumentCode],
+--        [Q].[TransactionDate],
+--        [Q].[SalesmanID],
+--        [Q].[Salesman],
+--        [Q].[CustomerID],
+--        [Q].[Customer],
+--        [Q].[DocumentStatusID],
+--        [Q].[DocumentStatusName],
+--        [Q].[PostedDate],
+--        [Q].[CreatedDate]
+--    FROM
+--    (
+--        SELECT
+--                ROW_NUMBER() OVER (PARTITION BY [SO].[DocumentCode] ORDER BY [SO].[CreatedDate]) [RowNumber],
+--                [SO].[DocumentID],
+--                [SO].[DocumentCode],
+--                [SO].[TransactionDate],
+--                [SO].[SalesmanID],
+--                [S].[Code] + ' - ' + [S].[Name] [Salesman],
+--                [SO].[CustomerID],
+--                [C].[Code] + ' - ' + [C].[Name] [Customer],
+--                [SO].[DocumentStatusID],
+--                [SL].[Name] [DocumentStatusName],
+--                [SO].[PostedDate],
+--                [SO].[CreatedDate]
+--            FROM
+--                [dbo].[SalesOrder] [SO] INNER JOIN
+--                [dbo].[Customer] [C] ON ([SO].[CustomerID] = [C].[ID]) INNER JOIN
+--                [dbo].[Salesman] [S] ON ([SO].[SalesmanID] = [S].[ID]) INNER JOIN
+--                [dbo].[SystemLookup] [SL] ON ([SL].[Group] = 'DocumentStatus' AND [SO].[DocumentStatusID] = [SL].[Value_Int32])
+--            WHERE
+--                [SO].[DocumentCode] IN (SELECT [DocumentCode] FROM [SalesOrder] GROUP BY [DocumentCode] HAVING (COUNT([DocumentCode]) > 1))
+--    ) [Q] INNER JOIN
+--    [dbo].[Site] [S] ON (SUBSTRING([Q].[DocumentCode], 1, 5) = [S].[Code])
+--    WHERE
+--        [Q].[RowNumber] > 1
+--    ORDER BY
+--        [Q].[DocumentCode],
+--        [Q].[RowNumber]
+
+--UPDATE
+--        [SO]
+--    SET
+--        [SO].[DocumentCode] = [FIX].[NewDocumentCode]
+--    FROM
+--        [dbo].[SalesOrder] [SO] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER] [FIX] ON ([SO].[DocumentID] = [FIX].[DocumentID])
+
+--UPDATE
+--        [SOX]
+--    SET
+--        [SOX].[DocumentCode] = [FIX].[NewDocumentCode]
+--    FROM
+--        [dbo].[SalesOrderExt] [SOX] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER] [FIX] ON ([SOX].[DocumentID] = [FIX].[DocumentID])
+
+--SELECT
+--        [SO].*
+--    FROM
+--        [dbo].[SalesOrder] [SO] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER] [FIX] ON ([SO].[DocumentID] = [FIX].[DocumentID])
+--    ORDER BY
+--        [SO].[DocumentCode]
+
+--UPDATE
+--        [ST]
+--    SET
+--        [ST].[DocumentCode] = [FIX].[NewDocumentCode]
+--    FROM
+--        [dbo].[StockTransaction] [ST] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER] [FIX] ON ([ST].[DocumentID] = [FIX].[DocumentID]) OR ([ST].[RefVoidedDocumentID] = [FIX].[DocumentID])
+--    WHERE
+--        [ST].[TransactionTypeID] = 1
+
+--SELECT
+--        CAST(ROW_NUMBER() OVER (ORDER BY [Code]) as nvarchar(3)) + '. ' + [Code] + ' - ' + [Name] [Site]
+--    FROM
+--        [dbo].[Site]
+--    WHERE
+--        [Code] IN (SELECT DISTINCT LEFT([DocumentCode], 5) [SiteCode] FROM [FIX_SALES_ORDER])
+
+--UPDATE
+--        [ANC]
+--    SET
+--        [ANC].[SalesOrder] = [FIX].[SalesOrder]
+--    FROM
+--        [dbo].[AutoNumberCounter] [ANC] INNER JOIN
+--        [dbo].[Site] [S] ON ([ANC].[SiteID] = [S].[ID]) INNER JOIN
+--        (
+--            SELECT
+--                    LEFT([DocumentCode], 5) [SiteCode],
+--                    MAX(CAST(RIGHT([NewDocumentCode], 7) AS int)) [SalesOrder]
+--                FROM
+--                    [FIX_SALES_ORDER]
+--                GROUP BY
+--                    LEFT([DocumentCode], 5)
+--        ) [FIX] ON ([S].[Code] = [FIX].[SiteCode])
+
+
+
+        
+
+--INSERT INTO [dbo].[FIX_SALES_ORDER_RETURN]
+--    (
+--        [DocumentID],
+--        [DocumentCode],
+--        [NewDocumentCode],
+--        [TransactionDate],
+--        [SalesmanID],
+--        [Salesman],
+--        [CustomerID],
+--        [Customer],
+--        [DocumentStatusID],
+--        [DocumentStatusName],
+--        [PostedDate],
+--        [CreatedDate]
+--    )
+--SELECT
+--        [Q].[DocumentID],
+--        [Q].[DocumentCode],
+--        SUBSTRING([Q].[DocumentCode], 1, 12) + RIGHT('0000000' + CAST((SELECT [SalesOrderReturn] FROM [dbo].[AutoNumberCounter] WHERE [SiteID] = [S].[ID]) + (ROW_NUMBER() OVER (PARTITION BY [S].[ID] ORDER BY [Q].[DocumentCode], [Q].[RowNumber]) - 1) AS nvarchar(7)), 7) [NewDocumentCode],
+--        [Q].[TransactionDate],
+--        [Q].[SalesmanID],
+--        [Q].[Salesman],
+--        [Q].[CustomerID],
+--        [Q].[Customer],
+--        [Q].[DocumentStatusID],
+--        [Q].[DocumentStatusName],
+--        [Q].[PostedDate],
+--        [Q].[CreatedDate]
+--    FROM
+--    (
+--        SELECT
+--                ROW_NUMBER() OVER (PARTITION BY [SOR].[DocumentCode] ORDER BY [SOR].[CreatedDate]) [RowNumber],
+--                [SOR].[DocumentID],
+--                [SOR].[DocumentCode],
+--                [SOR].[TransactionDate],
+--                [SOR].[SalesmanID],
+--                [S].[Code] + ' - ' + [S].[Name] [Salesman],
+--                [SOR].[CustomerID],
+--                [C].[Code] + ' - ' + [C].[Name] [Customer],
+--                [SOR].[DocumentStatusID],
+--                [SL].[Name] [DocumentStatusName],
+--                [SOR].[PostedDate],
+--                [SOR].[CreatedDate]
+--            FROM
+--                [dbo].[SalesOrderReturn] [SOR] INNER JOIN
+--                [dbo].[Customer] [C] ON ([SOR].[CustomerID] = [C].[ID]) INNER JOIN
+--                [dbo].[Salesman] [S] ON ([SOR].[SalesmanID] = [S].[ID]) INNER JOIN
+--                [dbo].[SystemLookup] [SL] ON ([SL].[Group] = 'DocumentStatus' AND [SOR].[DocumentStatusID] = [SL].[Value_Int32])
+--            WHERE
+--                [SOR].[DocumentCode] IN (SELECT [DocumentCode] FROM [SalesOrderReturn] GROUP BY [DocumentCode] HAVING (COUNT([DocumentCode]) > 1))
+--    ) [Q] INNER JOIN
+--    [dbo].[Site] [S] ON (SUBSTRING([Q].[DocumentCode], 1, 5) = [S].[Code])
+--    WHERE
+--        [Q].[RowNumber] > 1
+--    ORDER BY
+--        [Q].[DocumentCode],
+--        [Q].[RowNumber]
+
+--UPDATE
+--        [SOR]
+--    SET
+--        [SOR].[DocumentCode] = [FIX].[NewDocumentCode]
+--    FROM
+--        [dbo].[SalesOrderReturn] [SOR] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER_RETURN] [FIX] ON ([SOR].[DocumentID] = [FIX].[DocumentID])
+
+--UPDATE
+--        [SORX]
+--    SET
+--        [SORX].[DocumentCode] = [FIX].[NewDocumentCode]
+--    FROM
+--        [dbo].[SalesOrderReturnExt] [SORX] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER_RETURN] [FIX] ON ([SORX].[DocumentID] = [FIX].[DocumentID])
+
+--SELECT
+--        [SOR].*
+--    FROM
+--        [dbo].[SalesOrderReturn] [SOR] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER_RETURN] [FIX] ON ([SOR].[DocumentID] = [FIX].[DocumentID])
+--    ORDER BY
+--        [SOR].[DocumentCode]
+
+--UPDATE
+--        [ST]
+--    SET
+--        [ST].[DocumentCode] = [FIX].[NewDocumentCode]
+--    FROM
+--        [dbo].[StockTransaction] [ST] INNER JOIN
+--        [dbo].[FIX_SALES_ORDER_RETURN] [FIX] ON ([ST].[DocumentID] = [FIX].[DocumentID]) OR ([ST].[RefVoidedDocumentID] = [FIX].[DocumentID])
+--    WHERE
+--        [ST].[TransactionTypeID] = 2
+
+--SELECT
+--        CAST(ROW_NUMBER() OVER (ORDER BY [Code]) as nvarchar(3)) + '. ' + [Code] + ' - ' + [Name] [Site]
+--    FROM
+--        [dbo].[Site]
+--    WHERE
+--        [Code] IN (SELECT DISTINCT LEFT([DocumentCode], 5) [SiteCode] FROM [FIX_SALES_ORDER_RETURN])
+
+--UPDATE
+--        [ANC]
+--    SET
+--        [ANC].[SalesOrderReturn] = [FIX].[SalesOrderReturn]
+--    FROM
+--        [dbo].[AutoNumberCounter] [ANC] INNER JOIN
+--        [dbo].[Site] [S] ON ([ANC].[SiteID] = [S].[ID]) INNER JOIN
+--        (
+--            SELECT
+--                    LEFT([DocumentCode], 5) [SiteCode],
+--                    MAX(CAST(RIGHT([NewDocumentCode], 7) AS int)) [SalesOrderReturn]
+--                FROM
+--                    [FIX_SALES_ORDER_RETURN]
+--                GROUP BY
+--                    LEFT([DocumentCode], 5)
+--        ) [FIX] ON ([S].[Code] = [FIX].[SiteCode])
+
+
+
+
+
+--INSERT INTO [dbo].[FIX_INVOICE]
+--    (
+--        [DocumentID],
+--        [DocumentCode],
+--        [NewDocumentCode],
+--        [TransactionDate],
+--        [RefTransactionTypeID],
+--        [RefTransactionTypeName],
+--        [RefDocumentID],
+--        [RefDocumentCode],
+--        [CreatedDate]
+--    )
+--SELECT
+--        [Q].[DocumentID],
+--        [Q].[DocumentCode],
+--        SUBSTRING([Q].[DocumentCode], 1, 12) + RIGHT('0000000' + CAST((SELECT [Invoice] FROM [dbo].[AutoNumberCounter] WHERE [SiteID] = [S].[ID]) + (ROW_NUMBER() OVER (PARTITION BY [S].[ID] ORDER BY [Q].[DocumentCode], [Q].[RowNumber]) - 1) AS nvarchar(7)), 7) [NewDocumentCode],
+--        [Q].[TransactionDate],
+--        [Q].[RefTransactionTypeID],
+--        [Q].[RefTransactionTypeName],
+--        [Q].[RefDocumentID],
+--        [Q].[RefDocumentCode],
+--        [Q].[CreatedDate]
+--    FROM
+--    (
+--        SELECT
+--                ROW_NUMBER() OVER (PARTITION BY [I].[DocumentCode] ORDER BY [I].[CreatedDate]) [RowNumber],
+--                [I].[DocumentID],
+--                [I].[DocumentCode],
+--                [I].[TransactionDate],
+--                [I].[RefTransactionTypeID],
+--                [SL].[Name] [RefTransactionTypeName],
+--                [I].[RefDocumentID],
+--                ISNULL([SO].[DocumentCode], ISNULL([SOR].[DocumentCode], ISNULL([SOS].[DocumentCode], ISNULL([SOFOC].[DocumentCode], [SOSW].[DocumentCode])))) [RefDocumentCode],
+--                [I].[CreatedDate]
+--            FROM
+--                [dbo].[Invoice] [I] INNER JOIN
+--                [dbo].[SalesOrder] [SO] ON ([I].[RefDocumentID] = [SO].[DocumentID]) LEFT OUTER JOIN
+--                [dbo].[SalesOrderReturn] [SOR] ON ([I].[RefDocumentID] = [SOR].[DocumentID]) LEFT OUTER JOIN
+--                [dbo].[SalesOrderSample] [SOS] ON ([I].[RefDocumentID] = [SOS].[DocumentID]) LEFT OUTER JOIN
+--                [dbo].[SalesOrderFOC] [SOFOC] ON ([I].[RefDocumentID] = [SOFOC].[DocumentID]) LEFT OUTER JOIN
+--                [dbo].[SalesOrderSwap] [SOSW] ON ([I].[RefDocumentID] = [SOSW].[DocumentID]) INNER JOIN
+--                [dbo].[SystemLookup] [SL] ON ([SL].[Group] = 'SOTransactionType' AND [I].[RefTransactionTypeID] = [SL].[Value_Int32])
+--            WHERE
+--                [I].[DocumentCode] IN (SELECT [DocumentCode] FROM [Invoice] GROUP BY [DocumentCode] HAVING (COUNT([DocumentCode]) > 1))
+--    ) [Q] INNER JOIN
+--    [dbo].[Site] [S] ON (SUBSTRING([Q].[DocumentCode], 1, 5) = [S].[Code])
+--    WHERE
+--        [Q].[RowNumber] > 1
+--    ORDER BY
+--        [Q].[DocumentCode],
+--        [Q].[RowNumber]
+
+--UPDATE
+--        [I]
+--    SET
+--        [I].[DocumentCode] = [FIX].[NewDocumentCode]
+--    FROM
+--        [dbo].[Invoice] [I] INNER JOIN
+--        [dbo].[FIX_INVOICE] [FIX] ON ([I].[DocumentID] = [FIX].[DocumentID])
+
+--SELECT
+--        CAST(ROW_NUMBER() OVER (ORDER BY [Code]) as nvarchar(3)) + '. ' + [Code] + ' - ' + [Name] [Site]
+--    FROM
+--        [dbo].[Site]
+--    WHERE
+--        [Code] IN (SELECT DISTINCT LEFT([DocumentCode], 5) [SiteCode] FROM [FIX_INVOICE])
+
+--UPDATE
+--        [ANC]
+--    SET
+--        [ANC].[Invoice] = [FIX].[Invoice]
+--    FROM
+--        [dbo].[AutoNumberCounter] [ANC] INNER JOIN
+--        [dbo].[Site] [S] ON ([ANC].[SiteID] = [S].[ID]) INNER JOIN
+--        (
+--            SELECT
+--                    LEFT([DocumentCode], 5) [SiteCode],
+--                    MAX(CAST(RIGHT([NewDocumentCode], 7) AS int)) [Invoice]
+--                FROM
+--                    [FIX_INVOICE]
+--                GROUP BY
+--                    LEFT([DocumentCode], 5)
+--        ) [FIX] ON ([S].[Code] = [FIX].[SiteCode])

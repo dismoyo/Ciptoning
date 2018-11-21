@@ -1,0 +1,1 @@
+[2016-11-01 02:26:33] 'Application Start' event has ocurred.

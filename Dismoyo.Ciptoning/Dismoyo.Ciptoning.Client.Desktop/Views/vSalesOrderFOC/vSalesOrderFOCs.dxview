@@ -1,0 +1,27 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vSalesOrderFOCs', title: 'Sales Order FOC', pane: 'master' }">
+    <div data-bind="dxCommand: { onExecute: refreshList, id: 'refresh', title: 'Refresh', icon: 'refresh' }"></div>
+    <div id="vSalesOrderFOCs_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vSalesOrderFOCs_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vSalesOrderFOCs_viewSubContent" class="ui-layout-center full-space">
+            <div id="vSalesOrderFOCs_collapsibleFilter" class="desktop-collapsibleFilter ui-layout-north full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vSalesOrderFOCs_commonGridView" class="desktop-commonGridView ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonGridView' }"></div>
+
+            <div id="vSalesOrderFOCs_commonPopupEdit" class="desktop-commonPopupEdit"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupEdit' }"></div>
+
+            <div id="vSalesOrderFOCs_commonPopupIFrame" class="desktop-commonPopupIFrame"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupIFrame' }"></div>
+
+            <div id="vSalesOrderFOCs_productLotPopupEdit" class="desktop-commonPopupEdit"
+                 data-options="dxViewPlaceholder: { viewName: 'productLotPopupEdit' }"></div>
+        </div>
+    </div>
+</div>

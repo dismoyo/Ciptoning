@@ -1,0 +1,165 @@
+﻿using Dismoyo.Data.LinqToEntity;
+using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
+
+namespace Dismoyo.Ciptoning.Data
+{
+
+    public partial class StoreFunctionsDataContext : DataContext
+    {
+
+        #region fSalesOrderSwap
+
+        [DbFunction("StoreFunctionsDataContext", "fSalesOrderSwap")]
+        public IQueryable<vSalesOrderSwap> fSalesOrderSwap(
+            Guid? p_DocumentID,
+            string p_DocumentCode,
+            DateTime? p_TransactionDateFrom,
+            DateTime? p_TransactionDateTo,
+            Guid? p_SalesmanID,
+            string p_SalesmanCode,
+            string p_SalesmanName,
+            Guid? p_WarehouseID,
+            string p_WarehouseCode,
+            string p_WarehouseName,
+            Guid? p_SiteID,
+            string p_SiteCode,
+            string p_SiteName,
+            int? p_CompanyID,
+            string p_CompanyCode,
+            string p_CompanyName,
+            int? p_AreaID,
+            string p_AreaCode,
+            string p_AreaName,
+            int? p_RegionID,
+            string p_RegionCode,
+            string p_RegionName,
+            int? p_TerritoryID,
+            string p_TerritoryCode,
+            string p_TerritoryName,
+            int? p_SiteDistributionTypeID,
+            int? p_WarehouseTypeID,
+            bool? p_IsSiteLotNumberEntryRequired,
+            Guid? p_CustomerID,
+            string p_CustomerCode,
+            string p_CustomerName,
+            string p_ReferenceNumber,
+            Guid? p_DODocumentID,
+            string p_DODocumentCode,
+            DateTime? p_DOShipmentDateFrom,
+            DateTime? p_DOShipmentDateTo,
+            DateTime? p_DOReceivedDateFrom,
+            DateTime? p_DOReceivedDateTo,
+            DateTime? p_DOLastPrintedDateFrom,
+            DateTime? p_DOLastPrintedDateTo,
+            int? p_DocumentStatusID,
+            string p_DocumentStatusReason,
+            string p_SFAInvoiceDocumentCode,
+            DateTime? p_PostedDateFrom,
+            DateTime? p_PostedDateTo)
+        {
+            return OrderQuery<vSalesOrderSwap>(((IObjectContextAdapter)this).ObjectContext
+                .CreateQuery<vSalesOrderSwap>(string.Format(@"
+                [{0}].[fSalesOrderSwap]
+                ( 
+                    @DocumentID,
+                    @DocumentCode,
+                    @TransactionDateFrom,
+                    @TransactionDateTo,
+                    @SalesmanID,
+                    @SalesmanCode,
+                    @SalesmanName,
+                    @WarehouseID,
+                    @WarehouseCode,
+                    @WarehouseName,
+                    @SiteID,
+                    @SiteCode,
+                    @SiteName,
+                    @CompanyID,
+                    @CompanyCode,
+                    @CompanyName,
+                    @AreaID,
+                    @AreaCode,
+                    @AreaName,
+                    @RegionID,
+                    @RegionCode,
+                    @RegionName,
+                    @TerritoryID,
+                    @TerritoryCode,
+                    @TerritoryName,
+                    @SiteDistributionTypeID,
+                    @WarehouseTypeID,
+                    @IsSiteLotNumberEntryRequired,
+                    @CustomerID,
+                    @CustomerCode,
+                    @CustomerName,
+                    @ReferenceNumber,
+                    @DODocumentID,
+                    @DODocumentCode,
+                    @DOShipmentDateFrom,
+                    @DOShipmentDateTo,
+                    @DOReceivedDateFrom,
+                    @DOReceivedDateTo,
+                    @DOLastPrintedDateFrom,
+                    @DOLastPrintedDateTo,
+                    @DocumentStatusID,
+                    @DocumentStatusReason,
+                    @SFAInvoiceDocumentCode,
+                    @PostedDateFrom,
+                    @PostedDateTo
+                )", GetType().Name),
+
+                DefaultDataContext.CreateParameter("DocumentID", typeof(Guid?), p_DocumentID),
+                DefaultDataContext.CreateParameter("DocumentCode", typeof(string), p_DocumentCode),
+                DefaultDataContext.CreateParameter("TransactionDateFrom", typeof(DateTime?), p_TransactionDateFrom),
+                DefaultDataContext.CreateParameter("TransactionDateTo", typeof(DateTime?), p_TransactionDateTo),
+                DefaultDataContext.CreateParameter("SalesmanID", typeof(Guid?), p_SalesmanID),
+                DefaultDataContext.CreateParameter("SalesmanCode", typeof(string), p_SalesmanCode),
+                DefaultDataContext.CreateParameter("SalesmanName", typeof(string), p_SalesmanName),
+                DefaultDataContext.CreateParameter("WarehouseID", typeof(Guid?), p_WarehouseID),
+                DefaultDataContext.CreateParameter("WarehouseCode", typeof(string), p_WarehouseCode),
+                DefaultDataContext.CreateParameter("WarehouseName", typeof(string), p_WarehouseName),
+                DefaultDataContext.CreateParameter("SiteID", typeof(Guid?), p_SiteID),
+                DefaultDataContext.CreateParameter("SiteCode", typeof(string), p_SiteCode),
+                DefaultDataContext.CreateParameter("SiteName", typeof(string), p_SiteName),
+                DefaultDataContext.CreateParameter("CompanyID", typeof(int?), p_CompanyID),
+                DefaultDataContext.CreateParameter("CompanyCode", typeof(string), p_CompanyCode),
+                DefaultDataContext.CreateParameter("CompanyName", typeof(string), p_CompanyName),
+                DefaultDataContext.CreateParameter("AreaID", typeof(int?), p_AreaID),
+                DefaultDataContext.CreateParameter("AreaCode", typeof(string), p_AreaCode),
+                DefaultDataContext.CreateParameter("AreaName", typeof(string), p_AreaName),
+                DefaultDataContext.CreateParameter("RegionID", typeof(int?), p_RegionID),
+                DefaultDataContext.CreateParameter("RegionCode", typeof(string), p_RegionCode),
+                DefaultDataContext.CreateParameter("RegionName", typeof(string), p_RegionName),
+                DefaultDataContext.CreateParameter("TerritoryID", typeof(int?), p_TerritoryID),
+                DefaultDataContext.CreateParameter("TerritoryCode", typeof(string), p_TerritoryCode),
+                DefaultDataContext.CreateParameter("TerritoryName", typeof(string), p_TerritoryName),
+                DefaultDataContext.CreateParameter("SiteDistributionTypeID", typeof(int?), p_SiteDistributionTypeID),
+                DefaultDataContext.CreateParameter("WarehouseTypeID", typeof(int?), p_WarehouseTypeID),
+                DefaultDataContext.CreateParameter("IsSiteLotNumberEntryRequired", typeof(bool?), p_IsSiteLotNumberEntryRequired),
+                DefaultDataContext.CreateParameter("CustomerID", typeof(Guid?), p_CustomerID),
+                DefaultDataContext.CreateParameter("CustomerCode", typeof(string), p_CustomerCode),
+                DefaultDataContext.CreateParameter("CustomerName", typeof(string), p_CustomerName),
+                DefaultDataContext.CreateParameter("ReferenceNumber", typeof(string), p_ReferenceNumber),
+                DefaultDataContext.CreateParameter("DODocumentID", typeof(Guid?), p_DODocumentID),
+                DefaultDataContext.CreateParameter("DODocumentCode", typeof(string), p_DODocumentCode),
+                DefaultDataContext.CreateParameter("DOShipmentDateFrom", typeof(DateTime?), p_DOShipmentDateFrom),
+                DefaultDataContext.CreateParameter("DOShipmentDateTo", typeof(DateTime?), p_DOShipmentDateTo),
+                DefaultDataContext.CreateParameter("DOReceivedDateFrom", typeof(DateTime?), p_DOReceivedDateFrom),
+                DefaultDataContext.CreateParameter("DOReceivedDateTo", typeof(DateTime?), p_DOReceivedDateTo),
+                DefaultDataContext.CreateParameter("DOLastPrintedDateFrom", typeof(DateTime?), p_DOLastPrintedDateFrom),
+                DefaultDataContext.CreateParameter("DOLastPrintedDateTo", typeof(DateTime?), p_DOLastPrintedDateTo),
+                DefaultDataContext.CreateParameter("DocumentStatusID", typeof(int?), p_DocumentStatusID),
+                DefaultDataContext.CreateParameter("DocumentStatusReason", typeof(string), p_DocumentStatusReason),
+                DefaultDataContext.CreateParameter("SFAInvoiceDocumentCode", typeof(string), p_SFAInvoiceDocumentCode),
+                DefaultDataContext.CreateParameter("PostedDateFrom", typeof(DateTime?), p_PostedDateFrom),
+                DefaultDataContext.CreateParameter("PostedDateTo", typeof(DateTime?), p_PostedDateTo)));
+        }
+
+        #endregion
+
+    }
+
+};

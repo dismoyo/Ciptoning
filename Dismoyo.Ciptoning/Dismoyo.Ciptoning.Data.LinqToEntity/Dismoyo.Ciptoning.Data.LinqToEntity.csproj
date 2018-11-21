@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12B3A6E3-8A05-424C-B0AB-C56D82961220}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dismoyo.Ciptoning.Data.LinqToEntity</RootNamespace>
+    <AssemblyName>Dismoyo.Ciptoning.Data.LinqToEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeFirstStoreFunctions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=46c4868af4307d2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.CodeFirstStoreFunctions.1.1.2\lib\net45\CodeFirstStoreFunctions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Area\Generated\AreaDataProvider.generated.cs" />
+    <Compile Include="Area\Generated\AreaEntityTypeConfig.generated.cs" />
+    <Compile Include="Area\AreaDataProvider.cs" />
+    <Compile Include="ChangePassword\ChangePasswordDataProvider.generated.cs" />
+    <Compile Include="ChangePassword\ChangePasswordEntityTypeConfig.generated.cs" />
+    <Compile Include="ClosingPeriod\ClosingPeriodDataProvider.cs" />
+    <Compile Include="ClosingPeriod\Generated\ClosingPeriodDataProvider.generated.cs" />
+    <Compile Include="ClosingPeriod\Generated\ClosingPeriodEntityTypeConfig.generated.cs" />
+    <Compile Include="Common\CommonDataProvider.cs" />
+    <Compile Include="CompanyAddress\Generated\CompanyAddressDataProvider.generated.cs" />
+    <Compile Include="CompanyAddress\Generated\CompanyAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="Company\CompanyDataProvider.cs" />
+    <Compile Include="Company\Generated\CompanyDataProvider.generated.cs" />
+    <Compile Include="Company\Generated\CompanyEntityTypeConfig.generated.cs" />
+    <Compile Include="Country\Generated\CountryDataProvider.generated.cs" />
+    <Compile Include="Country\Generated\CountryEntityTypeConfig.generated.cs" />
+    <Compile Include="CustomerAdditionalInfo\Generated\CustomerAdditionalInfoDataProvider.generated.cs" />
+    <Compile Include="CustomerAdditionalInfo\Generated\CustomerAdditionalInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="CustomerAddress\Generated\CustomerAddressDataProvider.generated.cs" />
+    <Compile Include="CustomerAddress\Generated\CustomerAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="CustomerBillAddress\Generated\CustomerBillAddressDataProvider.generated.cs" />
+    <Compile Include="CustomerBillAddress\Generated\CustomerBillAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="CustomerCategoryInfo\Generated\CustomerCategoryInfoDataProvider.generated.cs" />
+    <Compile Include="CustomerCategoryInfo\Generated\CustomerCategoryInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="CustomerStockOnHandPeriodic\Generated\CustomerStockOnHandPeriodicDataProvider.generated.cs" />
+    <Compile Include="CustomerStockOnHandPeriodic\Generated\CustomerStockOnHandPeriodicEntityTypeConfig.generated.cs" />
+    <Compile Include="CustomerStockOnHandPeriodic\CustomerStockOnHandPeriodicDataProvider.cs" />
+    <Compile Include="CustomerTaxAddress\Generated\CustomerTaxAddressDataProvider.generated.cs" />
+    <Compile Include="CustomerTaxAddress\Generated\CustomerTaxAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="Customer\Generated\CustomerDataProvider.generated.cs" />
+    <Compile Include="Customer\Generated\CustomerEntityTypeConfig.generated.cs" />
+    <Compile Include="Customer\CustomerDataProvider.cs" />
+    <Compile Include="DefaultDataContext.cs" />
+    <Compile Include="DefaultTableDataProvider.cs" />
+    <Compile Include="DefaultViewDataProvider.cs" />
+    <Compile Include="DeliveryOrder\DeliveryOrderDataProvider.cs" />
+    <Compile Include="DeliveryOrder\Generated\DeliveryOrderDataProvider.generated.cs" />
+    <Compile Include="DeliveryOrder\Generated\DeliveryOrderEntityTypeConfig.generated.cs" />
+    <Compile Include="DiscountGroupProduct\Generated\DiscountGroupProductDataProvider.generated.cs" />
+    <Compile Include="DiscountGroupProduct\Generated\DiscountGroupProductEntityTypeConfig.generated.cs" />
+    <Compile Include="DiscountGroupProduct\DiscountGroupProductDataProvider.cs" />
+    <Compile Include="DiscountGroup\Generated\DiscountGroupDataProvider.generated.cs" />
+    <Compile Include="DiscountGroup\Generated\DiscountGroupEntityTypeConfig.generated.cs" />
+    <Compile Include="DiscountGroup\DiscountGroupDataProvider.cs" />
+    <Compile Include="DiscountStrataDetails\Generated\DiscountStrataDetailsDataProvider.generated.cs" />
+    <Compile Include="DiscountStrataDetails\Generated\DiscountStrataDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="DiscountStrataDetails\DiscountStrataDetailsDataProvider.cs" />
+    <Compile Include="DiscountStrata\Generated\DiscountStrataDataProvider.generated.cs" />
+    <Compile Include="DiscountStrata\Generated\DiscountStrataEntityTypeConfig.generated.cs" />
+    <Compile Include="DiscountStrata\DiscountStrataDataProvider.cs" />
+    <Compile Include="Invoice\Generated\InvoiceDataProvider.generated.cs" />
+    <Compile Include="Invoice\Generated\InvoiceEntityTypeConfig.generated.cs" />
+    <Compile Include="Invoice\InvoiceDataProvider.cs" />
+    <Compile Include="MerchandiseDisplayActivity\MerchandiseDisplayActivityDataProvider.cs" />
+    <Compile Include="MerchandiseDisplayActivity\Generated\MerchandiseDisplayActivityDataProvider.generated.cs" />
+    <Compile Include="MerchandiseDisplayActivity\Generated\MerchandiseDisplayActivityEntityTypeConfig.generated.cs" />
+    <Compile Include="PermissionObject\Generated\PermissionObjectDataProvider.generated.cs" />
+    <Compile Include="PermissionObject\Generated\PermissionObjectEntityTypeConfig.generated.cs" />
+    <Compile Include="ProductAdditionalInfo\Generated\ProductAdditionalInfoDataProvider.generated.cs" />
+    <Compile Include="ProductAdditionalInfo\Generated\ProductAdditionalInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="ProductBrand\Generated\ProductBrandDataProvider.generated.cs" />
+    <Compile Include="ProductBrand\Generated\ProductBrandEntityTypeConfig.generated.cs" />
+    <Compile Include="ProductBrand\ProductBrandDataProvider.cs" />
+    <Compile Include="ProductLot\Generated\ProductLotDataProvider.generated.cs" />
+    <Compile Include="ProductLot\Generated\ProductLotEntityTypeConfig.generated.cs" />
+    <Compile Include="ProductLot\ProductLotDataProvider.cs" />
+    <Compile Include="ProductPrice\Generated\ProductPriceDataProvider.generated.cs" />
+    <Compile Include="ProductPrice\Generated\ProductPriceEntityTypeConfig.generated.cs" />
+    <Compile Include="ProductPrice\ProductPriceDataProvider.cs" />
+    <Compile Include="Product\Generated\ProductDataProvider.generated.cs" />
+    <Compile Include="Product\Generated\ProductEntityTypeConfig.generated.cs" />
+    <Compile Include="Product\ProductDataProvider.cs" />
+    <Compile Include="PromoMaterialActivity\Generated\PromoMaterialActivityDataProvider.generated.cs" />
+    <Compile Include="PromoMaterialActivity\Generated\PromoMaterialActivityEntityTypeConfig.generated.cs" />
+    <Compile Include="PromoMaterialActivity\PromoMaterialActivityDataProvider.cs" />
+    <Compile Include="PromoProduct\Generated\PromoProductDataProvider.generated.cs" />
+    <Compile Include="PromoProduct\Generated\PromoProductEntityTypeConfig.generated.cs" />
+    <Compile Include="PromoProduct\PromoProductDataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrder\PurchaseOrderDataProvider.cs" />
+    <Compile Include="PurchaseOrder\Generated\PurchaseOrderDataProvider.generated.cs" />
+    <Compile Include="PurchaseOrder\Generated\PurchaseOrderEntityTypeConfig.generated.cs" />
+    <Compile Include="Region\Generated\RegionDataProvider.generated.cs" />
+    <Compile Include="Region\Generated\RegionEntityTypeConfig.generated.cs" />
+    <Compile Include="Region\RegionDataProvider.cs" />
+    <Compile Include="Role\Generated\RoleDataProvider.generated.cs" />
+    <Compile Include="Role\Generated\RoleEntityTypeConfig.generated.cs" />
+    <Compile Include="Role\RoleDataProvider.cs" />
+    <Compile Include="RoutePlan\RoutePlanDataProvider.cs" />
+    <Compile Include="RoutePlan\Generated\RoutePlanDataProvider.generated.cs" />
+    <Compile Include="RoutePlan\Generated\RoutePlanEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanCallLog\Generated\SalesmanCallLogDataProvider.generated.cs" />
+    <Compile Include="SalesmanCallLog\Generated\SalesmanCallLogEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanCallLog\SalesmanCallLogDataProvider.cs" />
+    <Compile Include="SalesmanCall\Generated\SalesmanCallDataProvider.generated.cs" />
+    <Compile Include="SalesmanCall\Generated\SalesmanCallEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanCall\SalesmanCallDataProvider.cs" />
+    <Compile Include="SalesmanInitialCall\Generated\SalesmanInitialCallDataProvider.generated.cs" />
+    <Compile Include="SalesmanInitialCall\Generated\SalesmanInitialCallEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanInitialCall\SalesmanInitialCallDataProvider.cs" />
+    <Compile Include="SalesmanTarget\Generated\SalesmanTargetDataProvider.generated.cs" />
+    <Compile Include="SalesmanTarget\Generated\SalesmanTargetEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanTarget\SalesmanTargetDataProvider.cs" />
+    <Compile Include="SalesmanProductTarget\Generated\SalesmanProductTargetDataProvider.generated.cs" />
+    <Compile Include="SalesmanProductTarget\Generated\SalesmanProductTargetEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanProductTarget\SalesmanProductTargetDataProvider.cs" />
+    <Compile Include="Salesman\SalesmanDataProvider.cs" />
+    <Compile Include="Salesman\Generated\SalesmanDataProvider.generated.cs" />
+    <Compile Include="Salesman\Generated\SalesmanEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderReturn\Generated\SalesOrderReturnDataProvider.generated.cs" />
+    <Compile Include="SalesOrderReturn\Generated\SalesOrderReturnEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderReturn\SalesOrderReturnDataProvider.cs" />
+    <Compile Include="SalesOrderReturnDetails\Generated\SalesOrderReturnDetailsDataProvider.generated.cs" />
+    <Compile Include="SalesOrderReturnDetails\Generated\SalesOrderReturnDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderReturnDetails\SalesOrderReturnDetailsDataProvider.cs" />
+    <Compile Include="SalesOrderDetails\Generated\SalesOrderDetailsDataProvider.generated.cs" />
+    <Compile Include="SalesOrderDetails\Generated\SalesOrderDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderDetails\SalesOrderDetailsDataProvider.cs" />
+    <Compile Include="SalesOrderFOCDetails\Generated\SalesOrderFOCDetailsDataProvider.generated.cs" />
+    <Compile Include="SalesOrderFOCDetails\Generated\SalesOrderFOCDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderFOCDetails\SalesOrderFOCDetailsDataProvider.cs" />
+    <Compile Include="SalesOrderFOCSummary\Generated\SalesOrderFOCSummaryDataProvider.generated.cs" />
+    <Compile Include="SalesOrderFOCSummary\Generated\SalesOrderFOCSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderFOCSummary\SalesOrderFOCSummaryDataProvider.cs" />
+    <Compile Include="SalesOrderFOC\Generated\SalesOrderFOCDataProvider.generated.cs" />
+    <Compile Include="SalesOrderFOC\Generated\SalesOrderFOCEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderFOC\SalesOrderFOCDataProvider.cs" />
+    <Compile Include="SalesOrderSampleDetails\Generated\SalesOrderSampleDetailsDataProvider.generated.cs" />
+    <Compile Include="SalesOrderSampleDetails\Generated\SalesOrderSampleDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderSampleDetails\SalesOrderSampleDetailsDataProvider.cs" />
+    <Compile Include="SalesOrderSampleSummary\Generated\SalesOrderSampleSummaryDataProvider.generated.cs" />
+    <Compile Include="SalesOrderSampleSummary\Generated\SalesOrderSampleSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderSampleSummary\SalesOrderSampleSummaryDataProvider.cs" />
+    <Compile Include="SalesOrderSample\Generated\SalesOrderSampleDataProvider.generated.cs" />
+    <Compile Include="SalesOrderSample\Generated\SalesOrderSampleEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderSample\SalesOrderSampleDataProvider.cs" />
+    <Compile Include="SalesOrderReturnSummary\Generated\SalesOrderReturnSummaryDataProvider.generated.cs" />
+    <Compile Include="SalesOrderReturnSummary\Generated\SalesOrderReturnSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderReturnSummary\SalesOrderReturnSummaryDataProvider.cs" />
+    <Compile Include="SalesOrderSummary\Generated\SalesOrderSummaryDataProvider.generated.cs" />
+    <Compile Include="SalesOrderSummary\Generated\SalesOrderSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderSummary\SalesOrderSummaryDataProvider.cs" />
+    <Compile Include="SalesOrderSwapDetails\Generated\SalesOrderSwapDetailsDataProvider.generated.cs" />
+    <Compile Include="SalesOrderSwapDetails\Generated\SalesOrderSwapDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderSwapDetails\SalesOrderSwapDetailsDataProvider.cs" />
+    <Compile Include="SalesOrderSwapSummary\Generated\SalesOrderSwapSummaryDataProvider.generated.cs" />
+    <Compile Include="SalesOrderSwapSummary\Generated\SalesOrderSwapSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderSwapSummary\SalesOrderSwapSummaryDataProvider.cs" />
+    <Compile Include="SalesOrderSwap\Generated\SalesOrderSwapDataProvider.generated.cs" />
+    <Compile Include="SalesOrderSwap\Generated\SalesOrderSwapEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrderSwap\SalesOrderSwapDataProvider.cs" />
+    <Compile Include="SalesOrder\Generated\SalesOrderDataProvider.generated.cs" />
+    <Compile Include="SalesOrder\Generated\SalesOrderEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesOrder\SalesOrderDataProvider.cs" />
+    <Compile Include="ScalarFunctionResult.cs" />
+    <Compile Include="SiteAdditionalInfo\Generated\SiteAdditionalInfoDataProvider.generated.cs" />
+    <Compile Include="SiteAdditionalInfo\Generated\SiteAdditionalInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="SiteAddress\Generated\SiteAddressDataProvider.generated.cs" />
+    <Compile Include="SiteAddress\Generated\SiteAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanProduct\Generated\SalesmanProductDataProvider.generated.cs" />
+    <Compile Include="SalesmanProduct\Generated\SalesmanProductEntityTypeConfig.generated.cs" />
+    <Compile Include="SalesmanProduct\SalesmanProductDataProvider.cs" />
+    <Compile Include="SiteProduct\Generated\SiteProductDataProvider.generated.cs" />
+    <Compile Include="SiteProduct\Generated\SiteProductEntityTypeConfig.generated.cs" />
+    <Compile Include="SiteProduct\SiteProductDataProvider.cs" />
+    <Compile Include="Site\Generated\SiteDataProvider.generated.cs" />
+    <Compile Include="Site\Generated\SiteEntityTypeConfig.generated.cs" />
+    <Compile Include="Site\SiteDataProvider.cs" />
+    <Compile Include="StockDisposal\Generated\StockDisposalDataProvider.generated.cs" />
+    <Compile Include="StockDisposal\Generated\StockDisposalEntityTypeConfig.generated.cs" />
+    <Compile Include="StockDisposal\StockDisposalDataProvider.cs" />
+    <Compile Include="StockDisposalDetails\Generated\StockDisposalDetailsDataProvider.generated.cs" />
+    <Compile Include="StockDisposalDetails\Generated\StockDisposalDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="StockDisposalDetails\StockDisposalDetailsDataProvider.cs" />
+    <Compile Include="StockChangesDetails\Generated\StockChangesDetailsDataProvider.generated.cs" />
+    <Compile Include="StockChangesDetails\Generated\StockChangesDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="StockChangesDetails\StockChangesDetailsDataProvider.cs" />
+    <Compile Include="StockDisposalSummary\Generated\StockDisposalSummaryDataProvider.generated.cs" />
+    <Compile Include="StockDisposalSummary\Generated\StockDisposalSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="StockDisposalSummary\StockDisposalSummaryDataProvider.cs" />
+    <Compile Include="StockChangesSummary\Generated\StockChangesSummaryDataProvider.generated.cs" />
+    <Compile Include="StockChangesSummary\Generated\StockChangesSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="StockChangesSummary\StockChangesSummaryDataProvider.cs" />
+    <Compile Include="StockChanges\Generated\StockChangesDataProvider.generated.cs" />
+    <Compile Include="StockChanges\Generated\StockChangesEntityTypeConfig.generated.cs" />
+    <Compile Include="StockChanges\StockChangesDataProvider.cs" />
+    <Compile Include="StockOnHandCurrent\Generated\StockOnHandCurrentDataProvider.generated.cs" />
+    <Compile Include="StockOnHandCurrent\Generated\StockOnHandCurrentEntityTypeConfig.generated.cs" />
+    <Compile Include="StockOnHandCurrent\StockOnHandCurrentDataProvider.cs" />
+    <Compile Include="StockOnHandPeriodic\Generated\StockOnHandPeriodicDataProvider.generated.cs" />
+    <Compile Include="StockOnHandPeriodic\Generated\StockOnHandPeriodicEntityTypeConfig.generated.cs" />
+    <Compile Include="StockOnHandPeriodic\StockOnHandPeriodicDataProvider.cs" />
+    <Compile Include="StockReceive\Generated\StockReceiveDataProvider.generated.cs" />
+    <Compile Include="StockReceive\Generated\StockReceiveEntityTypeConfig.generated.cs" />
+    <Compile Include="StockReceive\StockReceiveDataProvider.cs" />
+    <Compile Include="StockReceiveDetails\Generated\StockReceiveDetailsDataProvider.generated.cs" />
+    <Compile Include="StockReceiveDetails\Generated\StockReceiveDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="StockReceiveDetails\StockReceiveDetailsDataProvider.cs" />
+    <Compile Include="StockOpnameDetails\Generated\StockOpnameDetailsDataProvider.generated.cs" />
+    <Compile Include="StockOpnameDetails\Generated\StockOpnameDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="StockOpnameDetails\StockOpnameDetailsDataProvider.cs" />
+    <Compile Include="StockReceiveSummary\Generated\StockReceiveSummaryDataProvider.generated.cs" />
+    <Compile Include="StockReceiveSummary\Generated\StockReceiveSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="StockReceiveSummary\StockReceiveSummaryDataProvider.cs" />
+    <Compile Include="StockOpnameSummary\Generated\StockOpnameSummaryDataProvider.generated.cs" />
+    <Compile Include="StockOpnameSummary\Generated\StockOpnameSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="StockOpnameSummary\StockOpnameSummaryDataProvider.cs" />
+    <Compile Include="StockOpname\Generated\StockOpnameDataProvider.generated.cs" />
+    <Compile Include="StockOpname\Generated\StockOpnameEntityTypeConfig.generated.cs" />
+    <Compile Include="StockOpname\StockOpnameDataProvider.cs" />
+    <Compile Include="StockTransaction\Generated\StockTransactionDataProvider.generated.cs" />
+    <Compile Include="StockTransaction\Generated\StockTransactionEntityTypeConfig.generated.cs" />
+    <Compile Include="StockTransaction\StockTransactionDataProvider.cs" />
+    <Compile Include="StockTransferDetails\Generated\StockTransferDetailsDataProvider.generated.cs" />
+    <Compile Include="StockTransferDetails\Generated\StockTransferDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="StockTransferDetails\StockTransferDetailsDataProvider.cs" />
+    <Compile Include="StockTransferSummary\Generated\StockTransferSummaryDataProvider.generated.cs" />
+    <Compile Include="StockTransferSummary\Generated\StockTransferSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="StockTransferSummary\StockTransferSummaryDataProvider.cs" />
+    <Compile Include="StockTransfer\Generated\StockTransferDataProvider.generated.cs" />
+    <Compile Include="StockTransfer\Generated\StockTransferEntityTypeConfig.generated.cs" />
+    <Compile Include="StockTransfer\StockTransferDataProvider.cs" />
+    <Compile Include="StoreFunctionsDataContext.cs" />
+    <Compile Include="SyncHistory\Generated\SyncHistoryDataProvider.generated.cs" />
+    <Compile Include="SyncHistory\Generated\SyncHistoryEntityTypeConfig.generated.cs" />
+    <Compile Include="SyncHistory\SyncHistoryDataProvider.cs" />
+    <Compile Include="SystemLookup\Generated\SystemLookupDataProvider.generated.cs" />
+    <Compile Include="SystemLookup\Generated\SystemLookupEntityTypeConfig.generated.cs" />
+    <Compile Include="SystemLookup\SystemLookupDataProvider.cs" />
+    <Compile Include="SystemParameter\Generated\SystemParameterDataProvider.generated.cs" />
+    <Compile Include="SystemParameter\Generated\SystemParameterEntityTypeConfig.generated.cs" />
+    <Compile Include="SystemParameter\SystemParameterDataProvider.cs" />
+    <Compile Include="CustomerCategory\Generated\CustomerCategoryDataProvider.generated.cs" />
+    <Compile Include="CustomerCategory\Generated\CustomerCategoryEntityTypeConfig.generated.cs" />
+    <Compile Include="CustomerCategory\CustomerCategoryDataProvider.cs" />
+    <Compile Include="Territory\Generated\TerritoryDataProvider.generated.cs" />
+    <Compile Include="Territory\Generated\TerritoryEntityTypeConfig.generated.cs" />
+    <Compile Include="Territory\TerritoryDataProvider.cs" />
+    <Compile Include="UserNotification\Generated\UserNotificationDataProvider.generated.cs" />
+    <Compile Include="UserNotification\Generated\UserNotificationEntityTypeConfig.generated.cs" />
+    <Compile Include="AuthorizationAccessToken\Generated\AuthorizationAccessTokenDataProvider.generated.cs" />
+    <Compile Include="AuthorizationAccessToken\Generated\AuthorizationAccessTokenEntityTypeConfig.generated.cs" />
+    <Compile Include="AuthorizationAccessToken\AuthorizationAccessTokenDataProvider.cs" />
+    <Compile Include="UserRolePermission\Generated\UserRolePermissionDataProvider.generated.cs" />
+    <Compile Include="UserRolePermission\Generated\UserRolePermissionEntityTypeConfig.generated.cs" />
+    <Compile Include="UserRolePermission\UserRolePermissionDataProvider.cs" />
+    <Compile Include="UserRole\Generated\UserRoleDataProvider.generated.cs" />
+    <Compile Include="UserRole\Generated\UserRoleEntityTypeConfig.generated.cs" />
+    <Compile Include="UserRole\UserRoleDataProvider.cs" />
+    <Compile Include="User\Generated\UserDataProvider.generated.cs" />
+    <Compile Include="User\Generated\UserEntityTypeConfig.generated.cs" />
+    <Compile Include="User\UserDataProvider.cs" />
+    <Compile Include="vArea\Generated\vAreaDataProvider.generated.cs" />
+    <Compile Include="vArea\Generated\vAreaEntityTypeConfig.generated.cs" />
+    <Compile Include="vArea\vAreaDataProvider.cs" />
+    <Compile Include="vClosingPeriod\Generated\vClosingPeriodDataProvider.generated.cs" />
+    <Compile Include="vClosingPeriod\Generated\vClosingPeriodEntityTypeConfig.generated.cs" />
+    <Compile Include="vClosingPeriod\vClosingPeriodDataProvider.cs" />
+    <Compile Include="vCompanyAddress\Generated\vCompanyAddressDataProvider.generated.cs" />
+    <Compile Include="vCompanyAddress\Generated\vCompanyAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="vCompany\Generated\vCompanyDataProvider.generated.cs" />
+    <Compile Include="vCompany\Generated\vCompanyEntityTypeConfig.generated.cs" />
+    <Compile Include="vCompany\vCompanyDataProvider.cs" />
+    <Compile Include="vCountry\Generated\vCountryDataProvider.generated.cs" />
+    <Compile Include="vCountry\Generated\vCountryEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomerAdditionalInfo\Generated\vCustomerAdditionalInfoDataProvider.generated.cs" />
+    <Compile Include="vCustomerAdditionalInfo\Generated\vCustomerAdditionalInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomerAddress\Generated\vCustomerAddressDataProvider.generated.cs" />
+    <Compile Include="vCustomerAddress\Generated\vCustomerAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomerStockOnHandPeriodic\Generated\vCustomerStockOnHandPeriodicDataProvider.generated.cs" />
+    <Compile Include="vCustomerStockOnHandPeriodic\Generated\vCustomerStockOnHandPeriodicEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomerStockOnHandPeriodic\vCustomerStockOnHandPeriodicDataProvider.cs" />
+    <Compile Include="vCustomerStockOnHandPeriodic\vCustomerStockOnHandPeriodicEntityTypeConfig.cs" />
+    <Compile Include="vDailySalesmanInventoryReport\Generated\vDailySalesmanInventoryReportDataProvider.generated.cs" />
+    <Compile Include="vDailySalesmanInventoryReport\Generated\vDailySalesmanInventoryReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vDailySalesmanInventoryReport\vDailySalesmanInventoryReport.StoreFunctions.cs" />
+    <Compile Include="vDailySalesmanReport\Generated\vDailySalesmanReportDataProvider.generated.cs" />
+    <Compile Include="vDailySalesmanReport\Generated\vDailySalesmanReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vDailySalesmanReport\vDailySalesmanReport.StoreFunctions.cs" />
+    <Compile Include="vDailySalesReport\Generated\vDailySalesReportDataProvider.generated.cs" />
+    <Compile Include="vDailySalesReport\Generated\vDailySalesReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vDailySalesReport\vDailySalesReport.StoreFunctions.cs" />
+    <Compile Include="vMerchandiseDisplayActivity\Generated\vMerchandiseDisplayActivityDataProvider.generated.cs" />
+    <Compile Include="vMerchandiseDisplayActivity\Generated\vMerchandiseDisplayActivityEntityTypeConfig.generated.cs" />
+    <Compile Include="vMerchandiseDisplayActivity\vMerchandiseDisplayActivityDataProvider.cs" />
+    <Compile Include="vMerchandiseDisplayActivity\vMerchandiseDisplayActivityEntityTypeConfig.cs" />
+    <Compile Include="vPermissionObject\Generated\vPermissionObjectDataProvider.generated.cs" />
+    <Compile Include="vPermissionObject\Generated\vPermissionObjectEntityTypeConfig.generated.cs" />
+    <Compile Include="vPromoMaterialActivity\Generated\vPromoMaterialActivityDataProvider.generated.cs" />
+    <Compile Include="vPromoMaterialActivity\Generated\vPromoMaterialActivityEntityTypeConfig.generated.cs" />
+    <Compile Include="vPromoMaterialActivity\vPromoMaterialActivityDataProvider.cs" />
+    <Compile Include="vPromoMaterialActivity\vPromoMaterialActivityEntityTypeConfig.cs" />
+    <Compile Include="vPromoProduct\Generated\vPromoProductDataProvider.generated.cs" />
+    <Compile Include="vPromoProduct\Generated\vPromoProductEntityTypeConfig.generated.cs" />
+    <Compile Include="vPromoProduct\vPromoProductDataProvider.cs" />
+    <Compile Include="vRole\Generated\vRoleDataProvider.generated.cs" />
+    <Compile Include="vRole\Generated\vRoleEntityTypeConfig.generated.cs" />
+    <Compile Include="vRole\vRoleDataProvider.cs" />
+    <Compile Include="vRoutePlanCustomer\vRoutePlanCustomerDataProvider.cs" />
+    <Compile Include="vRoutePlanSalesman\vRoutePlanSalesmanDataProvider.cs" />
+    <Compile Include="vRoutePlan\vRoutePlan.StoreFunctions.cs" />
+    <Compile Include="vSalesBySiteByBrandReport\Generated\vSalesBySiteByBrandReportDataProvider.generated.cs" />
+    <Compile Include="vSalesBySiteByBrandReport\Generated\vSalesBySiteByBrandReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesBySiteByBrandReport\vSalesBySiteByBrandReport.StoreFunctions.cs" />
+    <Compile Include="vSalesByChannelByBrandReport\Generated\vSalesByChannelByBrandReportDataProvider.generated.cs" />
+    <Compile Include="vSalesByChannelByBrandReport\Generated\vSalesByChannelByBrandReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesByChannelByBrandReport\vSalesByChannelByBrandReport.StoreFunctions.cs" />
+    <Compile Include="vSalesBySiteReport\Generated\vSalesBySiteReportDataProvider.generated.cs" />
+    <Compile Include="vSalesBySiteReport\Generated\vSalesBySiteReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesBySiteReport\vSalesBySiteReport.StoreFunctions.cs" />
+    <Compile Include="vSalesByChannelReport\Generated\vSalesByChannelReportDataProvider.generated.cs" />
+    <Compile Include="vSalesByChannelReport\Generated\vSalesByChannelReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesByChannelReport\vSalesByChannelReport.StoreFunctions.cs" />
+    <Compile Include="vSalesmanActivityReport\Generated\vSalesmanActivityReportDataProvider.generated.cs" />
+    <Compile Include="vSalesmanActivityReport\Generated\vSalesmanActivityReportEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanCallLog\Generated\vSalesmanCallLogDataProvider.generated.cs" />
+    <Compile Include="vSalesmanCallLog\Generated\vSalesmanCallLogEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanCallLog\vSalesmanCallLogDataProvider.cs" />
+    <Compile Include="vSalesmanCallLog\vSalesmanCallLogEntityTypeConfig.cs" />
+    <Compile Include="vSalesmanCall\Generated\vSalesmanCallDataProvider.generated.cs" />
+    <Compile Include="vSalesmanCall\Generated\vSalesmanCallEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanInitialCall\Generated\vSalesmanInitialCallDataProvider.generated.cs" />
+    <Compile Include="vSalesmanInitialCall\Generated\vSalesmanInitialCallEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanInitialCall\vSalesmanInitialCallDataProvider.cs" />
+    <Compile Include="vSalesmanTarget\Generated\vSalesmanTargetDataProvider.generated.cs" />
+    <Compile Include="vSalesmanTarget\Generated\vSalesmanTargetEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanTarget\vSalesmanTargetDataProvider.cs" />
+    <Compile Include="vSalesmanProductTarget\Generated\vSalesmanProductTargetDataProvider.generated.cs" />
+    <Compile Include="vSalesmanProductTarget\Generated\vSalesmanProductTargetEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanProductTarget\vSalesmanProductTargetEntityTypeConfig.cs" />
+    <Compile Include="vSalesmanProductTarget\vSalesmanProductTargetDataProvider.cs" />
+    <Compile Include="vSalesOrderFOCDetails\vSalesOrderFOCDetails.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderFOCSummary\vSalesOrderFOCSummary.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderFOC\vSalesOrderFOC.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderReturnDetails\vSalesOrderReturnDetails.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderReturnSummary\vSalesOrderReturnSummary.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderReturn\vSalesOrderReturn.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderSampleDetails\vSalesOrderSampleDetails.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderSampleSummary\vSalesOrderSampleSummary.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderSample\vSalesOrderSample.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderSwapDetails\vSalesOrderSwapDetails.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderSwapSummary\vSalesOrderSwapSummary.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderSwap\vSalesOrderSwap.StoreFunctions.cs" />
+    <Compile Include="vSFADashboardDetails\Generated\vSFADashboardDetailsDataProvider.generated.cs" />
+    <Compile Include="vSFADashboardDetails\Generated\vSFADashboardDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vSFADashboardDetails\vSFADashboardDetails.StoreFunctions.cs" />
+    <Compile Include="vSFADashboard\Generated\vSFADashboardDataProvider.generated.cs" />
+    <Compile Include="vSFADashboard\Generated\vSFADashboardEntityTypeConfig.generated.cs" />
+    <Compile Include="vSFADashboard\vSFADashboard.StoreFunctions.cs" />
+    <Compile Include="vSite\vSite.StoreFunctions.cs" />
+    <Compile Include="vCustomerBillAddress\Generated\vCustomerBillAddressDataProvider.generated.cs" />
+    <Compile Include="vCustomerBillAddress\Generated\vCustomerBillAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomerCategoryInfo\Generated\vCustomerCategoryInfoDataProvider.generated.cs" />
+    <Compile Include="vCustomerCategoryInfo\Generated\vCustomerCategoryInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomerTaxAddress\Generated\vCustomerTaxAddressDataProvider.generated.cs" />
+    <Compile Include="vCustomerTaxAddress\Generated\vCustomerTaxAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomer\Generated\vCustomerDataProvider.generated.cs" />
+    <Compile Include="vCustomer\Generated\vCustomerEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomer\vCustomerDataProvider.cs" />
+    <Compile Include="vCustomer\vCustomer.StoreFunctions.cs" />
+    <Compile Include="vDiscountGroupProduct\Generated\vDiscountGroupProductDataProvider.generated.cs" />
+    <Compile Include="vDiscountGroupProduct\Generated\vDiscountGroupProductEntityTypeConfig.generated.cs" />
+    <Compile Include="vDiscountGroupProduct\vDiscountGroupProductEntityTypeConfig.cs" />
+    <Compile Include="vDiscountGroupProduct\vDiscountGroupProductDataProvider.cs" />
+    <Compile Include="vDiscountGroup\Generated\vDiscountGroupDataProvider.generated.cs" />
+    <Compile Include="vDiscountGroup\Generated\vDiscountGroupEntityTypeConfig.generated.cs" />
+    <Compile Include="vDiscountGroup\vDiscountGroupDataProvider.cs" />
+    <Compile Include="vDiscountStrataDetails\Generated\vDiscountStrataDetailsDataProvider.generated.cs" />
+    <Compile Include="vDiscountStrataDetails\Generated\vDiscountStrataDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vDiscountStrataDetails\vDiscountStrataDetailsEntityTypeConfig.cs" />
+    <Compile Include="vDiscountStrataDetails\vDiscountStrataDetailsDataProvider.cs" />
+    <Compile Include="vDiscountStrata\Generated\vDiscountStrataDataProvider.generated.cs" />
+    <Compile Include="vDiscountStrata\Generated\vDiscountStrataEntityTypeConfig.generated.cs" />
+    <Compile Include="vDiscountStrata\vDiscountStrataDataProvider.cs" />
+    <Compile Include="vProductAdditionalInfo\Generated\vProductAdditionalInfoDataProvider.generated.cs" />
+    <Compile Include="vProductAdditionalInfo\Generated\vProductAdditionalInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="vProductBrand\Generated\vProductBrandDataProvider.generated.cs" />
+    <Compile Include="vProductBrand\Generated\vProductBrandEntityTypeConfig.generated.cs" />
+    <Compile Include="vProductBrand\vProductBrandDataProvider.cs" />
+    <Compile Include="vProductLot\Generated\vProductLotDataProvider.generated.cs" />
+    <Compile Include="vProductLot\Generated\vProductLotEntityTypeConfig.generated.cs" />
+    <Compile Include="vProductPrice\Generated\vProductPriceDataProvider.generated.cs" />
+    <Compile Include="vProductPrice\Generated\vProductPriceEntityTypeConfig.generated.cs" />
+    <Compile Include="vProductPrice\vProductPriceDataProvider.cs" />
+    <Compile Include="vProduct\Generated\vProductDataProvider.generated.cs" />
+    <Compile Include="vProduct\Generated\vProductEntityTypeConfig.generated.cs" />
+    <Compile Include="vProduct\vProductDataProvider.cs" />
+    <Compile Include="vProduct\vProductEntityTypeConfig.cs" />
+    <Compile Include="vRegion\Generated\vRegionDataProvider.generated.cs" />
+    <Compile Include="vRegion\Generated\vRegionEntityTypeConfig.generated.cs" />
+    <Compile Include="vRegion\vRegionDataProvider.cs" />
+    <Compile Include="vRoutePlanCustomer\Generated\vRoutePlanCustomerDataProvider.generated.cs" />
+    <Compile Include="vRoutePlanCustomer\Generated\vRoutePlanCustomerEntityTypeConfig.generated.cs" />
+    <Compile Include="vRoutePlanCustomer\vRoutePlanCustomer.StoreFunctions.cs" />
+    <Compile Include="vRoutePlanSalesman\Generated\vRoutePlanSalesmanDataProvider.generated.cs" />
+    <Compile Include="vRoutePlanSalesman\Generated\vRoutePlanSalesmanEntityTypeConfig.generated.cs" />
+    <Compile Include="vRoutePlanSalesman\vRoutePlanSalesman.StoreFunctions.cs" />
+    <Compile Include="vRoutePlan\Generated\vRoutePlanDataProvider.generated.cs" />
+    <Compile Include="vRoutePlan\Generated\vRoutePlanEntityTypeConfig.generated.cs" />
+    <Compile Include="vRoutePlan\vRoutePlanDataProvider.cs" />
+    <Compile Include="vSalesman\Generated\vSalesmanDataProvider.generated.cs" />
+    <Compile Include="vSalesman\Generated\vSalesmanEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesman\vSalesmanDataProvider.cs" />
+    <Compile Include="vSalesOrderDetails\vSalesOrderDetails.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderReturnDetails\Generated\vSalesOrderReturnDetailsDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderReturnDetails\Generated\vSalesOrderReturnDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderReturnDetails\vSalesOrderReturnDetailsDataProvider.cs" />
+    <Compile Include="vSalesOrderReturnDetails\vSalesOrderReturnDetailsEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderReturn\Generated\vSalesOrderReturnDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderReturn\Generated\vSalesOrderReturnEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderReturn\vSalesOrderReturnDataProvider.cs" />
+    <Compile Include="vSalesOrderDetails\Generated\vSalesOrderDetailsDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderDetails\Generated\vSalesOrderDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderDetails\vSalesOrderDetailsDataProvider.cs" />
+    <Compile Include="vSalesOrderDetails\vSalesOrderDetailsEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderFOCDetails\Generated\vSalesOrderFOCDetailsDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderFOCDetails\Generated\vSalesOrderFOCDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderFOCDetails\vSalesOrderFOCDetailsDataProvider.cs" />
+    <Compile Include="vSalesOrderFOCDetails\vSalesOrderFOCDetailsEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderFOCSummary\Generated\vSalesOrderFOCSummaryDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderFOCSummary\Generated\vSalesOrderFOCSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderFOCSummary\vSalesOrderFOCSummaryDataProvider.cs" />
+    <Compile Include="vSalesOrderFOCSummary\vSalesOrderFOCSummaryEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderFOC\Generated\vSalesOrderFOCDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderFOC\Generated\vSalesOrderFOCEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderFOC\vSalesOrderFOCDataProvider.cs" />
+    <Compile Include="vSalesOrderSampleDetails\Generated\vSalesOrderSampleDetailsDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderSampleDetails\Generated\vSalesOrderSampleDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderSampleDetails\vSalesOrderSampleDetailsDataProvider.cs" />
+    <Compile Include="vSalesOrderSampleDetails\vSalesOrderSampleDetailsEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderSampleSummary\Generated\vSalesOrderSampleSummaryDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderSampleSummary\Generated\vSalesOrderSampleSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderSampleSummary\vSalesOrderSampleSummaryDataProvider.cs" />
+    <Compile Include="vSalesOrderSampleSummary\vSalesOrderSampleSummaryEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderSample\Generated\vSalesOrderSampleDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderSample\Generated\vSalesOrderSampleEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderSample\vSalesOrderSampleDataProvider.cs" />
+    <Compile Include="vSalesOrderReturnSummary\Generated\vSalesOrderReturnSummaryDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderReturnSummary\Generated\vSalesOrderReturnSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderReturnSummary\vSalesOrderReturnSummaryDataProvider.cs" />
+    <Compile Include="vSalesOrderReturnSummary\vSalesOrderReturnSummaryEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderSummary\Generated\vSalesOrderSummaryDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderSummary\Generated\vSalesOrderSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderSummary\vSalesOrderSummary.StoreFunctions.cs" />
+    <Compile Include="vSalesOrderSummary\vSalesOrderSummaryEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderSummary\vSalesOrderSummaryDataProvider.cs" />
+    <Compile Include="vSalesOrderSwapDetails\Generated\vSalesOrderSwapDetailsDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderSwapDetails\Generated\vSalesOrderSwapDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderSwapDetails\vSalesOrderSwapDetailsDataProvider.cs" />
+    <Compile Include="vSalesOrderSwapSummary\Generated\vSalesOrderSwapSummaryDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderSwapSummary\Generated\vSalesOrderSwapSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderSwapSummary\vSalesOrderSwapSummaryDataProvider.cs" />
+    <Compile Include="vSalesOrderSwapSummary\vSalesOrderSwapSummaryEntityTypeConfig.cs" />
+    <Compile Include="vSalesOrderSwap\Generated\vSalesOrderSwapDataProvider.generated.cs" />
+    <Compile Include="vSalesOrderSwap\Generated\vSalesOrderSwapEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrderSwap\vSalesOrderSwapDataProvider.cs" />
+    <Compile Include="vSalesOrder\Generated\vSalesOrderDataProvider.generated.cs" />
+    <Compile Include="vSalesOrder\Generated\vSalesOrderEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesOrder\vSalesOrder.StoreFunctions.cs" />
+    <Compile Include="vSalesOrder\vSalesOrderDataProvider.cs" />
+    <Compile Include="vSiteAdditionalInfo\Generated\vSiteAdditionalInfoDataProvider.generated.cs" />
+    <Compile Include="vSiteAdditionalInfo\Generated\vSiteAdditionalInfoEntityTypeConfig.generated.cs" />
+    <Compile Include="vSiteAddress\Generated\vSiteAddressDataProvider.generated.cs" />
+    <Compile Include="vSiteAddress\Generated\vSiteAddressEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanProduct\Generated\vSalesmanProductDataProvider.generated.cs" />
+    <Compile Include="vSalesmanProduct\Generated\vSalesmanProductEntityTypeConfig.generated.cs" />
+    <Compile Include="vSalesmanProduct\vSalesmanProductDataProvider.cs" />
+    <Compile Include="vSalesmanProduct\vSalesmanProductEntityTypeConfig.cs" />
+    <Compile Include="vSiteProduct\Generated\vSiteProductDataProvider.generated.cs" />
+    <Compile Include="vSiteProduct\Generated\vSiteProductEntityTypeConfig.generated.cs" />
+    <Compile Include="vSiteProduct\vSiteProductDataProvider.cs" />
+    <Compile Include="vSiteProduct\vSiteProductEntityTypeConfig.cs" />
+    <Compile Include="vSite\Generated\vSiteDataProvider.generated.cs" />
+    <Compile Include="vSite\Generated\vSiteEntityTypeConfig.generated.cs" />
+    <Compile Include="vSite\vSiteDataProvider.cs" />
+    <Compile Include="vStockChangesDetails\vStockChangesDetails.StoreFunctions.cs" />
+    <Compile Include="vStockChangesSummary\vStockChangesSummary.StoreFunctions.cs" />
+    <Compile Include="vStockChanges\vStockChanges.StoreFunctions.cs" />
+    <Compile Include="vStockDisposalDetails\vStockDisposalDetails.StoreFunctions.cs" />
+    <Compile Include="vStockDisposalSummary\vStockDisposalSummary.StoreFunctions.cs" />
+    <Compile Include="vStockDisposal\Generated\vStockDisposalDataProvider.generated.cs" />
+    <Compile Include="vStockDisposal\Generated\vStockDisposalEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockDisposal\vStockDisposalDataProvider.cs" />
+    <Compile Include="vStockDisposalDetails\Generated\vStockDisposalDetailsDataProvider.generated.cs" />
+    <Compile Include="vStockDisposalDetails\Generated\vStockDisposalDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockDisposalDetails\vStockDisposalDetailsDataProvider.cs" />
+    <Compile Include="vStockDisposalDetails\vStockDisposalDetailsEntityTypeConfig.cs" />
+    <Compile Include="vStockChangesDetails\Generated\vStockChangesDetailsDataProvider.generated.cs" />
+    <Compile Include="vStockChangesDetails\Generated\vStockChangesDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockChangesDetails\vStockChangesDetailsDataProvider.cs" />
+    <Compile Include="vStockChangesDetails\vStockChangesDetailsEntityTypeConfig.cs" />
+    <Compile Include="vStockDisposalSummary\Generated\vStockDisposalSummaryDataProvider.generated.cs" />
+    <Compile Include="vStockDisposalSummary\Generated\vStockDisposalSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockDisposalSummary\vStockDisposalSummaryDataProvider.cs" />
+    <Compile Include="vStockDisposalSummary\vStockDisposalSummaryEntityTypeConfig.cs" />
+    <Compile Include="vStockChangesSummary\Generated\vStockChangesSummaryDataProvider.generated.cs" />
+    <Compile Include="vStockChangesSummary\Generated\vStockChangesSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockChangesSummary\vStockChangesSummaryDataProvider.cs" />
+    <Compile Include="vStockChangesSummary\vStockChangesSummaryEntityTypeConfig.cs" />
+    <Compile Include="vStockChanges\Generated\vStockChangesDataProvider.generated.cs" />
+    <Compile Include="vStockChanges\Generated\vStockChangesEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockChanges\vStockChangesDataProvider.cs" />
+    <Compile Include="vStockDisposal\vStockDisposal.StoreFunctions.cs" />
+    <Compile Include="vStockOnHandAll\Generated\vStockOnHandAllDataProvider.generated.cs" />
+    <Compile Include="vStockOnHandAll\Generated\vStockOnHandAllEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockOnHandAvailable\Generated\vStockOnHandAvailableDataProvider.generated.cs" />
+    <Compile Include="vStockOnHandAvailable\Generated\vStockOnHandAvailableEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockOnHandAvailable\vStockOnHandAvailable.StoreFunctions.cs" />
+    <Compile Include="vStockOnHandCurrent\Generated\vStockOnHandCurrentDataProvider.generated.cs" />
+    <Compile Include="vStockOnHandCurrent\Generated\vStockOnHandCurrentEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockOpnameDetails\vStockOpnameDetails.StoreFunctions.cs" />
+    <Compile Include="vStockOpnameSummary\vStockOpnameSummary.StoreFunctions.cs" />
+    <Compile Include="vStockOpname\vStockOpname.StoreFunctions.cs" />
+    <Compile Include="vStockReceiveDetails\vStockReceiveDetails.StoreFunctions.cs" />
+    <Compile Include="vStockReceiveSummary\vStockReceiveSummary.StoreFunctions.cs" />
+    <Compile Include="vStockReceive\Generated\vStockReceiveDataProvider.generated.cs" />
+    <Compile Include="vStockReceive\Generated\vStockReceiveEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockReceive\vStockReceive.StoreFunctions.cs" />
+    <Compile Include="vStockReceive\vStockReceiveDataProvider.cs" />
+    <Compile Include="vStockReceiveDetails\Generated\vStockReceiveDetailsDataProvider.generated.cs" />
+    <Compile Include="vStockReceiveDetails\Generated\vStockReceiveDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockReceiveDetails\vStockReceiveDetailsDataProvider.cs" />
+    <Compile Include="vStockReceiveDetails\vStockReceiveDetailsEntityTypeConfig.cs" />
+    <Compile Include="vStockOpnameDetails\Generated\vStockOpnameDetailsDataProvider.generated.cs" />
+    <Compile Include="vStockOpnameDetails\Generated\vStockOpnameDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockOpnameDetails\vStockOpnameDetailsDataProvider.cs" />
+    <Compile Include="vStockOpnameDetails\vStockOpnameDetailsEntityTypeConfig.cs" />
+    <Compile Include="vStockReceiveSummary\Generated\vStockReceiveSummaryDataProvider.generated.cs" />
+    <Compile Include="vStockReceiveSummary\Generated\vStockReceiveSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockReceiveSummary\vStockReceiveSummaryDataProvider.cs" />
+    <Compile Include="vStockReceiveSummary\vStockReceiveSummaryEntityTypeConfig.cs" />
+    <Compile Include="vStockOpnameSummary\Generated\vStockOpnameSummaryDataProvider.generated.cs" />
+    <Compile Include="vStockOpnameSummary\Generated\vStockOpnameSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockOpnameSummary\vStockOpnameSummaryDataProvider.cs" />
+    <Compile Include="vStockOpnameSummary\vStockOpnameSummaryEntityTypeConfig.cs" />
+    <Compile Include="vStockTransferDetails\Generated\vStockTransferDetailsDataProvider.generated.cs" />
+    <Compile Include="vStockTransferDetails\Generated\vStockTransferDetailsEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockTransferDetails\vStockTransferDetailsEntityTypeConfig.cs" />
+    <Compile Include="vStockTransferDetails\vStockTransferDetailsDataProvider.cs" />
+    <Compile Include="vStockTransferDetails\vStockTransferDetails.StoreFunctions.cs" />
+    <Compile Include="vStockTransferSummary\Generated\vStockTransferSummaryDataProvider.generated.cs" />
+    <Compile Include="vStockTransferSummary\Generated\vStockTransferSummaryEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockTransferSummary\vStockTransferSummary.StoreFunctions.cs" />
+    <Compile Include="vStockTransferSummary\vStockTransferSummaryEntityTypeConfig.cs" />
+    <Compile Include="vStockTransferSummary\vStockTransferSummaryDataProvider.cs" />
+    <Compile Include="vStockTransfer\Generated\vStockTransferDataProvider.generated.cs" />
+    <Compile Include="vStockTransfer\Generated\vStockTransferEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockTransfer\vStockTransferDataProvider.cs" />
+    <Compile Include="vStockOpname\Generated\vStockOpnameDataProvider.generated.cs" />
+    <Compile Include="vStockOpname\Generated\vStockOpnameEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockOpname\vStockOpnameDataProvider.cs" />
+    <Compile Include="vStockTransfer\vStockTransfer.StoreFunctions.cs" />
+    <Compile Include="vStockView\Generated\vStockViewDataProvider.generated.cs" />
+    <Compile Include="vStockView\Generated\vStockViewEntityTypeConfig.generated.cs" />
+    <Compile Include="vStockView\vStockView.StoreFunctions.cs" />
+    <Compile Include="vSystemLookup\Generated\vSystemLookupDataProvider.generated.cs" />
+    <Compile Include="vSystemLookup\Generated\vSystemLookupEntityTypeConfig.generated.cs" />
+    <Compile Include="vSystemLookup\vSystemLookupDataProvider.cs" />
+    <Compile Include="vSystemParameter\Generated\vSystemParameterDataProvider.generated.cs" />
+    <Compile Include="vSystemParameter\Generated\vSystemParameterEntityTypeConfig.generated.cs" />
+    <Compile Include="vSystemParameter\vSystemParameterDataProvider.cs" />
+    <Compile Include="vCustomerCategory\Generated\vCustomerCategoryDataProvider.generated.cs" />
+    <Compile Include="vCustomerCategory\Generated\vCustomerCategoryEntityTypeConfig.generated.cs" />
+    <Compile Include="vCustomerCategory\vCustomerCategoryDataProvider.cs" />
+    <Compile Include="vSyncHistory\Generated\vSyncHistoryDataProvider.generated.cs" />
+    <Compile Include="vSyncHistory\Generated\vSyncHistoryEntityTypeConfig.generated.cs" />
+    <Compile Include="vSyncHistory\vSyncHistory.StoreFunctions.cs" />
+    <Compile Include="vSyncHistory\vSyncHistoryDataProvider.cs" />
+    <Compile Include="vTerritory\Generated\vTerritoryDataProvider.generated.cs" />
+    <Compile Include="vTerritory\Generated\vTerritoryEntityTypeConfig.generated.cs" />
+    <Compile Include="vTerritory\vTerritory.StoreFunctions.cs" />
+    <Compile Include="vTerritory\vTerritoryDataProvider.cs" />
+    <Compile Include="vUserNotification\Generated\vUserNotificationDataProvider.generated.cs" />
+    <Compile Include="vUserNotification\Generated\vUserNotificationEntityTypeConfig.generated.cs" />
+    <Compile Include="vUserPermissionAll\vUserPermissionAllDataProvider.cs" />
+    <Compile Include="vAuthorizationAccessToken\Generated\vAuthorizationAccessTokenDataProvider.generated.cs" />
+    <Compile Include="vAuthorizationAccessToken\Generated\vAuthorizationAccessTokenEntityTypeConfig.generated.cs" />
+    <Compile Include="vAuthorizationAccessToken\vAuthorizationAccessTokenDataProvider.cs" />
+    <Compile Include="vUserRoleAll\Generated\vUserRoleAllDataProvider.generated.cs" />
+    <Compile Include="vUserRoleAll\Generated\vUserRoleAllEntityTypeConfig.generated.cs" />
+    <Compile Include="vUserPermissionAll\Generated\vUserPermissionAllDataProvider.generated.cs" />
+    <Compile Include="vUserPermissionAll\Generated\vUserPermissionAllEntityTypeConfig.generated.cs" />
+    <Compile Include="vUserPermissionAll\vUserPermissionAllEntityTypeConfig.cs" />
+    <Compile Include="vUserRolePermission\Generated\vUserRolePermissionDataProvider.generated.cs" />
+    <Compile Include="vUserRolePermission\Generated\vUserRolePermissionEntityTypeConfig.generated.cs" />
+    <Compile Include="vUserRolePermission\vUserRolePermissionDataProvider.cs" />
+    <Compile Include="vUserRolePermission\vUserRolePermissionEntityTypeConfig.cs" />
+    <Compile Include="vUserRole\Generated\vUserRoleDataProvider.generated.cs" />
+    <Compile Include="vUserRole\Generated\vUserRoleEntityTypeConfig.generated.cs" />
+    <Compile Include="vUserRole\vUserRoleEntityTypeConfig.cs" />
+    <Compile Include="vUserRole\vUserRoleDataProvider.cs" />
+    <Compile Include="vUser\Generated\vUserDataProvider.generated.cs" />
+    <Compile Include="vUser\Generated\vUserEntityTypeConfig.generated.cs" />
+    <Compile Include="vUserNotification\vUserNotificationDataProvider.cs" />
+    <Compile Include="vUser\vUserDataProvider.cs" />
+    <Compile Include="vWarehouse\Generated\vWarehouseDataProvider.generated.cs" />
+    <Compile Include="vWarehouse\Generated\vWarehouseEntityTypeConfig.generated.cs" />
+    <Compile Include="vWarehouse\vWarehouseEntityTypeConfig.cs" />
+    <Compile Include="vWarehouse\vWarehouseDataProvider.cs" />
+    <Compile Include="Warehouse\Generated\WarehouseDataProvider.generated.cs" />
+    <Compile Include="Warehouse\Generated\WarehouseEntityTypeConfig.generated.cs" />
+    <Compile Include="Warehouse\WarehouseDataProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Data\Dismoyo.Ciptoning.Data.csproj">
+      <Project>{4f0d8033-8deb-424b-94a4-31651423a695}</Project>
+      <Name>Dismoyo.Ciptoning.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Data.LinqToEntity\Dismoyo.Data.LinqToEntity.csproj">
+      <Project>{8d465f75-cd28-47e7-bd2f-73e6b8d1b7bb}</Project>
+      <Name>Dismoyo.Data.LinqToEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Data\Dismoyo.Data.csproj">
+      <Project>{fdc5213a-3b33-47a5-858c-f46de29df569}</Project>
+      <Name>Dismoyo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Utilities\Dismoyo.Utilities.csproj">
+      <Project>{8bd5cead-a880-4a18-a560-502da4c4ad09}</Project>
+      <Name>Dismoyo.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dismoyo_packages\Dismoyo.Web\Dismoyo.Web.csproj">
+      <Project>{850677ff-5f70-46c2-b1be-c28a90b79d69}</Project>
+      <Name>Dismoyo.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

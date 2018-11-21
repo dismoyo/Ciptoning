@@ -1,0 +1,586 @@
+.desktop-layout .wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.dx-theme-generic.dx-color-scheme-dark .desktop-layout header .logo {
+    background-position: -104px 0;
+}
+
+.dx-theme-generic.dx-color-scheme-light .desktop-layout header .logo {
+    background-position: 0 0;
+}
+
+.desktop-layout .main-menu {
+    width: 100%;
+}
+
+.desktop-layout .toolbar {
+    box-sizing: border-box;
+    height: 56px;
+    margin-bottom: 35px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.desktop-layout #navBar .dx-icon {
+    display: none;
+}
+
+.desktop-layout #navBar .dx-tab {
+    padding: 9px 30px 11px;
+}
+
+.desktop-layout #navBar .dx-nav-item {
+    height: 40px;
+}
+
+    .desktop-layout #navBar .dx-nav-item.dx-state-focused {
+        box-shadow: none;
+    }
+
+.desktop-layout #tabs {
+    width: 100%;
+    text-align: center;
+}
+
+    .desktop-layout #tabs .dx-tab {
+        padding: 5px 30px;
+    }
+
+.desktop-layout .half-content {
+    float: left;
+    width: 45%;
+    margin: 0;
+    padding: 0;
+}
+
+    .desktop-layout .half-content:first-child {
+        padding: 0 10% 0 0;
+    }
+
+.desktop-layout .dx-field {
+    position: static;
+}
+
+.desktop-layout .dx-toolbar {
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+    .desktop-layout .dx-toolbar .dx-toolbar-before .dx-toolbar-item:first-child {
+        margin: 0;
+    }
+
+    .desktop-layout .dx-toolbar .dx-toolbar-after .dx-toolbar-item {
+        margin: 0 0 0 8px;
+    }
+
+.desktop-layout .dx-popup-title.dx-toolbar .dx-toolbar-label {
+    padding: 0 5px 0 0;
+}
+
+
+
+
+
+
+/* ----------------------------------------- */
+
+
+
+
+
+
+.page-rect {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.page-header {
+    background-color: #f39e6c;
+    text-align: center;
+}
+
+.page-content {
+    background-color: #f5e5a6;
+}
+
+.page-left-side-bar {
+    background-color: #94d7c7;
+}
+
+.page-right-side-bar {
+    background-color: #77c7e7;
+}
+
+.page-footer {
+    background-color: #7b9bcf;
+}
+
+
+
+
+.main-content {
+    padding: 40px 20px 10px 20px;
+    width: auto;
+    overflow: auto;
+    max-width: 1000px;
+    margin-left: 330px;
+    margin-right: auto;
+    display: block;
+}
+
+.main-content-body {
+    width: auto;
+    min-width: 300px;
+    display: block;
+}
+
+.left-menu-wrapper {
+    position: fixed;
+    top: 91px;
+    bottom: 20px;
+    left: 36px;
+    width: 250px;
+    z-index: 6;
+    backface-visibility: hidden;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-contentHeader
+------------------------------------------------------------------------------------------------ */
+
+.desktop-contentHeader {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.desktop-contentHeader-content {
+    height: 32px;
+    margin: 7px 10px 7px 14px;
+}
+
+.desktop-contentHeader-content-item {
+    float: right;
+    margin-left: 4px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-commonPopupEdit
+------------------------------------------------------------------------------------------------ */
+
+.desktop-Login {
+}
+
+.desktop-login-gallery {
+    overflow: hidden;
+    margin: 0px;
+}
+
+.desktop-login-form {
+    overflow: hidden;
+    width: auto;
+    margin: 2px 10px 7px 14px;
+}
+
+.desktop-login-commands {
+    width: 100%;
+    height: 26px;
+    padding: 0px 0px;
+}
+
+.desktop-login-commands-item {
+    float: right;
+    margin-right: 12px;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-collapsibleFilter
+------------------------------------------------------------------------------------------------ */
+
+.desktop-collapsibleFilter {
+    overflow: hidden;
+}
+
+.desktop-collapsibleFilter-form {
+    margin: 2px 10px 7px 14px;
+}
+
+.desktop-collapsibleFilter-header {
+    height: 34px;
+}
+
+.desktop-collapsibleFilter-header-item {
+    float: left;
+    margin-right: 4px;
+}
+
+.desktop-collapsibleFilter-commands {
+    height: 26px;
+    margin: 0px 10px 0px 14px;
+}
+
+.desktop-collapsibleFilter-commands-item {
+    float: right;
+    margin-left: 4px;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-commonGridView
+------------------------------------------------------------------------------------------------ */
+
+.desktop-commonGridView {
+    overflow: hidden;
+}
+
+    .desktop-commonGridView .dx-view {
+        width: 100%;
+    }
+
+.desktop-commonGridView-container {
+    height: 100%;
+}
+
+#commonGridView_dataGrid {
+    width: 100%;
+}
+
+.desktop-commonGridView-commands {
+    height: 26px;
+    margin: 7px 10px 7px 14px;
+}
+
+.desktop-commonGridView-commands-item {
+    float: left;
+    margin-right: 4px;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-commonTreeView
+------------------------------------------------------------------------------------------------ */
+
+.desktop-commonTreeView {
+}
+
+.desktop-commonTreeView-commands {
+    height: 26px;
+    margin: 7px 10px 7px 14px;
+}
+
+.desktop-commonTreeView-commands-item {
+    float: left;
+    margin-right: 4px;
+}
+
+.desktop-commonTreeView-focusedItem {
+    background-color: #606060;
+    color: #fff;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-commonPopupEdit
+------------------------------------------------------------------------------------------------ */
+
+.desktop-commonPopupEdit {
+}
+
+.desktop-commonPopupEdit-popupContent {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 35px;
+    bottom: 46px;
+    height: auto;
+}
+
+.desktop-commonPopupEdit-form {
+    margin: 2px 10px 7px 14px;
+}
+
+.desktop-commonPopupEdit-extContent {
+    margin: 2px 10px 7px 14px;
+}
+
+.desktop-commonPopupEdit-commands {
+    width: 100%;
+    height: 26px;
+    position: fixed;
+    left: 0px;
+    bottom: 12px;
+    padding: 0px 12px;
+}
+
+.desktop-commonPopupEdit-commands-item {
+    float: right;
+    margin: 0px;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-commonPopupIFrame
+------------------------------------------------------------------------------------------------ */
+
+.desktop-commonPopupIFrame {
+}
+
+
+/*.desktop-commonPopupIFrame {
+    overflow: hidden;
+    width: 100%;
+}*/
+
+    .desktop-commonPopupIFrame .dx-view {
+        width: 100%;
+    }
+
+.desktop-commonPopupIFrame-container {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 31px;
+    bottom: 46px;    
+}
+
+#commonPopupIFrame_iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.desktop-commonPopupIFrame-commands {
+    width: 100%;
+    height: 26px;
+    position: fixed;
+    left: 0px;
+    bottom: 12px;
+    padding: 0px 12px;
+}
+
+.desktop-commonPopupIFrame-commands-item {
+    float: right;
+    margin: 0px;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-commonLookup
+------------------------------------------------------------------------------------------------ */
+
+.desktop-commonLookup {
+}
+
+.desktop-commonLookup-popupContent {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 35px;
+    bottom: 46px;
+    height: auto;
+    /*overflow: auto;*/
+}
+
+.desktop-commonLookup-item {
+    margin: 2px 10px 7px 14px;
+}
+
+.desktop-commonLookup-commands {
+    width: 100%;
+    height: 26px;
+    position: fixed;
+    left: 0px;
+    bottom: 12px;
+    padding: 0px 12px;
+}
+
+.desktop-commonLookup-commands-item {
+    float: right;
+    margin: 0px;
+}
+
+
+
+.salesOrderSummaryForm-item-label .dx-field-item-label-content {
+    width: 80px;
+    font-size: medium;
+}
+
+.salesOrderSummaryForm-item-textInput .dx-texteditor-input {
+    font-size: medium;
+    text-align: right;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- desktop-commonIFrame
+------------------------------------------------------------------------------------------------ */
+
+.desktop-commonIFrame {
+    overflow: hidden;
+    width: 100%;
+}
+
+    .desktop-commonIFrame .dx-view {
+        width: 100%;
+    }
+
+.desktop-commonIFrame-container {
+    height: 100%;
+}
+
+#commonIFrame_iframe {
+    width: 100%;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+-- dxcustom
+------------------------------------------------------------------------------------------------ */
+.dxcustom-linkbutton {
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.dxcustom-placeholder-textalign-right .dx-placeholder {
+    position: absolute;
+    top: 0;
+    left: unset;
+    right: 0px;
+    max-width: 100%;
+    width: auto;
+    height: 0;
+    text-align: left;
+    cursor: text;
+    pointer-events: none;
+}
+
+.dxcustom-textinput-textalign-right .dx-texteditor-input {
+    text-align: right;
+}
+
+
+
+.data-grid-banded-header-border-top {
+    border-top: 1px solid #d3d3d3;
+}
+
+.datagrid-bandedHeader {
+    border-top: 1px solid #d3d3d3 !important;
+}
+
+.datagrid-columnheader {
+    border-top: 1px solid #d3d3d3 !important;
+    border-bottom: 1px solid #d3d3d3 !important;
+}
+
+.form-group-padding .dx-field-item-content .dx-form-group {
+    padding-left: 0px !important;
+}
+
+
+
+.dx-accordion-item {
+    border-top-style: none !important;
+    border-left-style: none !important;
+    border-right-style: none !important;
+}
+
+.dx-tabpanel .dx-tab {
+    font-size: medium;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    height: 49px;
+    background-color: #007bc1;
+    padding: 4px;
+}
+
+    header .company-logo {
+        width: 120px;
+        height: 40px;
+        float: left;
+        margin: 4px 14px 0px 14px;
+        background: url(../images/company_logo_small.png) no-repeat;
+    }
+
+    header .commands {
+        font-size: small;
+        height: 40px;
+        color: white;
+        float: right;
+        margin: 4px 14px 0px 14px;
+    }
+
+
+
+footer {
+    height: 36px;
+    background-color: #f1f1f1;
+}
+
+    footer .footer-bottom {
+        border-top: 1px solid #d3d3d3;
+    }
+
+    footer .privacy-link {
+        color: #f05b41;
+        font-size: 13px;
+        float: left;
+        padding-top: 12px;
+    }
+
+    footer .footer-bottom .footer-logo {
+        margin-top: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAeCAQAAAABBt2jAAAG7UlE�rPM+25wHM/38B/LxbL8Bu2lwDOLcX4JnZ5fa/ics/6yv/D0jfiVBiBcfHAAAAAElFTkSuQmCC');
+        height: 30px;
+        width: 160px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        float: right;
+        display: block;
+    }
+
+    footer .copyright {
+        display: inline-block;
+        float: right;
+        text-align: right;
+        margin-right: 45px;
+        margin-top: 7px;
+    }
+
+
+
+.viewContent {
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}

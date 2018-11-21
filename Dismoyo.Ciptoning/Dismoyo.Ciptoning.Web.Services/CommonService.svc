@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Dismoyo.Ciptoning.Web.Services.CommonService" CodeBehind="CommonService.svc.cs" %>

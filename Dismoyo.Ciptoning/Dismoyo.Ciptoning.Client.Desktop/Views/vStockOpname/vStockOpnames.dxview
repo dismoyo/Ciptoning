@@ -1,0 +1,27 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vStockOpnames', title: 'Stock Opnames', pane: 'master' }">
+    <div data-bind="dxCommand: { onExecute: refreshList, id: 'refresh', title: 'Refresh', icon: 'refresh' }"></div>
+    <div id="vStockOpnames_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vStockOpnames_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vStockOpnames_viewSubContent" class="ui-layout-center full-space">
+            <div id="vStockOpnames_collapsibleFilter" class="desktop-collapsibleFilter ui-layout-north full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vStockOpnames_commonGridView" class="desktop-commonGridView ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonGridView' }"></div>
+
+            <div id="vStockOpnames_commonPopupEdit" class="desktop-commonPopupEdit"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupEdit' }"></div>
+
+            <div id="vStockOpnames_commonPopupIFrame" class="desktop-commonPopupIFrame"
+                 data-options="dxViewPlaceholder: { viewName: 'commonPopupIFrame' }"></div>
+
+            <div id="vStockOpnames_productLotPopupEdit" class="desktop-commonPopupEdit"
+                 data-options="dxViewPlaceholder: { viewName: 'productLotPopupEdit' }"></div>
+        </div>
+    </div>
+</div>

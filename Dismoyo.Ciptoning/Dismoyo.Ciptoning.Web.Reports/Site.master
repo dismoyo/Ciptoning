@@ -1,0 +1,36 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AIO.IDOS2.Web.Reports.SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title>IDOS 2.0 Reports</title>
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    
+    <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
+    <script type="text/javascript" src="js/globalize.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-ui-1.11.4.min.js"></script>
+    
+    <script type="text/javascript" src="js/CommonUtility.js"></script>       
+
+    <link rel="stylesheet" href="~/Content/Site.css" /> 
+</head>
+<body>
+    <form id="mainForm" runat="server">
+        <div class="content-wrapper">
+            <div class="header">                
+            </div>
+
+            <div class="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="footer">               
+            </div>
+        </div>
+    </form>
+</body>
+</html>

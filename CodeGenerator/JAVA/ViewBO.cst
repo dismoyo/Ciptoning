@@ -1,0 +1,43 @@
+﻿<%@ Template Language="C#" Src="..\BaseTemplate.cst.cs" Inherits="Generator.BaseTemplate" TargetLanguage="Java" Description="Create a class from database view." %>
+<%@ Assembly Name="SchemaExplorer" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+
+<%@ Property Name="SourceView" Type="SchemaExplorer.ViewSchema" Category="Context" Description="View that the object is based on." %>
+
+<% %>
+package id.co.aio.sfa.bo;
+
+public class <%= SourceView.Name %>BO {                
+
+    //--------------------------------------------------------------------------------------------------
+    // Fields
+    //--------------------------------------------------------------------------------------------------
+<%
+foreach(ViewColumnSchema c in SourceView.Columns)
+{
+    string systemTypeString = GetSystemTypeString(Map.Load(GetMapFileFullName("System-JavaAlias.csmap")),
+        Map.Load(GetMapFileFullName("System-JavaNullable.csmap")), c.SystemType.FullName, c.AllowDBNull);
+%>
+    private <%= systemTypeString %> _<%= c.Name %>;
+<%
+}
+%>
+
+    //--------------------------------------------------------------------------------------------------
+    // Getter & Setter
+    //--------------------------------------------------------------------------------------------------
+<%
+foreach(ViewColumnSchema c in SourceView.Columns)
+{
+    string systemTypeString = GetSystemTypeString(Map.Load(GetMapFileFullName("System-JavaAlias.csmap")),
+        Map.Load(GetMapFileFullName("System-JavaNullable.csmap")), c.SystemType.FullName, c.AllowDBNull);
+%>
+    
+    public <%= systemTypeString %> get<%= c.Name %>() { return _<%= c.Name %>; }    
+    public void set<%= c.Name %>(<%= systemTypeString %> value) { _<%= c.Name %> = value; }
+<%
+}
+%>
+
+}

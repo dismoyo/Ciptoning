@@ -1,0 +1,10 @@
+[2016-11-27 10:41:50] 'Application Start' event has ocurred.
+[2016-11-27 10:54:05] ERROR: [5ae63a72-cd8b-4b5b-885b-a4cd5700ce74] Nullable object must have a value.
+[2016-11-27 10:55:19] ERROR: [fc021be4-499f-4941-90d9-bd2717b7bc2f] Nullable object must have a value.
+[2016-11-27 10:59:05] 'Application Start' event has ocurred.
+[2016-11-27 11:00:35] ERROR: [5f8bc840-db5f-4e8f-940c-20947c2f7617] Nullable object must have a value.
+[2016-11-27 11:01:23] ERROR: [cee20688-6832-4419-bfe3-ac0d23021f11] Nullable object must have a value.
+[2016-11-27 11:01:39] ERROR: [cb5569d7-3ffb-4827-90b3-26f58bc05f3f] Nullable object must have a value.
+[2016-11-27 11:02:29] ERROR: [710bc3be-285a-4917-8323-110c554be903] Nullable object must have a value.
+[2016-11-27 11:04:52] ERROR: [dc44d18e-0f2b-42b4-83ef-1083f80128ea] The specified cast from a materialized 'System.Int64' type to the 'System.String' type is not valid.
+[2016-11-27 11:20:12] 'Application Start' event has ocurred.

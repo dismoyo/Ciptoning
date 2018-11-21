@@ -1,0 +1,4 @@
+[2016-11-05 04:44:49] 'Application Start' event has ocurred.
+[2016-11-05 04:46:23] ERROR: [eb2408f4-11eb-46f9-8219-ec9c3f209b74] The network path was not found
+[2016-11-05 04:47:26] ERROR: [df0e028e-0630-47b9-8fa5-cd38769e6400] The network path was not found
+[2016-11-05 05:03:38] 'Application Start' event has ocurred.

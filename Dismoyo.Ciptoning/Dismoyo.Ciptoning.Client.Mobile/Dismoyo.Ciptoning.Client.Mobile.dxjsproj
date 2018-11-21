@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>eb288960-5e15-415b-8f8c-ca796f4e12cd</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <UploadPluginsToTheCourier>True</UploadPluginsToTheCourier>
+    <RootNamespace>Dismoyo_Ciptoning_Client</RootNamespace>
+    <ApplicationPage>index.html</ApplicationPage>
+    <Name>Dismoyo.Ciptoning.Client.Mobile</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Dismoyo_Ciptoning_Client.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="index.css" />
+    <Content Include="cordova.js" />
+    <None Include="config.xml" />
+    <Content Include="index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Empty\EmptyLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Empty\EmptyLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Empty\EmptyLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Navbar\NavbarLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Navbar\NavbarLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Navbar\NavbarLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Pivot\PivotLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Pivot\PivotLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Pivot\PivotLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Popup\PopupLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Popup\PopupLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Popup\PopupLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Simple\SimpleLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Simple\SimpleLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Simple\SimpleLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\SlideOut\SlideOutLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\SlideOut\SlideOutLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\SlideOut\SlideOutLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Split\SplitLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Split\SplitLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Layouts\Mobile\Split\SplitLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Views\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="js\" />
+    <Folder Include="Layouts" />
+    <Folder Include="Layouts\Mobile\Empty\" />
+    <Folder Include="Layouts\Mobile\Navbar\" />
+    <Folder Include="Layouts\Mobile" />
+    <Folder Include="Layouts\Mobile\Pivot\" />
+    <Folder Include="Layouts\Mobile\Popup\" />
+    <Folder Include="Layouts\Mobile\Simple\" />
+    <Folder Include="Layouts\Mobile\SlideOut\" />
+    <Folder Include="Layouts\Mobile\Split\" />
+    <Folder Include="Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dismoyo.Ciptoning.Client.Shared\Dismoyo.Ciptoning.Client.Shared.dxjsproj">
+      <Name>Dismoyo.Ciptoning.Client.Shared</Name>
+      <Project>{35a65fac-be50-47da-881e-4a6b1b24b316}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

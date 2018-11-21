@@ -1,0 +1,26 @@
+[2016-12-14 09:46:10] 'Application Start' event has ocurred.
+[2016-12-14 09:46:10] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentException: Document 'c3d9b4e53e6b408ebdb94bf100944bc3' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-14 10:27:13] 'Application Start' event has ocurred.
+[2016-12-14 10:32:25] ERROR: [2ca2e99b-20e3-4b59-b287-aeb88622358f] Unable to cast object of type 'System.Collections.Generic.List`1[AIO.IDOS2.Data.vStockTransfer]' to type 'AIO.IDOS2.Data.vStockTransfer'.
+[2016-12-14 10:33:41] 'Application Start' event has ocurred.
+[2016-12-14 10:37:10] 'Application Start' event has ocurred.
+[2016-12-14 10:37:10] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentException: Document '74eb13089c294d399c987d6734414bbd' not found
+Parameter name: id
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.ThrowDocumentNotFound(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.GetPreviewDocument(String id)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.InMemoryDocumentStorage.DoWithBuildResult[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
+[2016-12-14 11:30:29] 'Application Start' event has ocurred.

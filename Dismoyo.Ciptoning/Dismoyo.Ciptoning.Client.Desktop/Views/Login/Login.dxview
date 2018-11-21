@@ -1,0 +1,18 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'Login', title: 'Sign In', pane: 'master' }">
+    <div id="Login_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }">
+        <div id="Login_viewSubContent" class="ui-layout-center">
+            <div class="desktop-login-gallery">
+                <div id="Login_gallery" data-bind="dxGallery: $root.galleryOptions"></div>
+            </div>
+        </div>
+        <div id="Login_controls" class="ui-layout-east">
+            <div id="Login_form" class="desktop-login-form" data-bind="dxForm: $root.loginFormOptions"></div>
+
+            <div class="desktop-login-commands">
+                <div class="desktop-login-commands-item">
+                    <div id="Login_submit" data-bind="dxButton: $root.submitOptions" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

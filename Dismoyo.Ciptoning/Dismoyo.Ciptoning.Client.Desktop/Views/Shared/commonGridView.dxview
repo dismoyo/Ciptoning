@@ -1,0 +1,14 @@
+<div data-options="dxView : { name: 'commonGridView' }">
+    <div id="commonGridView_commands" class="desktop-commonGridView-commands">
+        <div class="desktop-commonGridView-commands-item">
+            <div id="commonGridView_newRow" data-bind="dxButton: $root.commonGridView.newRowOptions" />
+        </div>
+        <div class="desktop-commonGridView-commands-item">
+            <div id="commonGridView_deleteRows" data-bind="dxButton: $root.commonGridView.deleteRowsOptions" />
+        </div>
+    </div>
+    
+    <div class="desktop-commonGridView-container">
+        <div id="commonGridView_dataGrid" data-bind="dxDataGrid: $root.commonGridView.dataGridOptions"></div>
+    </div>
+</div>

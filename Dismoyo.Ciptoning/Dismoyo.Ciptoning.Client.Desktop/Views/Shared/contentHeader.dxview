@@ -1,0 +1,10 @@
+<div data-options="dxView : { name: 'contentHeader' }">
+    <div class="desktop-contentHeader-content">
+        <div class="desktop-contentHeader-content-item">
+            <img width="32" height="32" data-bind="attr: { src: $root.icon } " />
+        </div>
+        <div class="desktop-contentHeader-content-item">
+            <h2 data-bind="text: title"></h2>
+        </div>
+    </div>
+</div>

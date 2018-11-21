@@ -1,0 +1,25 @@
+<div data-options="dxView: { name: 'collapsibleFilter' }">
+    <div id="collapsibleFilter_filter" data-bind="dxAccordion: $root.collapsibleFilter.filterOptions">
+        <div class="desktop-collapsibleFilter-header" data-options="dxTemplate: { name: 'title' }">
+            <div class="desktop-collapsibleFilter-header-item">
+                <img width="24" height="24" src="Images/filter_24px.png" />
+            </div>
+            <div class="desktop-collapsibleFilter-header-item">
+                <h3 data-bind="text: title"></h3>
+            </div>
+        </div>
+        <div data-options="dxTemplate: { name: 'content' }">
+            <div id="collapsibleFilter_form" class="desktop-collapsibleFilter-form"
+                 data-bind="dxForm: $root.collapsibleFilter.formOptions"></div>
+            <div class="desktop-collapsibleFilter-commands">
+                <div class="desktop-collapsibleFilter-commands-item" style="right:70px;position:absolute;">
+                    <div id="collapsibleFilter_search" data-bind="dxButton: $root.collapsibleFilter.searchOptions" />
+                </div>
+                <div class="desktop-collapsibleFilter-commands-item">
+                    <div id="collapsibleFilter_clear" data-bind="dxButton: $root.collapsibleFilter.clearOptions" />
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

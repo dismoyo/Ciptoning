@@ -1,0 +1,17 @@
+<div class="ui-layout-center full-space" data-options="dxView: { name: 'vSalesByChannelReports', title: 'Sales by Channel Reports', pane: 'master' }">
+    <div id="vSalesByChannelReports_viewContent" class="dx-content-background viewContent ui-layout-center full-space" data-options="dxContent : { targetPlaceholder: 'content' }"
+         data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: isReady }">
+
+        <div id="vSalesByChannelReports_viewContentHeader" class="ui-layout-north full-space">
+            <div class="desktop-contentHeader" data-options="dxViewPlaceholder: { viewName: 'contentHeader' }"></div>
+        </div>
+
+        <div id="vSalesByChannelReports_viewSubContent" class="ui-layout-center full-space">
+            <div id="vSalesByChannelReports_collapsibleFilter" class="desktop-collapsibleFilter"
+                 data-options="dxViewPlaceholder: { viewName: 'collapsibleFilter' }"></div>
+
+            <div id="vSalesByChannelReports_commonIFrame" class="desktop-commonIFrame ui-layout-center full-space"
+                 data-options="dxViewPlaceholder: { viewName: 'commonIFrame' }"></div>
+        </div>
+    </div>
+</div>

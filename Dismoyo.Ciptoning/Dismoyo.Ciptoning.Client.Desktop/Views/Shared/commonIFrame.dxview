@@ -1,0 +1,16 @@
+<div data-options="dxView : { name: 'commonIFrame' }">
+    <div id="commonIFrame_loadingPanel" data-bind="dxLoadPanel: {
+                showIndicator: true,
+                showPane: true,
+                shading: true,
+                closeOnOutsideClick: false,
+                shadingColor: 'rgba(0,0,0,0.4)',
+                position: { of: '#commonIFrame_iframe' }
+            }">
+    </div>
+
+    <div class="desktop-commonIFrame-container">
+        <iframe id="commonIFrame_iframe" onload="setLoadingPanelByVisibility('#commonIFrame_loadingPanel', false);">
+        </iframe>
+    </div>
+</div>

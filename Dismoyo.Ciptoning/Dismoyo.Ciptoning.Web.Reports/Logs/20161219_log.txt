@@ -1,0 +1,11 @@
+[2016-12-19 11:45:24] 'Application Start' event has ocurred.
+[2016-12-19 14:14:02] 'Application Start' event has ocurred.
+[2016-12-19 14:18:13] ERROR: WebDocumentViewerRequestManager.ProcessRequest: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: resolution
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementServiceLogic.GetPage(Document document, Int32 pageIndex, Int32 resolution)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.FileDocumentStorage.FileWebPreviewWritableDocument.DoWithBuildResult[T](Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.DoWithDocument[T](String id, Nullable`1 loadPageIndex, Func`2 func)
+   at DevExpress.XtraReports.Web.WebDocumentViewer.Native.Services.DocumentManagementService.GetPage(DocumentPageRequest pageRequest)
+   at lambda_method(Closure , IWebDocumentViewerRequestController , String )
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequestCore(NameValueCollection query)
+   at DevExpress.XtraReports.Web.Native.ClientControls.Services.RequestManagerBase`1.ProcessRequest(NameValueCollection query)
