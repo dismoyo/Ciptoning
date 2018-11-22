@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dismoyo.Ciptoning.Web.Services", "Dismoyo.Ciptoning.Web.Services\Dismoyo.Ciptoning.Web.Services.csproj", "{BFB84BB6-8E92-4625-8091-A3CFAACD30DE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dismoyo_packages", "dismoyo_packages", "{05B59F7E-CD2D-4CA8-B550-73DB564AD2ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dismoyo.Ciptoning.Web.Services", "Dismoyo.Ciptoning.Web.Services\Dismoyo.Ciptoning.Web.Services.csproj", "{BFB84BB6-8E92-4625-8091-A3CFAACD30DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dismoyo.Data", "dismoyo_packages\Dismoyo.Data\Dismoyo.Data.csproj", "{FDC5213A-3B33-47A5-858C-F46DE29DF569}"
 EndProject
@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dismoyo.Ciptoning.Web.Mvc.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dismoyo.Ciptoning.Web.Mvc.Applications", "Dismoyo.Ciptoning.Web.Mvc.Applications\Dismoyo.Ciptoning.Web.Mvc.Applications.csproj", "{018E0C88-6C44-497D-9E28-92D729CD67EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dismoyo.Ciptoning.Web.Mvc.Views", "Dismoyo.Ciptoning.Web.Mvc.Views\Dismoyo.Ciptoning.Web.Mvc.Views.csproj", "{26FB16F8-118B-4630-9F0D-91DA3114A254}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dismoyo.Ciptoning.Web.Mvc.Views", "Dismoyo.Ciptoning.Web.Mvc.Views\Dismoyo.Ciptoning.Web.Mvc.Views.csproj", "{029A0C88-2C33-497D-9E27-92D729CD67EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -170,14 +170,14 @@ Global
 		{018E0C88-6C44-497D-9E28-92D729CD67EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{018E0C88-6C44-497D-9E28-92D729CD67EF}.Release|x64.ActiveCfg = Release|Any CPU
 		{018E0C88-6C44-497D-9E28-92D729CD67EF}.Release|x64.Build.0 = Release|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Debug|x64.Build.0 = Debug|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Release|x64.ActiveCfg = Release|Any CPU
-		{26FB16F8-118B-4630-9F0D-91DA3114A254}.Release|x64.Build.0 = Release|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Debug|x64.Build.0 = Debug|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Release|x64.ActiveCfg = Release|Any CPU
+		{029A0C88-2C33-497D-9E27-92D729CD67EE}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

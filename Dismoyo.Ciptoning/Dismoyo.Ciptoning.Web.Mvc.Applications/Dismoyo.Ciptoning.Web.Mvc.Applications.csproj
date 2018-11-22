@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dismoyo_Ciptoning_Web_Mvc_Applications</RootNamespace>
-    <AssemblyName>Dismoyo_Ciptoning_Web_Mvc_Applications</AssemblyName>
+    <RootNamespace>Dismoyo.Ciptoning.Web.Mvc.Applications</RootNamespace>
+    <AssemblyName>Dismoyo.Ciptoning.Web.Mvc.Applications</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -212,8 +212,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -298,7 +301,7 @@
       <Name>Dismoyo.Ciptoning.Web.Mvc.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dismoyo.Ciptoning.Web.Mvc.Views\Dismoyo.Ciptoning.Web.Mvc.Views.csproj">
-      <Project>{26fb16f8-118b-4630-9f0d-91da3114a254}</Project>
+      <Project>{029a0c88-2c33-497d-9e27-92d729cd67ee}</Project>
       <Name>Dismoyo.Ciptoning.Web.Mvc.Views</Name>
     </ProjectReference>
   </ItemGroup>
@@ -320,7 +323,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4527</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51009/</IISUrl>
+          <IISUrl>http://localhost:6310/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

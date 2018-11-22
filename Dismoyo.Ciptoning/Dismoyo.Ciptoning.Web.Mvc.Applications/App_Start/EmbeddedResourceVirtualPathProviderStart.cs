@@ -1,19 +1,18 @@
+using Dismoyo.Ciptoning.Web.Mvc.Applications;
 using System.Linq;
 using System.Reflection;
 using System.Web.Compilation;
 using System.Web.Hosting;
 
-[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(Dismoyo_Ciptoning_Web_Mvc_Applications.EmbeddedResourceVirtualPathProviderStart), "Start")]
+[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(EmbeddedResourceVirtualPathProviderStart), "Start")]
 
-namespace Dismoyo_Ciptoning_Web_Mvc_Applications
+namespace Dismoyo.Ciptoning.Web.Mvc.Applications
 {
 
     public static class EmbeddedResourceVirtualPathProviderStart
     {
 
         #region Methods
-
-        #endregion
 
         public static void Start()
         {
@@ -22,12 +21,14 @@ namespace Dismoyo_Ciptoning_Web_Mvc_Applications
                 .Where(p => p.GetName().Name.StartsWith("System") == false);
             HostingEnvironment.RegisterVirtualPathProvider(
                 new EmbeddedResourceVirtualPathProvider.Vpp(assemblies.ToArray())
-            {
-                //you can do a specific assembly registration too. If you provide the assembly source path, it can read
-                //from the source file so you can change the content while the app is running without needing to rebuild
-                //{typeof(SomeAssembly.SomeClass).Assembly, @"..\SomeAssembly"} 
-            });
+                {
+                    //you can do a specific assembly registration too. If you provide the assembly source path, it can read
+                    //from the source file so you can change the content while the app is running without needing to rebuild
+                    //{typeof(SomeAssembly.SomeClass).Assembly, @"..\SomeAssembly"} 
+                });
         }
+
+        #endregion
 
     }
 
