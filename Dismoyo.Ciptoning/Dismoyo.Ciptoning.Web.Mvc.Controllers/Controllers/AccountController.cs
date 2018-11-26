@@ -3,12 +3,12 @@ using System.Web.Mvc;
 namespace Dismoyo.Ciptoning.Web.Mvc.Controllers
 {
 
-    public class HomeController : Controller
+    public class AccountController : Controller
     {
 
         #region Methods
 
-        public ActionResult Index()
+        public ActionResult Login()
         {
             return View();
         }

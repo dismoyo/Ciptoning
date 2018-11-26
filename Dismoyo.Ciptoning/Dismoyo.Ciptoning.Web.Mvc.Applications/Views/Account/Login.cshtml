@@ -1,0 +1,50 @@
+@using Dismoyo.Ciptoning.Web.Mvc.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    $(function () {
+        alert('Test');
+        $('#txt').dxTextArea({
+        });
+
+        var form = $('#form').dxForm({
+            readOnly: false,
+            showColonAfterLabel: true,
+            labelLocation: 'top',
+            minColWidth: 300,
+            colCount: 2,
+            formData: {
+                name: 'John Heart',
+                picture: 'https://js.devexpress.com/Content/images/doc/18_2/PhoneJS/person2.png'
+            },
+            items: [{
+                dataField: 'name',
+                template: function (data, itemElement) {
+                    itemElement.append('<div id="textAreaContainer">')
+                        .dxTextArea({
+                            value: data.component.option('formData')[data.dataField],
+                            onValueChanged: function (e) {
+                                data.component.updateData(data.dataField, e.value);
+                            }
+                        });
+                }
+            }, {
+                dataField: 'picture',
+                template: function (data, itemElement) {
+                    itemElement.append('<img src="' + data.editorOptions.value + '">');
+                }
+            }]
+        }).dxForm('instance');
+    }
+</script>
+
+<h2>Login</h2>
+
+<div id="form"></div>
+
+<div id="txt"></div>
+
+@Html.DevExtreme().Button().Text("Hello")

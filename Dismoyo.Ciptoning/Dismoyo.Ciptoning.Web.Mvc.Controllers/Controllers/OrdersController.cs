@@ -14,11 +14,15 @@ namespace Dismoyo.Ciptoning.Web.Mvc.Controllers
     public class OrdersController : ApiController
     {
 
+        #region Methods
+
         [HttpGet]
         public HttpResponseMessage Get(DataSourceLoadOptions loadOptions)
         {
             return Request.CreateResponse(DataSourceLoader.Load(SampleData.Orders, loadOptions));
         }
+
+        #endregion
 
     }
 
